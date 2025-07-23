@@ -28,11 +28,13 @@ header {
   z-index: 1000;
 }
 
-header p {
+  header p {
+    color: white;
     margin: 0;
     font-size: 1.8rem;
-   font-weight: bold;
+    font-weight: bold;
   }
+ 
   nav a {
     color: white;
     text-decoration: none;
@@ -45,16 +47,6 @@ header p {
     color: #a0f0ed;
   }
 
-.en-construction {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #888;
-  margin-top: 10px; /* espace pour le header fixe */
-  margin-bottom: 1rem;
-  font-style: italic;
-  letter-spacing: 0.5px;
-}
-
 
 /*----------------------MAIN------------------*/
   main {
@@ -65,26 +57,16 @@ header p {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
 
-/*----------------------INTRO------------------*/
+/*----------------------These------------------*/
 main section {
-margin: 20px auto 0 auto;
-}
-
-.image-profil {
-  display: block;
-  margin: 20px auto 2rem auto; /* espace sous header */
-  width: 500px; /* ou autre taille */
-  height: auto;
-  border-radius: 20px; /* coins arrondis */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* optionnel : ombre douce */
+margin: 10px auto 0 auto;
 }
 
 .intro {
   display: flex;
   align-items: center;
-  margin-top: 70px; /* espace sous header fixe */
-  margin-bottom: 70px;
-  padding: 3rem;
+  margin-top: 20px; /* espace sous header fixe */
+  margin-bottom: 20px;
   width = 90%;
   max-width: 1200px;
   margin-left: auto;
@@ -93,22 +75,30 @@ margin: 20px auto 0 auto;
   gap: 8rem;
 }
 
-.texte-droite {
-  flex: 1;
+.texte-gauche {
+  flex: 2;
 }
 
-.texte-droite h2 {
-  font-size: 1.8rem;
+.texte-gauche h2 {
   margin-top: 0;
 }
 
-.texte-droite h3 {
-font-size: 1.5rem;
+section h3 {
 color: #4DD0E1;
 }
 
-.texte-droite p{
+.texte-gauche p{
   font-size: 1rem;
+}
+
+.image-these {
+  display: block;
+  margin: 100px auto 2rem auto; /* espace sous header */
+  width: 200px; /* ou autre taille */
+  height: auto;
+  border-radius: 20px; /* coins arrondis */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* optionnel : ombre douce */
+  flex : 1;
 }
 
 .separateur {
@@ -118,10 +108,9 @@ color: #4DD0E1;
   width: 80%;                  /* ajuste selon ton style */
 }
 
-/*----------------------À propos de moi------------------*/
+/*----------------------Basel problem and boy surface------------------*/
 
-.apropos {
-  padding: 1rem;
+.basel {
   width = 90%;
   max-width: 1200px;
   margin-left: auto;
@@ -129,9 +118,14 @@ color: #4DD0E1;
   background: white;
 }
 
-.apropos p {
-  font-size: 1rem;
+.boy {
+  width = 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
 }
+
 
 
 /*----------------------Footer------------------*/
