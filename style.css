@@ -33,6 +33,7 @@ header p {
     font-size: 1.8rem;
    font-weight: bold;
   }
+
   nav a {
     color: white;
     text-decoration: none;
@@ -42,7 +43,7 @@ header p {
   }
 
   nav a:hover {
-    color: #a0f0ed;
+    color: #4DD0E1;
   }
 
 .en-construction {

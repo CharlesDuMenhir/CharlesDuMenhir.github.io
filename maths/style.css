@@ -1,6 +1,6 @@
 * {
-  box-sizing: border-box;
-} /*limite les box à l'écran*/
+  box-sizing: border-box;  /*limite les box à l'écran*/
+} 
 
 body {
   margin: 0;
@@ -44,7 +44,7 @@ header {
   }
 
   nav a:hover {
-    color: #a0f0ed;
+    color: #4DD0E1;
   }
 
 
@@ -57,21 +57,43 @@ header {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
 
-/*----------------------These------------------*/
+
 main section {
-margin: 10px auto 0 auto;
+    margin: 10px auto 0 auto;
+    width = 90%;
+    max-width: 1200px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+section h3 {
+color: #4DD0E1;
+}
+
+
+.dateSection {
+  text-align: end;
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 3rem;
+  font-style: italic;
+}
+
+.separateur {
+  border: none;
+  border-top: 1px solid #ccc;  /* fine ligne grise claire */
+  margin: 1rem auto;
+  width: 80%;                  /* ajuste selon ton style */
+}
+
+
+/*----------------------These------------------*/
 
 .intro {
   display: flex;
   align-items: center;
-  margin-top: 20px; /* espace sous header fixe */
-  margin-bottom: 20px;
-  width = 90%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  background: white;
   gap: 8rem;
 }
 
@@ -79,51 +101,12 @@ margin: 10px auto 0 auto;
   flex: 2;
 }
 
-.texte-gauche h2 {
-  margin-top: 0;
-}
-
-section h3 {
-color: #4DD0E1;
-}
-
-.texte-gauche p{
-  font-size: 1rem;
-}
-
 .image-these {
-  display: block;
-  margin: 100px auto 2rem auto; /* espace sous header */
-  width: 200px; /* ou autre taille */
+  flex: 1;
+  width: 100px; /* ou autre taille */
   height: auto;
   border-radius: 20px; /* coins arrondis */
   box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* optionnel : ombre douce */
-  flex : 1;
-}
-
-.separateur {
-  border: none;
-  border-top: 1px solid #ccc;  /* fine ligne grise claire */
-  margin: 3rem auto;
-  width: 80%;                  /* ajuste selon ton style */
-}
-
-/*----------------------Basel problem and boy surface------------------*/
-
-.basel {
-  width = 90%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  background: white;
-}
-
-.boy {
-  width = 90%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  background: white;
 }
 
 
