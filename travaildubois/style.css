@@ -1,6 +1,6 @@
 * {
-  box-sizing: border-box;
-} /*limite les box à l'écran*/
+  box-sizing: border-box;  /*limite les box à l'écran*/
+} 
 
 body {
   margin: 0;
@@ -27,12 +27,13 @@ header {
   z-index: 1000;
 }
 
-header p {
+  header p {
+    color: white;
     margin: 0;
     font-size: 1.8rem;
-   font-weight: bold;
+    font-weight: bold;
   }
-
+ 
   nav a {
     color: white;
     text-decoration: none;
@@ -45,16 +46,6 @@ header p {
     color: #4DD0E1;
   }
 
-.en-construction {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #888;
-  margin-top: 10px; /* espace pour le header fixe */
-  margin-bottom: 1rem;
-  font-style: italic;
-  letter-spacing: 0.5px;
-}
-
 
 /*----------------------MAIN------------------*/
   main {
@@ -65,73 +56,40 @@ header p {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
 
-/*----------------------INTRO------------------*/
+
 main section {
-margin: 20px auto 0 auto;
+    margin: 10px auto 0 auto;
+    width = 90%;
+    max-width: 1200px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.image-profil {
-  display: block;
-  margin: 20px auto 2rem auto; /* espace sous header */
-  width: 500px; /* ou autre taille */
-  height: auto;
-  border-radius: 20px; /* coins arrondis */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* optionnel : ombre douce */
-}
-
-.intro {
-  display: flex;
-  align-items: center;
-  margin-top: 70px; /* espace sous header fixe */
-  margin-bottom: 70px;
-  padding: 3rem;
-  width = 90%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  background: white;
-  gap: 8rem;
-}
-
-.texte-droite {
-  flex: 1;
-}
-
-.texte-droite h2 {
-  font-size: 1.8rem;
-  margin-top: 0;
-}
-
-.texte-droite h3 {
-font-size: 1.5rem;
+section h3 {
 color: #4DD0E1;
 }
 
-.texte-droite p{
-  font-size: 1rem;
+
+.dateSection {
+  text-align: end;
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 3rem;
+  font-style: italic;
 }
 
 .separateur {
   border: none;
   border-top: 1px solid #ccc;  /* fine ligne grise claire */
-  margin: 3rem auto;
+  margin: 1rem auto;
   width: 80%;                  /* ajuste selon ton style */
 }
 
-/*----------------------À propos de moi------------------*/
 
-.apropos {
-  padding: 1rem;
-  width = 90%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  background: white;
-}
+/*----------------------Charpente------------------*/
 
-.apropos p {
-  font-size: 1rem;
-}
 
 
 /*----------------------Footer------------------*/
