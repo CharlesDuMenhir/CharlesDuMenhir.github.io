@@ -88,9 +88,37 @@ color: #4DD0E1;
 }
 
 
-/*----------------------Fez------------------*/
+/*----------------------Game------------------*/
+
+.horizontalFlex {
+  display: flex;
+  */flex-direction: row;*/
+  align-items: center;
+  padding: 1rem;
+  gap: 6rem;
+}
+
+.horizontalFlex .texte {
+  flex: 2;
+  text-align: justify;
+  text-justify: distribute;
+}
 
 
+.horizontalFlex .container-image{
+	flex:1;
+	display: flex;
+	align-items: center;
+}
+
+.horizontalFlex .image {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;            /* ← garde les proportions naturelles */
+  display: block; /*passe d'une inline à un block*/
+  border-radius: 20px; /* coins arrondis */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* optionnel : ombre douce */
+}
 
 
 /*----------------------Footer------------------*/
