@@ -1,150 +1,191 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-    <title>Charles Duménil -> Maths</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/style.css" rel="stylesheet">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <title>Maths</title>
 </head>
 
 <body>
-    <header>
-        <p>Charles Duménil</p>
-        <nav>
-            <a href="/">Accueil</a>
-            <a href="/maths/">Maths</a>
-            <a href="/escalade/">Escalade</a>
-            <a href="/gaming/">Gaming</a>
-            <a href="/travaildubois/">Travail du bois</a>
-            <a href="/genealogie/">Généalogie</a>
-            <a href="/mido/">Galerie de Mido</a>
-        </nav>
-    </header>
+  <header>
+    <p>Maths</p>
+    <nav>
+      <a href="/">Accueil</a>
+      <a href="/maths/">Maths</a>
+      <a href="/escalade/">Escalade</a>
+      <a href="/gaming/">Gaming</a>
+      <a href="/travaildubois/">Travail du bois</a>
+      <a href="/genealogie/">Généalogie</a>
+      <a href="/mido/">Galerie de Mido</a>
+    </nav>
+  </header>
 
-<main>
+  <div id="top" style="scroll-margin-top: 75px"></div>
+  <a href="#top" class="bouton-retour">Up</a>
 
-<!-- Surface de Boy -->
+  <main>
 
-<section class="boy">
-  <h2>My favorite surface</h2>
-  <h3>The Boy  surface</h3>
-  <p> Yes I have a favorite surface. But it is for later!</p>
-<div class="dateSection">Later</div>
-</section>
+    <!-- Surface de Boy -->
 
-<hr class="separateur">
+    <section class="boy">
+      <h2>My favorite surface</h2>
+      <h3>The Boy surface</h3>
+      <p> Yes I have a favorite surface. But it is for later!</p>
+      <div class="dateSection">Later</div>
+    </section>
 
-
-<!-- Probleme de Bale -->
-
-<section class="basel">
-  <h2>My favorite math problem</h2>
-  <h3>The Basel problem : \(~\frac 1 {1^1} + \frac 1 {2^2}+ \frac 1 {3^2}+ \frac 1 {4^2}+~... ~=~ ?\) </h3>
-  <p> I know. I know... It is an extremly mainstream problem... I know. You can't be original every day!
-Fortunately, not everybody is a mathematician. So! The Basel problem boils down to that question : What is the value of the sum of the inverse of the square of the natural numbers? It has been solved by Leonhard Euler in 1735. This is mathematical formulation of the solution:</p>
-
-$$
-\sum_{n=1}^\infty \frac 1 {n^2} = \frac{\pi^2}{6}.
-$$
-
-<p> Where the not so profane might be surprised to see the number \(\pi\) appear. And for good reason. As far as I know, it does not exist an "easy" demonstration. But before delving into the resolutions of the problem, we might give some explanations.
-</p>
-
-<p>First: why does that infinite sum converge? And yes, some infinite sums converge, as long as the terms of the sum are small enough. The most obvious example of a convergent sum is given in the paradox of Zenon : Consider you go home, but half-way, you stop. Then you go again, and you stop again half-way before home. And so on. After an infinite amount of time (it might be long), you arrive home. Well you have an example of a convergent infinite series. This one was a geometric series. For geometric series, the convergence is very fast. Actually it is exponential! In the case of the Basel problem, the terms do not decrease that quickly. It is the particular case of a Riemann sum: </p>
-$$
-\zeta(\alpha) := \sum_{n=1}^\infty \frac 1 {n^\alpha}.
-$$
-<p> And it is well known that a Riemann sum converges if and only if \(\alpha > 1\) ( or \( Re(\alpha) > 1\) if we extend to complex numbers). For the Basel problem, \(\alpha=2\), so the series converges, and what we compute is actually \(\zeta(2)\), the value of the Riemann Zeta function at 2.
-</p>
-
-<p>Their exist various ways to compute \(\zeta(2)\). In 1999, Robin Chapman from University of Exeter wrote the survey <a href = "/maths/files/EvaluatingZeta2ByRobinChapman.pdf">"Evaluating \(\zeta(2)\)"</a> in which he provides a collection of such proofs. My favorite one is the sixth. It does not involve advanced theories and goes through original, while elementary, formulas like : </p>
-
-$$
-\text{For any } t \in ~] 0; 2\pi [~, \quad \sum_{n=1}^\infty \sin (nt) < \frac 2 {\sin (\frac t2)} \quad \text{ and } \quad \sum_{n=1}^\infty \frac{\sin (nt)}n = \frac{\pi-t}{2}~~.
-$$
-
-<p>In the meantime, other proofs have been provided. Continuing the work of Robin Chapman, I listed three of them in <a href = "/maths/files/ReEvaluatingZeta2ByCharlesDumenil.pdf">that document</a>. They differ from the previous one, by bringing geometric and probabilistic aspects.</p>
-
-<p>As I said, the Basel problem is a part of the Riemann Zeta function. And this function still keeps a lot of mysteries. The most obvious one is the Riemann hypothesis itself. But it is far too complicated... The one that interests me here is the following : We were able to compute \(\zeta(2)\), actually we have a practical expression of \(\zeta(n)\) for any even \(n\). But, for all odd \(n\), we are not even close to a simple expression. For instance, all we know about \(\zeta(3)\), the Apéry's constant, is that it is an irrational number. I think that's pretty frustrating!</p>
-
-<p>And yet! We have lots of formulas and hints that may help us. For instance, for any even \(n\), \(\zeta(n)\) is a fraction of \(\pi^n\). We may have a pattern here! Also, using proof 6 from the survey of Robin Chapman, we can have:
-$$
-\sum_{n=1}^\infty \frac{\cos (nt)}{n^2} =\frac{t^2}4-\frac{\pi t}2+\frac{\pi^2}6~~.
-$$
-
-And up to an integration, we obtain :
-
-$$
-\sum_{n=1}^\infty \frac{\sin (nt)}{n^3} =\frac{t^3}{12}-\frac{\pi t^2}4+\frac{\pi^2t}6~~.
-$$
-
-At \(t=3\pi/2\), it gives:
-
-$$
-\sum_{k=0}^\infty \frac{(-1)^k}{(2k+1)^3}= -\frac{\pi^3}{32}~~.
-$$
-
-So we can have some results with cubic powers. And we could continue the process to higher degrees. But the expression that would interest us is \(\sum_{n=1}^\infty \frac{\cos (nt)}{n^3}\), that is \(\zeta (3)\) at \(t=0\).
-With the game of alternations between sinus and cosinus through the derivatives, the only way to reach it would be to iteratively integrate from \(\sum_{n=1}^\infty \frac{\cos (nt)}n\). We can give a nice expression for \(t \in ]0;2\pi[\):
-
-$$
-\sum_{n=1}^\infty \frac{\cos (nt)}n= -\ln(2\sin (\tfrac t 2))~~.
-$$
+    <hr class="separateur">
 
 
-And here comes the problem. We can hardly integrate this expression. So its a dead-end for the method of proof 6. And I am pretty sure that any other adaptation would be a dead-end too. So the open question is: Why? Is it just because of some impossible integrations? Is it for some obscure algebraic reasons? Are all dead-ends related in some way? If you have any idea...
-</p>  
+    <!-- Probleme de Bale -->
 
-<div class="dateSection">Écrit le 23 juillet 2025</div>
-</section>
+    <section class="basel">
+      <h2>My favorite math problem</h2>
+      <h3>The Basel problem : \(~\frac 1 {1^1} + \frac 1 {2^2}+ \frac 1 {3^2}+ \frac 1 {4^2}+~... ~=~ ?\) </h3>
+      <p> I know. I know... It is an extremly mainstream problem... I know. You can't be original every day!
+        Fortunately, not everybody is a mathematician. So! The Basel problem boils down to that question : What is the
+        value of the sum of the inverse of the square of the natural numbers? It has been solved by Leonhard Euler in
+        1735. This is mathematical formulation of the solution:</p>
+
+      $$
+      \sum_{n=1}^\infty \frac 1 {n^2} = \frac{\pi^2}{6}.
+      $$
+
+      <p> Where the not so profane might be surprised to see the number \(\pi\) appear. And for good reason. As far as I
+        know, it does not exist an "easy" demonstration. But before delving into the resolutions of the problem, we
+        might give some explanations.
+      </p>
+
+      <p>First: why does that infinite sum converge? And yes, some infinite sums converge, as long as the terms of the
+        sum are small enough. The most obvious example of a convergent sum is given in the paradox of Zenon : Consider
+        you go home, but half-way, you stop. Then you go again, and you stop again half-way before home. And so on.
+        After an infinite amount of time (it might be long), you arrive home. Well you have an example of a convergent
+        infinite series. This one was a geometric series. For geometric series, the convergence is very fast. Actually
+        it is exponential! In the case of the Basel problem, the terms do not decrease that quickly. It is the
+        particular case of a Riemann sum: </p>
+      $$
+      \zeta(\alpha) := \sum_{n=1}^\infty \frac 1 {n^\alpha}.
+      $$
+      <p> And it is well known that a Riemann sum converges if and only if \(\alpha > 1\) ( or \( Re(\alpha) > 1\) if we
+        extend to complex numbers). For the Basel problem, \(\alpha=2\), so the series converges, and what we compute is
+        actually \(\zeta(2)\), the value of the Riemann Zeta function at 2.
+      </p>
+
+      <p>Their exist various ways to compute \(\zeta(2)\). In 1999, Robin Chapman from University of Exeter wrote the
+        survey <a href="/maths/files/EvaluatingZeta2ByRobinChapman.pdf">"Evaluating \(\zeta(2)\)"</a> in which he
+        provides a collection of such proofs. My favorite one is the sixth. It does not involve advanced theories and
+        goes through original, while elementary, formulas like :
+      </p>
+
+      $$
+      \text{For any } t \in ~] 0; 2\pi [~, \quad \sum_{n=1}^\infty \sin (nt) < \frac 2 {\sin (\frac t2)} \quad \text{
+        and } \quad \sum_{n=1}^\infty \frac{\sin (nt)}n=\frac{\pi-t}{2}~~. $$
+        <p>In the meantime, other proofs have been
+        provided. Continuing the work of Robin Chapman, I listed three of them in <a
+          href="/maths/files/ReEvaluatingZeta2ByCharlesDumenil.pdf">that document</a>. They differ from the previous
+        one, by bringing geometric and probabilistic aspects.</p>
+
+        <p>As I said, the Basel problem is a part of the Riemann Zeta function. And this function still keeps a lot of
+          mysteries. The most obvious one is the Riemann hypothesis itself. But it is far too complicated... The one
+          that interests me here is the following : We were able to compute \(\zeta(2)\), actually we have a practical
+          expression of \(\zeta(n)\) for any even \(n\). But, for all odd \(n\), we are not even close to a simple
+          expression. For instance, all we know about \(\zeta(3)\), the Apéry's constant, is that it is an irrational
+          number. I think that's pretty frustrating!</p>
+
+        <p>And yet! We have lots of formulas and hints that may help us. For instance, for any even \(n\), \(\zeta(n)\)
+          is a fraction of \(\pi^n\). We may have a pattern here! Also, using proof 6 from the survey of Robin Chapman,
+          we can have:
+          $$
+          \sum_{n=1}^\infty \frac{\cos (nt)}{n^2} =\frac{t^2}4-\frac{\pi t}2+\frac{\pi^2}6~~.
+          $$
+
+          And up to an integration, we obtain :
+
+          $$
+          \sum_{n=1}^\infty \frac{\sin (nt)}{n^3} =\frac{t^3}{12}-\frac{\pi t^2}4+\frac{\pi^2t}6~~.
+          $$
+
+          At \(t=3\pi/2\), it gives:
+
+          $$
+          \sum_{k=0}^\infty \frac{(-1)^k}{(2k+1)^3}= -\frac{\pi^3}{32}~~.
+          $$
+
+          So we can have some results with cubic powers. And we could continue the process to higher degrees. But the
+          expression that would interest us is \(\sum_{n=1}^\infty \frac{\cos (nt)}{n^3}\), that is \(\zeta (3)\) at
+          \(t=0\).
+          With the game of alternations between sinus and cosinus through the derivatives, the only way to reach it
+          would be to iteratively integrate from \(\sum_{n=1}^\infty \frac{\cos (nt)}n\). We can give a nice expression
+          for \(t \in ]0;2\pi[\):
+
+          $$
+          \sum_{n=1}^\infty \frac{\cos (nt)}n= -\ln(2\sin (\tfrac t 2))~~.
+          $$
 
 
-<hr class="separateur">
+          And here comes the problem. We can hardly integrate this expression. So its a dead-end for the method of proof
+          6. And I am pretty sure that any other adaptation would be a dead-end too. So the open question is: Why? Is it
+          just because of some impossible integrations? Is it for some obscure algebraic reasons? Are all dead-ends
+          related in some way? If you have any idea...
+        </p>
 
-<!-- Sujet de thèse -->
+        <div class="dateSection">Écrit le 23 juillet 2025</div>
+    </section>
 
-  <section>
-  <div class="intro">
-  <div class="texte-gauche">
-    <h2>My Phd topic</h2>
-    <h3> 3D-Delaunay triangulation of points on surface </h3>
-    <p>The Delaunay triangulation of a set of points is the triangulation in which any triangle has an empty circumsphere.
-	In the plane, a triangle exists if and only if the circle passing through the three vertices of triangles does not contains any other points of the sample points. In that dimension, by Euler's characteristic, the number of edges and triangles are asymptotically linear with the number of points. We say that the size of Delaunay triangulation is linear with the number of points.</p>
 
-    <p>We extend to dimension 3 by considering the sphere passing through the four vertices of a tetrahedron instead of a circle passing through the three vertices of a triangle. But in dimension 3, Euler's characteristic is not a sufficient constraint, and the size of the Delaunay triangulation ranges from linear to quadratic. Even worst, it depends both on the surface and the sample points.</p>
+    <hr class="separateur">
 
-    <p>My job, supervised by Olivier Devillers, was to estimate that size, in the case where the surface is a so-called generic surface, and the sample points is random (Poisson) set of points. I proved that the Delaunay triangulation, in that case, maintains its linear size. More explications below (later).</p>
-  </div>
+    <!-- Sujet de thèse -->
 
-  <img src="images/DelTri.png" alt="planar Delaunay Triangulation" class="image-these">
-  </div>
+    <section>
+      <div class="horizontalFlex">
+        <div class="container-texte">
+          <h2>My Phd topic</h2>
+          <h3> 3D-Delaunay triangulation of points on surface </h3>
+          <p>The Delaunay triangulation of a set of points is the triangulation in which any triangle has an empty
+            circumsphere.
+            In the plane, a triangle exists if and only if the circle passing through the three vertices of triangles
+            does not contains any other points of the sample points. In that dimension, by Euler's characteristic, the
+            number of edges and triangles are asymptotically linear with the number of points. We say that the size of
+            Delaunay triangulation is linear with the number of points.</p>
 
-  <div class="dateSection">Écrit le 23 juillet 2025</div>
-  </section>
+          <p>We extend to dimension 3 by considering the sphere passing through the four vertices of a tetrahedron
+            instead of a circle passing through the three vertices of a triangle. But in dimension 3, Euler's
+            characteristic is not a sufficient constraint, and the size of the Delaunay triangulation ranges from linear
+            to quadratic. Even worst, it depends both on the surface and the sample points.</p>
 
-<hr class="separateur">
+          <p>My job, supervised by Olivier Devillers, was to estimate that size, in the case where the surface is a
+            so-called generic surface, and the sample points is random (Poisson) set of points. I proved that the
+            Delaunay triangulation, in that case, maintains its linear size. More explications below (later).</p>
+        
+          </div>
+        <div class="container-image">
+          <img src="images/DelTri.jpg" alt="planar Delaunay Triangulation" class="image">
+        </div>
+      </div>
 
-  <section>
-    <p>Feel free to share your thoughts, remarks or questions about thoses articles. (need a github account)</p>
+      <div class="dateSection">Écrit le 23 juillet 2025</div>
+    </section>
 
-<script src="https://utteranc.es/client.js"
-        repo="CharlesDuMenhir/CharlesDuMenhir.github.io"
-        issue-term="/maths/"
-        label="💬 Commentaires"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
-  </section>
+    <hr class="separateur">
 
-<hr class="separateur">
+    <section>
+      <p>Feel free to share your thoughts, remarks or questions about thoses articles (github account needed).</p>
 
+      <script src="https://utteranc.es/client.js" repo="CharlesDuMenhir/CharlesDuMenhir.github.io" issue-term="/maths/"
+        label="💬 Commentaires" theme="github-light" crossorigin="anonymous" async>
+      </script>
+    </section>
+
+  </main>
     <footer>
-        <p> &copy; 2025 [Charles Duménil]</p>
+      <p> &copy; 2025 [Charles Duménil]</p>
     </footer>
 </body>
+
 </html>

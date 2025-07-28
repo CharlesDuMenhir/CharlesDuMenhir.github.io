@@ -1,0 +1,33 @@
+TO KNOW:
+
+-----Pour tester le site en local-------------
+
+Dans ce dossier, ouvrir un terminal, et entrer:
+
+python -m http.server 5500
+
+Puis sur un navigateur, aller sur http://localhost:5500/
+
+TRES IMPORTANT!!! Faire shift+reload sur la page pour supprimer le cache!
+
+On quitte le serveur dans le terminal avec ctrl c.
+
+----- Tips VSC-------------
+Alt z : limiter le texte à l'écran
+Alt shift f : autoindentation
+
+
+-----Sites utiles-------------
+https://www.tinkercad.com/ pour modeliser en 3d
+
+https://sketchfab.com/ pour presenter sa librairie d'objets 3D
+
+---------------------------------------------------------------------------------------
+
+TO DO:
+
+Un sous menu pour certaines pages
+
+un sousheader d'explications
+
+Des liens GitHub CV etc...

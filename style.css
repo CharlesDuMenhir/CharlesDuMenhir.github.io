@@ -1,12 +1,11 @@
 * {
-  box-sizing: border-box;
-} /*limite les box à l'écran*/
+  box-sizing: border-box;  /*limite les box à l'écran*/
+} 
 
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
   background: white;
-  padding: 2rem; 
+  padding: 3rem; 
   color: #333;
 }
 
@@ -23,114 +22,135 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
   z-index: 1000;
 }
 
 header p {
-    margin: 0;
-    font-size: 1.8rem;
-   font-weight: bold;
-  }
+  color: white;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
 
-  nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 2rem;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
 
-  nav a:hover {
-    color: #4DD0E1;
-  }
+nav a:hover {
+  color: #4DD0E1;
+}
 
-.en-construction {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #888;
-  margin-top: 10px; /* espace pour le header fixe */
-  margin-bottom: 1rem;
-  font-style: italic;
-  letter-spacing: 0.5px;
+
+.bouton-retour {
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  background-color: #333;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 25%;
+  text-decoration: none;
+  font-size: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
 }
 
 
 /*----------------------MAIN------------------*/
-  main {
-    width: 98%;
-    margin: 0px auto 0 auto; /* espace pour header */
-    background: white;
-    padding: 2rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-
-/*----------------------INTRO------------------*/
-main section {
-margin: 20px auto 0 auto;
+main {
+  margin: 0 10px; /*pour que ca colle avec les angles du footer*/
+  margin-bottom: 0px;/*pour que ca touche le footer*/
+  background: white;
+  padding: .5rem;/* espace pour header */
+  text-align: justify;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); 
 }
 
-.image-profil {
-  display: block;
-  margin: 20px auto 2rem auto; /* espace sous header */
-  width: 500px; /* ou autre taille */
-  height: auto;
-  border-radius: 20px; /* coins arrondis */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* optionnel : ombre douce */
-}
 
-.intro {
-  display: flex;
-  align-items: center;
-  margin-top: 70px; /* espace sous header fixe */
-  margin-bottom: 70px;
-  padding: 3rem;
-  width = 90%;
-  max-width: 1200px;
+section {
+  margin: 10px auto ;
+  width: 90%;
+  max-width: 2000px; /*Evite de s'etendre si on dezoom*/ 
+  margin-top: 5rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
-  background: white;
-  gap: 8rem;
 }
 
-.texte-droite {
-  flex: 1;
+section h3 {
+  color: #4DD0E1;
 }
 
-.texte-droite h2 {
-  font-size: 1.8rem;
-  margin-top: 0;
-}
-
-.texte-droite h3 {
-font-size: 1.5rem;
-color: #4DD0E1;
-}
-
-.texte-droite p{
-  font-size: 1rem;
+.dateSection {
+  text-align: end;
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 3rem;
+  font-style: italic;
 }
 
 .separateur {
   border: none;
   border-top: 1px solid #ccc;  /* fine ligne grise claire */
-  margin: 3rem auto;
+  margin: 1rem auto;
   width: 80%;                  /* ajuste selon ton style */
 }
 
-/*----------------------À propos de moi------------------*/
 
-.apropos {
-  padding: 1rem;
-  width = 90%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  background: white;
+/*----------------------Game------------------*/
+
+.horizontalFlex {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 4rem;  /*remettre 4 à la fin*/
 }
 
-.apropos p {
-  font-size: 1rem;
+.container-texte {
+  flex: 2;
+}
+
+.container-image{
+	flex: 1;
+}
+
+.image {
+  width: 100%;
+  height: auto;            /* ← garde les proportions naturelles */
+  border-radius: 20px; /* coins arrondis */
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); /* optionnel : ombre douce */
+}
+
+.texte-encadre {
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  border-radius: 20px; /* coins arrondis */
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.cont-image-centree{
+  margin: 1rem auto;
+  text-align: center;
+  max-width: 30%;
+}
+
+.cont-image-centree .image {
+  box-shadow: 0 0 8px 3px #ae800a; /* optionnel : ombre douce */
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-top: 0.5em;
 }
 
 
@@ -143,7 +163,7 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   border-radius: 12px; /* arrondi des coins */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* ombre externe */
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); /* ombre externe */
 }
 
 footer p {
