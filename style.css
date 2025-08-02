@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;  /*limite les box à l'écran*/
-} 
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -17,7 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 16px 32px;
   position: fixed;
   top: 0;
   left: 0;
@@ -45,6 +45,14 @@ nav a:hover {
   color: #4DD0E1;
 }
 
+header img {
+  height: 1.5rem;
+  transition: transform 0.2s ease; /* effet fluide */
+}
+
+header img:hover {
+  transform: scale(1.2); /* agrandissement à 120 % */
+}
 
 .bouton-retour {
   position: fixed;
@@ -61,25 +69,21 @@ nav a:hover {
 }
 
 
+
 /*----------------------MAIN------------------*/
 main {
-  margin: 0 10px; /*pour que ca colle avec les angles du footer*/
-  margin-bottom: 0px;/*pour que ca touche le footer*/
+  width: 1000px;
+  margin: 0px auto; /*10px pour que ca colle avec les angles du footer*/
   background: white;
-  padding: .5rem;/* espace pour header */
+  padding: 1rem ;/* espace sous header */
   text-align: justify;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); 
 }
 
-
 section {
-  margin: 10px auto ;
+  margin: 2rem auto ;
   width: 90%;
   max-width: 2000px; /*Evite de s'etendre si on dezoom*/ 
-  margin-top: 5rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 section h3 {
@@ -102,13 +106,61 @@ section h3 {
 }
 
 
-/*----------------------Game------------------*/
+/*----------------------MENU BLOG------------------*/
 
+.articles-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.articles-list a{
+  text-decoration: none;
+  color: #333;
+}
+
+article {
+  height: 170px;
+  display: flex; /* image à coté de la descirption*/
+  align-items: flex-start;
+  gap: 1rem;
+  border: 1px solid #98989c;
+  border-radius: 6px;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+article:hover {
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); 
+}
+
+.article-thumb {
+  height: 100%;       /* largeur maximale */
+  width: auto;   /* conserve les proportions */
+  object-fit: cover;    /*crop pour ajuster*/
+  /*display: block;         /* supprime l’espacement inline par défaut */
+  border-radius: 6px;     /* coins arrondis (optionnel) */
+}
+
+article h3 {
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  vertical-align: middle;
+}
+
+article p{
+  text-align: end;
+  font-style: italic;
+  font-size: .8rem;
+  margin-bottom: 0;
+}
+
+/*----------------------Game------------------*/
 .horizontalFlex {
   display: flex;
   align-items: center;
-  padding: 1rem 0;
-  gap: 4rem;  /*remettre 4 à la fin*/
+  margin: 0 auto 1rem;
+  gap: 4rem;
 }
 
 .container-texte {
@@ -121,7 +173,7 @@ section h3 {
 
 .image {
   width: 100%;
-  height: auto;            /* ← garde les proportions naturelles */
+  height: auto;
   border-radius: 20px; /* coins arrondis */
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); /* optionnel : ombre douce */
 }
@@ -132,6 +184,7 @@ section h3 {
   text-align: center;
   font-size: 1.2em;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  background-color: white;
   border-radius: 20px; /* coins arrondis */
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
 }
@@ -139,11 +192,7 @@ section h3 {
 .cont-image-centree{
   margin: 1rem auto;
   text-align: center;
-  max-width: 30%;
-}
-
-.cont-image-centree .image {
-  box-shadow: 0 0 8px 3px #ae800a; /* optionnel : ombre douce */
+  max-width: 30%; /*ou 350px*/
 }
 
 figcaption {
@@ -153,10 +202,58 @@ figcaption {
   margin-top: 0.5em;
 }
 
+/*--------------Genealogie-------------*/
+
+.decorativeG-image {
+  position: absolute;
+  width: 15rem;  /*ou 20%*/
+  height:auto;
+}
+
+.decorativeD-image {
+  position: absolute;
+  right:0;
+  width: 15rem;
+  height: auto;
+}
+
+#genea .horizontalFlex{
+ justify-content: space-evenly;
+ gap: 2rem;
+}
+
+.vintage-frame {
+  padding: 20px;/*largeur duc adre*/
+  background-color: #e4d5ab; /* ton papier vieilli */
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.vintage-frame img {
+  width: 100%;
+  border: 2px solid #fff;
+}
+
+.vintage-frame .photo {
+  height: 250px;
+  width: auto;
+  border: 2px solid #fff;
+}
+
+.vintage-frame figcaption {
+  font-size: .8rem;
+  margin: auto;
+  font-style: italic;
+  color: #666;
+  margin-top: 0.8rem;
+}
+
 
 /*----------------------Footer------------------*/
 
 footer {
+  margin: 0 auto;
+  width: 1020px;
   padding: 0rem 2rem;
   background-color: white;
   border: solid black;
