@@ -1,3 +1,18 @@
+TO DO:
+
+Un sous menu pour certaines pages
+
+Sujets:
+Lerouville (Escalade)
+Saint mihiel (Escalade)
+These (Maths Perso)
+Galerie de Mido (Perso)
+Principe thermo (Science)
+Surface de boy (Maths)
+
+
+
+---------------------------------------------------------------------------------------
 TO KNOW:
 
 -----Pour tester le site en local-------------
@@ -22,12 +37,3 @@ https://www.tinkercad.com/ pour modeliser en 3d
 
 https://sketchfab.com/ pour presenter sa librairie d'objets 3D
 
----------------------------------------------------------------------------------------
-
-TO DO:
-
-Un sous menu pour certaines pages
-
-un sousheader d'explications
-
-Des liens GitHub CV etc...
