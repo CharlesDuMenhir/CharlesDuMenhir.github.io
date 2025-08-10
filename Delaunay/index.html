@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/style.css" rel="stylesheet">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <title>Delaunay</title>
+</head>
+
+<body>
+  <header>
+    <p>3D-Delaunay triangulation</p>
+    <nav>
+      <a href="https://instagram.com/CharlesDuMenhir"><img src="/images/InstaMin.png"></a>
+      <a href="https://github.com/CharlesDuMenhir"><img src="/images/GithubMin.png"></a>
+      <a href="https://www.8a.nu/user/charles-dumenil"><img src="/images/VerticalLifeMin.png"></a>
+      <a href="/mido/">Galerie de Mido</a>
+    </nav>
+  </header>
+
+  <!-- Bouton retour accueil-->
+  <a href="/" class="bouton home"> <img src="/images/Left.png"style="width:40px;"> </a>
+
+  <!-- Bouton retour en haut -->
+  <div id="top" style="scroll-margin-top: 75px"></div>
+  <a href="#top" class="bouton up"> <img src="/images/Up.png"style="width:40px;"> </a>
+
+  <main>
+
+    <!-- Sujet de thèse -->
+
+    <section>
+      <h1>My Phd topic:<br> Expected size of the 3D-Delaunay triangulation of random points on a surface.</h1>
+
+      <h2>Preamble</h2>
+      <p>
+        While being a teacher, I made a break to give back to my life a scientific part. I've always wanted to do a PhD, I was just waiting for the right moment. That moment arrived during an internship at Inria, where I met Olivier Devillers. He was specialised in the Delaunay triangulation, and for the past few years, added probability features in his researches. He offered a research topic that mixed maths and computer science. I got it. It took me almost 6 years to achieve my thesis! The problem was harder than expected.  
+      </p>
+
+      <p>
+        In this article, I present the great lines of my PhD subject. Not only to expose the notions to the reader but also for myself, to keep in mind the keystones of the demonstration I made. 
+      </p>
+
+
+      <h2>Clarifications</h2>
+      <p>
+        The 2D-Delaunay triangulation is a triangular mesh of points that has a specific property: 3 points are neighbors if and only if their circumcircle does not contain any other points. In that case, we say that the corresponding triangle has an empty circumcircle. In practice, it creates nice triangles, closer to equilateral triangle than to flat triangles. In higher dimension, it is the same but you replace triangles by simplex of the corresponding dimension, tetraedron for 3D etc...
+      </p>
+
+      <div class="container-image" style="text-align: center;">
+        <img src="images/DelaunayVoronoi.jpg" alt="Delaunay Voronoi" class="image" style="width:35%;">
+        <figcaption>The Voronoi diagram (in red) and the Delaunay triangulation of 10 points uniformly distributed in the unit disk.</figcaption>
+      </div>
+
+      <p>
+        The Delaunay triangulation is mainly used to solve numerically differential equations, and modelize physics problems. It is also used as a cruxial step in algorithms of surface reconstruction. In computer science, it can be used to compute other graph constructions like the minimal spanning tree, since it contains it. Notice that the Delaunay triangulation is the dual of the Voronoi diagram.
+      </p>
+
+      <div class="container-image" style="text-align: center;">
+        <img src="images/CGALEleph.jpg" alt="elephant" class="image" style="width:50%;">
+        <figcaption>The Voronoi diagram (in red) and the Delaunay triangulation of 10 points uniformly distributed in the unit disk.</figcaption>
+      </div>
+
+      <p>
+        A legitimate question is: for n points, how many triangles does it creates? The answer might first depend on the dimension. For 2D-triangulation, it is rather a topological question, and Euler's characteristic says that the number of triangles is linear to the number of points. The precise number of triangles depends only on the genus of the surface. If it is a sphere — a plane, with a point at infinity — the number of triangles is 2n-4 and the number of edges is 3n-6. If it is a torus, the number triangles (resp. edges) is 2n (resp. 3n). Actually, it is not even specific to Delaunay triangulations.
+      </p>
+
+  <div class="container-image" >
+        <img src="images/quadraticCase.jpg" alt="quadratic Triangulation" class="image" style="width:50%;">
+        <figcaption>A quadratic case for the 3D-Delaunay triangulation: the two lines are not coplanar, and half of the point set is on each line.</figcaption>
+      </div>
+
+      <p>
+        The question is tougher in higher dimensions. Indeed, the size of the 3D-Delaunay triangulation ranges from linear to quadratic. As a linear example, you can consider a 3D grid of points. As a quadratic triangulation, consider two not-parallel lines, on which lie n/2 points each. You can link any pair of consecutive points of a line to any such pair on the other line. Their circumsphere won't contain any other points, thus you have Θ(n^2) tetraedra (the notation means that n^2 is an order of magnitude). But it is not that simple, for points on a single surface, you can have different sizes of Delaunay triangulation depending on the distribution of the points. On a cylinder for instance, if the points lie on an helix, the triangulation size will be \( \Theta( n^{3/2}) \). If they are uniformly distributed at random, its size will be Θ(n ln(n)) in expectation.
+      </p>
+
+      <div class="container-image" >
+        <img src="images/badCylinder.jpg" alt="bad cylinder" class="image" style="width:20%;">
+        <figcaption>n points are distributed on an helix on the cylinder, each point, for instance the red one, is neighbor with \(\sqrt n\) other points.</figcaption>
+      </div>
+
+      <p>
+        But, as a surface of revolution, the cylinder is quite a specific surface. And we might admit that the Delaunay triangulation has a pretty pathological behavior on it. Thus the question I answered in my thesis is: what happens if we keep a random uniform distribution of points but on a generic surface, not a specific one. Practically, we observed that the triangulation remained linear. But I had to prove it. Back then, when I explained my subject to my PhD collegues, I often showed the Stanford bunny as an illustration. I remember one saying that my job was to count triangles on rabbits... Nice vulgarisation! It would be more precise to say that I counted triangles on and inside rabbits. Rest assured, no animals were harmed during the making of this thesis.
+      </p>
+
+      <h2>The cylinder case</h2>
+      <p>
+        In <a href="https://inria.hal.science/inria-00176204/">this article</a>, Deviller et al. proved the Θ(n ln(n)) bound in the cylinder case. We remind that we consider a random uniform set of points on a cylinder and the Delaunay triangulation of those points. The idea is the following: instead of checking if 4 points are linked by a Delaunay tetraedron, we check if two points are linked by an edge, we say that they are Delaunay neighors. It is the case if their exists an empty sphere with those two points on its boundary. Since the data points are distributed on the cylinder, two points are neighbors if their exists a sphere passing through the points whose intersection with the cylinder is empty. And that is the first keystone. For two given points p and q on the cylinder, all we need to do is to check all the possible intersections of a cylindre and a sphere passing through p and q.
+      </p>
+
+      <p>
+        All such possible intersections is a lot, it is equivalent to R^2 (consider all possible centers in the mediator plane of p and q). But we can reduce again the analysis. We can identify a family F(p,q) of regions on the cylinder depending on the two points, such that a sphere passing through p and q contains one the shape of F(p,q). If we consider the graph in which two points p and q are neighbors if one the shape of F(p,q) is empty is then a super-graph of the Delaunay triangulation. For this method to be useful, we need to choose well the family F so that the size of the new graph keeps the order of magnitude of the Delaunay triangulation. Before explaining what are those regions and how we choose them in the cylinder case, I have to explain basic notions on curvature on surface.
+      </p>
+
+      <p>
+        On some geometric objects, you can consider a notion of curvature. On a planar curve the notion is intuitive, consider the curve as a car racing circuit, the curvature describe how much a turn is tight. If you are on a straight line, the curvature is 0. To be precise, at a point of the curve, the curvature is the inverse of the radius of the osculating circle — the circle that fits the most with the curve at this point. On a smooth surface, you can find two special osculating spheres at each point, a greatest one and a smaller one. They give the two so called principale curvatures at a point. Each sphere osculates the surface along a line on the surface. The remarquable point is that the principale lines are always perpendicular.
+      </p>
+
+      <div class="container-image" >
+        <img src="images/curvatures.jpg" alt="principal curvatures" class="image" style="width:50%;">
+        <figcaption>The principal curvatures of S at p are the curvatures of the red curves at p.</figcaption>
+      </div>
+
+      <p>
+        Back to the cylinder: at each point the principale lines are the basis circle and straight line along the cylinder. For a sphere to be a Delaunay sphere, it needs its intersection with the cylinder to be small enough. The problem with the cylinder is that, if you take an almost osculating sphere, inside the cylinder, the intersection will create a strip around the cylinder. And you can make that strip as thin as you want. Thus on a cylinder, two point can be far and Delaunay neigbors.
+      </p>
+
+      <div class="container-image" >
+        <img src="images/cylinder.jpg" alt="cylinder" class="image" style="width:75%;">
+        <figcaption>Left: The cylinder and its intersections with specific spheres. Right: Their images under an unroll map.</figcaption>
+      </div>
+
+      <p>
+        To compute the size of Delaunay triangulation, we can consider, for each pair of point p and q, the following family F(p,q) of regions: consider the four principal lines at p and at q. They form a rectangle on a the cylinder with p and q as opposite corners. Cut the rectangle into two triangles such that [pq] is the hypotenuse. They will be the main regions of F(p,q). Now consider a sphere passing through p and q, you can observe that it is very likely to contain one the triangles. To be complete we should consider other regions, but it will not be necessary for this explanations. Note that the chosen triangles, are aligned with the principal curvatures. Since the principale lines form natural axis on the cylinder, we say that those triangles are axis-aligned. Thus, the next step is to consider a graph in which to points are neighbors if an axis-aligned right triangle with [pq] for hypotenuse is empty.
+      </p>
+
+      <p>
+        I will expain it in later chapter, but such a graph has a Θ(n ln(n)) expected size. Thus the Delaunay triangulation has a smaller size: we say it has a O(n ln(n)) expected size (big o represents upper bounds). It is important to know if we chose well the regions, in other words, if the lower bound is also Θ(n ln(n)). Here we have to consider a sub-graph of the Delaunay triangulation. We do that by limiting the possible spheres passing through p and q. I won't delve into this part but we can find spheres such that the corresponding graph is Θ(n ln(n)) in expected size. That proves that the Delaunay triangulation of uniform random points on a cylinder has expected size Θ(n ln(n)).
+      </p>
+
+      <h2>On a generic surface</h2>
+      <p>
+        On a generic surface, we conjectured that this pathological behavior won't happen. But first it might be important to define what is a generic surface. 
+      </p>
+
+      <p>
+        A generic surface is the opposite of a specific surface. Roughly it is what we call sometimes a patatoid. What interests us here is the curvature of such a surface. More precisely, the locus of maximal curvatures. On patatoids, this locus forms a one-dimensional set of curves, commonly called ridges. On a cylinder, this locus is the whole cylinder itself, because the curvature is constant. That gives our generic property: we say that a surface is generic if the locus of maximal curvatures is a one-dimensional set of curves. A property of those ridges is that, since they are maxima of curvature, their osculating sphere is locally intersecting the surface only at the contact point. Another important element of surface is their medial axis. The medial axis is the set of centers of maximal spheres for the surface. Usually such spheres touche tangently the surface at two points, sometimes more. If the medial axis is bidimensional, the surface will be generic. If not, it is bad sign. Dedicated readers may notice that the ridges correspond to the contact points of spheres that are both medial and osculating.
+      </p>
+
+        <div class="container-image" >
+        <img src="images/medialAxis.jpg" alt="medial Axis" class="image" style="width:50%;">
+        <figcaption>The inner medial axis (in red) of the black curve. Its extremities are centers of osculating circles (in green).</figcaption>
+      </div>
+
+      <p>
+        Two examples illustrate well the distinction between generic and not generic: the oblong and the flattened spheroids. If you elongate a sphere, like a rugby ball, every line in a direction orthogonal to the axis of elongation is a principal line with constant curvature, so like for the cylinder, the maxima of curvature cover the whole spheroid. In the opposite, if you flatten a sphere, the maxima of curvature will lie on the largest circle, where the surface is the most... curved. It is well a one-dimensionnal set. This surface is said generic. Note that the medial axis of an oblate spheroid is one-dimensional. 
+      </p>
+
+      <p>
+        Now that what it is clear what a generic surface is, we can put our interest back in the Delaunay triangulation. If a large number of points are distributed on a surface, that we call S, a sphere gas more chance to be a Delaunay sphere if its intersection with S is small. Small in the sense of its area. So we have a look at small intersection of spheres with S. Roughly we can consider two extremal cases, either the sphere is small, either the sphere is almost medial. And all intermediate spheres. But in all cases, we observe one important thing, for intersection small enough, the intersection approaches an ellipse axis-aligned on S. Morever their aspect ratio is computable. If at a point p on S, k1 and k2 are the principal curvatures, and r* is the medial radius, the aspect ratio of the ellipses ranges from 1 to \( \sqrt\frac{1-k_1r^*}{1-k_2r^*}\). Thus, it seemed enough to study the empty-region graphs where the regions are axis-aligned ellipses.
+      </p>
+
+      <h2>Empty-region graph</h2>
+      <p>
+        An empty-region graph is a graph in which two points p and q are neighbors if there exists a region, given among a family of regions depending on p and q, that is empty from other data points. A first obvious example is the 2D-Delaunay triangulation, where the corresponding regions are all the circles passing through two points p and q. But it is not that easy to compute its size that way (moreover we already know it). Another empty-region graph is the half-moon graph: two points p and q are neighbors if one the two halves Hr and Hl of the disk with diameter [pq] is empty (Hr stands for half-moon on the right of the vector pq. Hl, for the left). One may notice that it is a super graph of the Delaunay triangulation: a circle passing through p and q contains either Hr or Hl. We compute the expected size of the Half-moon graph by computing the expected degree — the number of neighbors — of a point p. Let's do it: we sum over all points q in the Poisson process X with parameter λ.
+      </p>
+
+      $$\begin{align}
+        E[deg(p)]&=E[\Sigma_{q \in X} \textbf{1}(Hr(p,q)~empty)+\textbf{1}(Hl(p,q)~empty)-\textbf{1}(Hr(p,q)~\lor~Hl(p,q)~empty)]\\
+      &=\int_{R^2} \lambda (\textbf{P}(Hr(p,q)~empty)+\textbf{P}(Hl(p,q)~empty)-\textbf{P}(Hr(p,q)~\lor~Hl(p,q)~empty))dq\\
+      &=\int_{R^2} \lambda (e^{-\lambda|Hr(p,q)|}+e^{-\lambda|Hl(p,q)|}-e^{-\lambda|Hr(p,q)\cup Hl(p,q)|})dq\\
+      &=\int_0^{2\pi} \int_0^{+\infty} \lambda (e^{-\lambda r_q^2/8}+e^{-\lambda r_q^2/8}-e^{-\lambda r_q^2/4})r_qdr_q d\theta_q\\
+      &=8+8-4=12.
+      \end{align}$$
+
+      <p>
+        We go through line 1 to line 2 using Slivnyak-Mecke theorem, from line 2 to line 3 using formulas of Poisson process, and from line 4 to 5 as a famous Gaussian integral. tWe obtain that the expected degree of a point in the half-moon graph is 12. Thus, if the points are distributed in a square of area 1, the expected size is approximately 6λ (where λ is the expected number of points).
+      </p>
+
+      <p>On the other hand, we can consider the Gabriel graph in which two points p and q are neighbors if the circle with diameter [pq] is empty. It is a subgraph of the Delaunay triangulation since among all possible circles passing through p and q, we have restricted the possibilities to a single circle. A similar computation provides an expected degree for each point of 4. Suppose that it was difficult to compute the size of the Delaunay triangulation, this would provide upper and lower bounds.</p>
+
+      <div class="container-image" >
+        <img src="images/3graphes.jpg" alt="planar Delaunay Gabriel Triangulation" class="image" style="width:100%;">
+        <figcaption>Gabriel graph, Delaunay triangulation and Half-moon graph.</figcaption>
+      </div>
+
+      <p>
+        Fir my subject, what interested me was empty-axis-aligned-ellipse graphs. We can consider three kind of such graphs: ellipses withs one given aspect ratio, with a bounded aspect ratio, or with any aspect ratio. In the first case, to be brief, the expected degree is 6. It is a stretched Delaunay triangulation. In the last case, we fall back into the cylinder case. We note that inside an axis-aligned ellipse passing throughs two points p and q, you can always insert an axis-aligned-right-triangle with [pq] for hypotenuse. Thus we have super-graph. We compute its expected degree. In that case, we assume first that the Poisson process is distributed in a square of area 1. We compute in a similar way than before, instead that the area of a triangle is given by \(x_qy_q/2\) for p at the origin. We obtain:
+      </p>
+
+      $$\begin{align}
+        E[deg(p)]=12\ln (\lambda)+O(1).
+      \end{align}$$
+
+      <p>
+        That gives the order of magnitude of the expected size of the 3D-Delaunay triangulation on cylinder: Θ(n ln(n)).
+      </p>
+
+      <p>
+        It remains the case of ellipses with bounded aspect ratio. We consider ellipses whose aspect ratio ranges from 1 to a. A first difficulty is to find a family F of regions such that any ellipse passing through p and q would contain a region of F. We could have taken the right triangles, but we good reasons to believe that the upper bound would not be tight. A better region is the intersection of the ellipses center on the middle of [pq] with extremal aspect ratio. It resembles a rounded rectangle. Cut in half, it guaranties that any ellipses passing p and q contains one of its halves. It gives the following tight bound:
+      </p>
+
+      $$\begin{align}
+        E[deg(p)]=\Theta(\ln 1/a).
+      \end{align}$$
+
+      <h2>Expected size of the 3D-Delaunay triangulation of points on a generic surface</h2>
+      <p>
+        As we said, a small intersection sphere/surface resembles an axis-aligned-ellipse, where the axis is given by the principal curvatures, and the aspect ratio ranges from 1 to \( \sqrt\frac{1-k_1r^*}{1-k_2r^*}\). Thus, up to some approximations, we can say that the expected degree of a point p in the 3D-Delaunay triangulation of a Poisson process point on a surface is:  
+      </p>
+
+      $$\begin{align}
+        E[deg(p)]=\Theta \left(\ln \frac{1-k_2r^*}{1-k_1r^*} \right).
+      \end{align}$$
+
+      <p>
+        It would be ok if that quantity was bounded, but it is not the case. Remember that the ridges are characterized by the fact that their medial sphere coincides with their first osculating sphere. In other words \(k_1=1/r^*\). But fortunalety, as p approaches the ridges, this quantity grows slowly enough and we get the theorem:
+      </p>
+
+      <div class="texte-encadre">
+      <p>
+        Let S be a closed generic surface on which a Poisson process X with parameter λ is distributed.<br>
+        The 3D-Delaunay triangulation of X is linear with λ.</p>
+      $$\begin{align}
+        E[Del(X)]=\Theta \left( λ \right).
+      \end{align}$$
+      </div>
+      
+      <p>
+        It took me 6 years to prove this. But you know, the devil is on the details...
+      </p>
+      <div class="dateSection">Écrit le 10 Août 2025</div>
+    </section>
+
+    <hr class="separateur">
+
+    <section>
+      <p>Feel free to share your thoughts, remarks or questions about thoses articles (github account needed).</p>
+
+      <script src="https://utteranc.es/client.js" repo="CharlesDuMenhir/CharlesDuMenhir.github.io" issue-term="/Delaunay/"
+        label="💬 Commentaires" theme="github-light" crossorigin="anonymous" async>
+      </script>
+    </section>
+
+  </main>
+    <footer>
+      <p> &copy; 2025 [Charles Duménil]</p>
+    </footer>
+</body>
+
+</html>
