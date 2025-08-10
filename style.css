@@ -101,6 +101,10 @@ section {
   max-width: 2000px; /*Evite de s'etendre si on dezoom*/ 
 }
 
+section h2{
+  margin-top: 3rem;
+}
+
 section h3 {
   color: #4DD0E1;
 }
@@ -183,6 +187,7 @@ article p{
 }
 
 .container-image{
+  text-align: center;
 	flex: 1;
 }
 
