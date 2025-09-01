@@ -8,30 +8,31 @@
 </head>
 
 <body>
+  <script>
+  fetch('/nav.html')
+    .then(r => r.text())
+    .then(html => document.querySelector('nav').innerHTML = html);
+  </script>
     <header>
         <p>Généalogie</p>
         <nav>
-            <a href="https://instagram.com/CharlesDuMenhir"><img src="/images/InstaMin.png"></a>
-            <a href="https://github.com/CharlesDuMenhir"><img src="/images/GithubMin.png"></a>
-            <a href="https://www.8a.nu/user/charles-dumenil"><img src="/images/VerticalLifeMin.png"></a>
-            <a href="/mido/">Galerie de Mido</a>
         </nav>
     </header>
 
 <!-- Bouton retour accueil -->
-<a href="/" class="bouton home"><img src="/images/Left.png"style="width:40px;">  </a>
+<a href="/" class="bouton home"><img src="/images/Left.png" class="img_button"">  </a>
 
 
 <!-- Bouton retour en haut -->
 <div id="top" style="scroll-margin-top: 75px"></div>
-<a href="#top" class="bouton up"><img src="/images/Up.png"style="width:40px;"></a>
+<a href="#top" class="bouton up"><img src="/images/Up.png" class="img_button"></a>
 
 
     <main id="genea">
         <div style="position: relative; margin: 10px 0;">
             <img src="images/motifChapG.png" class="decorativeG-image">
             <img src="images/motifChapD.png" class="decorativeD-image">
-            <img src="/images/ConfLogo2.png" alt="logo Roussey Bar-le-Duc" style="display: block; margin: 0 auto; width: 200px;">
+            <img src="/images/ConfLogo2.png" alt="logo Roussey Bar-le-Duc" style="display: block; margin: 0 auto; width: 30%;">
         </div>
   
         <h1 style="text-align: center;"> Une histoire barisienne</h1>
@@ -521,8 +522,8 @@
             <p>
                 En 1957, Marcelle, qui n'aura su trouver l'âme soeur, décède à l'âge de 72 ans.
             </p>
-            <div class="vintage-frame" style="width : 30%; margin: 0 auto 1rem;">
-                <img src="images/MarcRoussey2.jpg" alt="Marcelle Rousseyt">
+            <div class="vintage-frame" style="width : 30%; margin: 0 auto 1rem; height: auto">
+                <img src="images/MarcRoussey2.jpg" alt="Marcelle Roussey">
                 <figcaption>Marcelle Roussey<br>~1950</figcaption>
             </div>
             <p>
@@ -530,7 +531,7 @@
                 Marcel et Germaine s'éteignent respectivement en 1974 et 1986.
             </p>
             <div class="horizontalFlex">
-                <div class="vintage-frame" style="flex:.25;">
+                <div class="vintage-frame">
                     <img src="images/MLadevezeHonneur.jpg" alt="Legion d'honneur" >
                     <figcaption>Marcel reçoit la légion d'honneur<br>1961</figcaption>
                 </div>
@@ -544,7 +545,16 @@
             </p>
         </section>
 
-        <hr class="separateur">
+        <hr class="separateur"><!-- ------------------------------------------------------------- -->
+
+        <style>
+            .img_archive{
+                height: 12rem;
+                display: inline-block;
+                border: .2rem solid #010101;
+            }
+        </style>
+
 
         <section>
             <h2>
@@ -565,11 +575,11 @@
             </p>
             <div class="horizontalFlex">
                 <div>
-                    <img src="images/FHoriotActeDeces.jpg" alt="Francois Horiot Deces" style="height: 200px; display: inline-block; border: 4px solid #010101;">
+                    <img src="images/FHoriotActeDeces.jpg" alt="Francois Horiot Deces" class="img_archive">
                     <figcaption>Acte de décès de François</figcaption>
                 </div>
                 <div>
-                    <img src="images/FHoriotActeMariage.jpg" alt="Francois Horiot Mariage" style="height: 200px; display: inline-block; border: 4px solid #010101;">
+                    <img src="images/FHoriotActeMariage.jpg" alt="Francois Horiot Mariage" class="img_archive">
                     <figcaption>Acte de mariage de François et Julie</figcaption>
                 </div>
             </div>
@@ -587,7 +597,7 @@
             </p>
             <div class="horizontalFlex">
                 <div >
-                    <img src="images/FHoriotActeNaissance.jpg" alt="Francois Horiot Naissance" style="height: 200px; display: inline-block; border: 4px solid #010101;">
+                    <img src="images/FHoriotActeNaissance.jpg" alt="Francois Horiot Naissance" class="img_archive">
                     <figcaption>Acte de naissance de François</figcaption>
                 </div>
             </div>
@@ -601,11 +611,11 @@
             </p>
             <div class="horizontalFlex">
                 <div>
-                    <img src="images/ConfAnnuaire1899.jpg" alt="Annuaire 1899 confitures" style="height: 200px; display: inline-block; border: 4px solid #010101;">
+                    <img src="images/ConfAnnuaire1899.jpg" alt="Annuaire 1899 confitures" class="img_archive">
                     <figcaption>Extrait de l'annuaire 1899</figcaption>
                 </div>
                 <div>
-                    <img src="images/ConfAnnuaire1900.jpg" alt="Annuaire 1899 confitures" style="height: 200px; display: inline-block; border: 4px solid #010101;">
+                    <img src="images/ConfAnnuaire1900.jpg" alt="Annuaire 1899 confitures" class="img_archive">
                     <figcaption>Extrait de l'annuaire 1900</figcaption>
                 </div>
             </div>
@@ -627,7 +637,6 @@
 
 
         <div class="dateSection">Écrit le 4 Août 2025</div>
-        <!-- ------------------------ Reconstitution ------------------------ -->
 
    
         <hr class="separateur">

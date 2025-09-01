@@ -2,29 +2,29 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/style.css" rel="stylesheet">
-  <title>Accueil</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet">
+    <title>Profil</title>
 </head>
-
 <body>
-  <header>
-    <p>Profil</p>
-    <nav>
-       <a href="https://instagram.com/CharlesDuMenhir"><img src="/images/InstaMin.png"></a>
-      <a href="https://github.com/CharlesDuMenhir"><img src="/images/GithubMin.png"></a>
-      <a href="https://www.8a.nu/user/charles-dumenil"><img src="/images/VerticalLifeMin.png"></a>
-      <a href="/Profil"><Profil></a>
-      <a href="/mido/">Galerie de Mido</a>
-    </nav>
-  </header>
+    <script>
+        fetch('/nav.html')
+        .then(r => r.text())
+        .then(html => document.querySelector('nav').innerHTML = html);
+    </script>
+    <header>
+        <p>Profil</p>
+        <nav>
+        </nav>
+    </header>
 
   <!-- Bouton retour accueil-->
-  <a href="/" class="bouton home"> <img src="/images/Left.png"style="width:40px;"> </a>
+  <a href="/" class="bouton home"><img src="/images/Left.png" class="img_button"></a>
 
   <main>
-    <section class="horizontalFlex" style="margin: 6rem auto;">
+
+    <section class="horizontalFlex" style="padding: 16rem auto;">
       <div class="container-image" style="flex:1; margin-top: 4rem;">
       <img src="images/profilGraviton.jpg" alt="Charles Duménil Graviton Fontainebleau" class="coins-arrondis">
       </div>
@@ -49,7 +49,7 @@
       <h2>À propos de moi</h2>
       <p>
         J'ai grandi dans les années 90. À la frontière entre l'analogique et le numérique. Dans le village d'Haironville, j'ai évolué avec les copains à construire des cabanes, à grimper dans les arbres, à jouer à la Game Boy et à Mario Kart 64 sur écran splité, à faire du vélo, du skate et tous les autres trucs stéréotypiques de cette époque incroyable.
-        Au château de la forge, restauré par mes parents, je me suis construit dans un climat calme, sain et culturellement riche. Je me revois, enfant, à lire l'Encyclopædia Universallis et découvrir ce qu'est un quark.
+        Au château de la forge, restauré par mes parents, je me suis construit dans un climat calme, sain et culturellement riche. Je me revois, enfant, à lire l'Encyclopædia Universalis et découvrir ce qu'est un quark.
         Ces éléments auront façonné définitivement mon évolution.
       </p>
       <p>

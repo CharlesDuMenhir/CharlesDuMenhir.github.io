@@ -9,19 +9,20 @@
 </head>
 
 <body>
+  <script>
+  fetch('/nav.html')
+    .then(r => r.text())
+    .then(html => document.querySelector('nav').innerHTML = html);
+  </script>
+
   <header>
     <p>Accueil</p>
     <nav>
-       <a href="https://instagram.com/CharlesDuMenhir"><img src="/images/InstaMin.png"></a>
-      <a href="https://github.com/CharlesDuMenhir"><img src="/images/GithubMin.png"></a>
-      <a href="https://www.8a.nu/user/charles-dumenil"><img src="/images/VerticalLifeMin.png"></a>
-      <a href="/Profil/">Profil</a>
-      <a href="/mido/">Galerie de Mido</a>
     </nav>
   </header>
 
   <main>
-    <p>( Site en construction. Un jour, peut-être, il y aura plein de sujets...)</p>
+    <p>( Site en construction. Un jour, peut-être, il y aura plein de sujets...Les prochains: les voies de Meuse, la surface de Boy)</p>
 
     <section style="margin: 6rem auto;">
       <div class="articles-list">
@@ -29,7 +30,7 @@
         <a href="/Delaunay/">
           <article>
             <img src="/images/StanfordBunnyMin.png" alt="StanfordBUnny" class="article-thumb">
-            <div style="flex:2; margin: auto;">
+            <div class="article_desc">
               <h3>My PhD topic</h3>
               <p>#Perso #Maths</p>
             </div>

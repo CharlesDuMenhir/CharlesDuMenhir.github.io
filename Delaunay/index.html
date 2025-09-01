@@ -12,22 +12,23 @@
 </head>
 
 <body>
+  <script>
+    fetch('/nav.html')
+    .then(r => r.text())
+    .then(html => document.querySelector('nav').innerHTML = html);
+  </script>
   <header>
-    <p>3D-Delaunay triangulation</p>
+    <p>3D-Delaunay</p>
     <nav>
-      <a href="https://instagram.com/CharlesDuMenhir"><img src="/images/InstaMin.png"></a>
-      <a href="https://github.com/CharlesDuMenhir"><img src="/images/GithubMin.png"></a>
-      <a href="https://www.8a.nu/user/charles-dumenil"><img src="/images/VerticalLifeMin.png"></a>
-      <a href="/mido/">Galerie de Mido</a>
     </nav>
   </header>
 
   <!-- Bouton retour accueil-->
-  <a href="/" class="bouton home"> <img src="/images/Left.png"style="width:40px;"> </a>
+  <a href="/" class="bouton home"><img src="/images/Left.png" class="img_button"></a>
 
   <!-- Bouton retour en haut -->
   <div id="top" style="scroll-margin-top: 75px"></div>
-  <a href="#top" class="bouton up"> <img src="/images/Up.png"style="width:40px;"> </a>
+  <a href="#top" class="bouton up"> <img src="/images/Up.png" class="img_button"> </a>
 
   <main>
 
@@ -149,6 +150,7 @@
         An empty-region graph is a graph in which two points p and q are neighbors if there exists a region, given among a family of regions depending on p and q, that is empty from other data points. A first obvious example is the 2D-Delaunay triangulation, where the corresponding regions are all the circles passing through two points p and q. But it is not that easy to compute its size that way (moreover we already know it). Another empty-region graph is the half-moon graph: two points p and q are neighbors if one the two halves Hr and Hl of the disk with diameter [pq] is empty (Hr stands for half-moon on the right of the vector pq. Hl, for the left). One may notice that it is a super graph of the Delaunay triangulation: a circle passing through p and q contains either Hr or Hl. We compute the expected size of the Half-moon graph by computing the expected degree — the number of neighbors — of a point p. Let's do it: we sum over all points q in the Poisson process X with parameter λ.
       </p>
 
+      <div style="font-size: 0.75em;"">
       $$\begin{align}
         E[deg(p)]&=E[\Sigma_{q \in X} \textbf{1}(Hr(p,q)~empty)+\textbf{1}(Hl(p,q)~empty)-\textbf{1}(Hr(p,q)~\lor~Hl(p,q)~empty)]\\
       &=\int_{R^2} \lambda (\textbf{P}(Hr(p,q)~empty)+\textbf{P}(Hl(p,q)~empty)-\textbf{P}(Hr(p,q)~\lor~Hl(p,q)~empty))dq\\
@@ -156,7 +158,7 @@
       &=\int_0^{2\pi} \int_0^{+\infty} \lambda (e^{-\lambda r_q^2/8}+e^{-\lambda r_q^2/8}-e^{-\lambda r_q^2/4})r_qdr_q d\theta_q\\
       &=8+8-4=12.
       \end{align}$$
-
+      </div>
       <p>
         We go through line 1 to line 2 using Slivnyak-Mecke theorem, from line 2 to line 3 using formulas of Poisson process, and from line 4 to 5 as a famous Gaussian integral. tWe obtain that the expected degree of a point in the half-moon graph is 12. Thus, if the points are distributed in a square of area 1, the expected size is approximately 6λ (where λ is the expected number of points).
       </p>

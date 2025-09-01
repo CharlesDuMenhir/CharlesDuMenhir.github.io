@@ -12,36 +12,25 @@
 </head>
 
 <body>
+  <script>
+    fetch('/nav.html')
+    .then(r => r.text())
+    .then(html => document.querySelector('nav').innerHTML = html);
+  </script>
   <header>
     <p>Zeta(2)</p>
     <nav>
-      <a href="https://instagram.com/CharlesDuMenhir"><img src="/images/InstaMin.png"></a>
-      <a href="https://github.com/CharlesDuMenhir"><img src="/images/GithubMin.png"></a>
-      <a href="https://www.8a.nu/user/charles-dumenil"><img src="/images/VerticalLifeMin.png"></a>
-      <a href="/mido/">Galerie de Mido</a>
     </nav>
   </header>
 
   <!-- Bouton retour accueil-->
-  <a href="/" class="bouton home"> <img src="/images/Left.png"style="width:40px;"> </a>
+  <a href="/" class="bouton home"><img src="/images/Left.png" class="img_button"></a>
 
   <!-- Bouton retour en haut -->
   <div id="top" style="scroll-margin-top: 75px"></div>
   <a href="#top" class="bouton up"> <img src="/images/Up.png"style="width:40px;"> </a>
 
   <main>
-
-    <!-- Surface de Boy -->
-
-    <section class="boy">
-      <h2>My favorite surface</h2>
-      <h3>The Boy surface</h3>
-      <p> Yes I have a favorite surface. But it is for later!</p>
-      <div class="dateSection">Later</div>
-    </section>
-
-    <hr class="separateur">
-
 
     <!-- Probleme de Bale -->
 
@@ -143,41 +132,6 @@
         </p>
 
         <div class="dateSection">Écrit le 23 juillet 2025</div>
-    </section>
-
-
-    <hr class="separateur">
-
-    <!-- Sujet de thèse -->
-
-    <section>
-      <div class="horizontalFlex">
-        <div class="container-texte">
-          <h2>My Phd topic</h2>
-          <h3> 3D-Delaunay triangulation of points on surface </h3>
-          <p>The Delaunay triangulation of a set of points is the triangulation in which any triangle has an empty
-            circumsphere.
-            In the plane, a triangle exists if and only if the circle passing through the three vertices of triangles
-            does not contains any other points of the sample points. In that dimension, by Euler's characteristic, the
-            number of edges and triangles are asymptotically linear with the number of points. We say that the size of
-            Delaunay triangulation is linear with the number of points.</p>
-
-          <p>We extend to dimension 3 by considering the sphere passing through the four vertices of a tetrahedron
-            instead of a circle passing through the three vertices of a triangle. But in dimension 3, Euler's
-            characteristic is not a sufficient constraint, and the size of the Delaunay triangulation ranges from linear
-            to quadratic. Even worst, it depends both on the surface and the sample points.</p>
-
-          <p>My job, supervised by Olivier Devillers, was to estimate that size, in the case where the surface is a
-            so-called generic surface, and the sample points is random (Poisson) set of points. I proved that the
-            Delaunay triangulation, in that case, maintains its linear size. More explications below (later).</p>
-        
-          </div>
-        <div class="container-image">
-          <img src="images/DelTri.jpg" alt="planar Delaunay Triangulation" class="image">
-        </div>
-      </div>
-
-      <div class="dateSection">Écrit le 23 juillet 2025</div>
     </section>
 
     <hr class="separateur">

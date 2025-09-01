@@ -8,23 +8,24 @@
 </head>
 
 <body>
+    <script>
+        fetch('/nav.html')
+        .then(r => r.text())
+        .then(html => document.querySelector('nav').innerHTML = html);
+    </script>
     <header>
         <p>Fez</p>
         <nav>
-        <a href="https://instagram.com/CharlesDuMenhir"><img src="/images/InstaMin.png"></a>
-        <a href="https://github.com/CharlesDuMenhir"><img src="/images/GithubMin.png"></a>
-        <a href="https://www.8a.nu/user/charles-dumenil"><img src="/images/VerticalLifeMin.png"></a>
-        <a href="/mido/">Galerie de Mido</a>
         </nav>
     </header>
 
 
     <!-- Bouton retour accueil-->
-    <a href="/" class="bouton home"> <img src="/images/Left.png"style="width:40px;"> </a>
+    <a href="/" class="bouton home"> <img src="/images/Left.png" class="img_button"> </a>
 
     <!-- Bouton retour en haut -->
     <div id="top" style="scroll-margin-top: 75px"></div>
-    <a href="#top" class="bouton up"> <img src="/images/Up.png"style="width:40px;"> </a>
+    <a href="#top" class="bouton up"> <img src="/images/Up.png" class="img_button"> </a>
 
     <main>
         <!-- Fez -->
@@ -142,7 +143,7 @@
                         What are we supposed to do now? Easy! Just write down the blinking pattern of the red dots. And then? Well… here's where it gets tricky. In my opinion, if you're not familiar with basic computer logic, this puzzle is a dead end. Thankfully, the gaming community is large and generous, and it didn't take long for a clever nerd to figure it out. Here's the key: the left dot is a 0, the right dot is a 1. Why? Why not! There are two things — it's binary ! On the Switch version, the full sequence is:
                     </p> 
                     <p style="text-align: center; font-size: 1.2em; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;">    
-                        010100100100110001001100010100100101001001001100
+                        010100100100110001001100&#8203;010100100101001001001100
                     </p>
                     <p>
                        Well, well, well… What now? Maybe you didn't notice the pattern repeating every eight bits. Indeed, the sequences 01010010 and 01001100 appear multiple times. By converting these binary sequences to ASCII, you get the characters R and L. From the original sequence, this translates to: R L L R R L. Now it's up to you to enter these inputs and earn your second Heart Cube. Easy, right? Just wait — there's more to come!
@@ -283,8 +284,7 @@
                 </div>
             </div>
 
-
-            <div class="sketchfab-embed-wrapper" style="text-align: center;"> <iframe title="Hexahedron" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/75ce83e560c5471c9d3eb8dcabbb6841/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/hexahedron-75ce83e560c5471c9d3eb8dcabbb6841?utm_medium=embed&utm_campaign=share-popup&utm_content=75ce83e560c5471c9d3eb8dcabbb6841" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Hexahedron </a> by <a href="https://sketchfab.com/toiletsnakes?utm_medium=embed&utm_campaign=share-popup&utm_content=75ce83e560c5471c9d3eb8dcabbb6841" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> toiletsnakes </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=75ce83e560c5471c9d3eb8dcabbb6841" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+            <div class="sketchfab-embed-wrapper" style="text-align: center;"> <iframe title="Hexahedron" height="120rem" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/75ce83e560c5471c9d3eb8dcabbb6841/embed"> </iframe> <p style="font-size: 1rem; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/hexahedron-75ce83e560c5471c9d3eb8dcabbb6841?utm_medium=embed&utm_campaign=share-popup&utm_content=75ce83e560c5471c9d3eb8dcabbb6841" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Hexahedron </a> by <a href="https://sketchfab.com/toiletsnakes?utm_medium=embed&utm_campaign=share-popup&utm_content=75ce83e560c5471c9d3eb8dcabbb6841" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> toiletsnakes </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=75ce83e560c5471c9d3eb8dcabbb6841" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
 
             <div class="horizontalFlex">
                 <div class="container-texte">  
@@ -305,19 +305,8 @@
                     <figcaption>The Heart completed in the Temple of Love</figcaption>
                 </div>
             </div>
-
-                    
+            
             <div class="horizontalFlex">
-                <div>
-                    <div class="sketchfab-embed-wrapper" style="margin-bottom: 20px;">
-                        <iframe title="Fez Writing Cube" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/401eb666e94c42c28750536561c1ceff/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/fez-writing-cube-401eb666e94c42c28750536561c1ceff?utm_medium=embed&utm_campaign=share-popup&utm_content=401eb666e94c42c28750536561c1ceff" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Fez Writing Cube </a>   by <a href="https://sketchfab.com/CharlesDuMenhir?utm_medium=embed&utm_campaign=share-popup&utm_content=401eb666e94c42c28750536561c1ceff" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> myself </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=401eb666e94c42c28750536561c1ceff" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
-                    </div>
-
-                    <div class="sketchfab-embed-wrapper">
-                         <iframe title="FEZ Counting Artifact" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/7f293d0a2c594f6cbef32e4b7fc951ee/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/fez-counting-artifact-7f293d0a2c594f6cbef32e4b7fc951ee?utm_medium=embed&utm_campaign=share-popup&utm_content=7f293d0a2c594f6cbef32e4b7fc951ee" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Fez Counting Cube </a> by <a href="https://sketchfab.com/JulesCardenas?utm_medium=embed&utm_campaign=share-popup&utm_content=7f293d0a2c594f6cbef32e4b7fc951ee" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Jules Cárdenas </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=7f293d0a2c594f6cbef32e4b7fc951ee" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
-                    </div>
-                </div>
-
                 <div class="container-texte">
                     <h3>Other useful links</h3>
                     <p>
@@ -333,6 +322,16 @@
                     <p>
                         As a gift for the reader who has reached the end of this article, here is a 3D visualization of the writing and counting cubes. Mine is ugly (I'll upload a better one once I learn more), but Jules Cárdenas's version is really nice! Maybe this can help with the puzzle solving.
                     </p> 
+                </div>
+
+                <div>
+                    <div class="sketchfab-embed-wrapper" style="margin-bottom: 20px;">
+                        <iframe title="Fez Writing Cube" height="120rem" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/401eb666e94c42c28750536561c1ceff/embed"> </iframe> <p style="font-size: 1rem; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/fez-writing-cube-401eb666e94c42c28750536561c1ceff?utm_medium=embed&utm_campaign=share-popup&utm_content=401eb666e94c42c28750536561c1ceff" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Fez Writing Cube </a>   by <a href="https://sketchfab.com/CharlesDuMenhir?utm_medium=embed&utm_campaign=share-popup&utm_content=401eb666e94c42c28750536561c1ceff" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> myself </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=401eb666e94c42c28750536561c1ceff" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
+                    </div>
+
+                    <div class="sketchfab-embed-wrapper">
+                         <iframe title="FEZ Counting Artifact" height="120rem" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/7f293d0a2c594f6cbef32e4b7fc951ee/embed"> </iframe> <p style="font-size: 1rem; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/fez-counting-artifact-7f293d0a2c594f6cbef32e4b7fc951ee?utm_medium=embed&utm_campaign=share-popup&utm_content=7f293d0a2c594f6cbef32e4b7fc951ee" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Fez Counting Cube </a> by <a href="https://sketchfab.com/JulesCardenas?utm_medium=embed&utm_campaign=share-popup&utm_content=7f293d0a2c594f6cbef32e4b7fc951ee" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Jules Cárdenas </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=7f293d0a2c594f6cbef32e4b7fc951ee" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
+                    </div>
                 </div>
             </div>
 
