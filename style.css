@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;  /*limite les box à l'écran*/
-}
-
 @media (max-width: 768px) {
   html{
     font-size: 8px;
@@ -25,6 +21,7 @@ body {
 /*----------------------HEADER------------------*/
 
 header {
+  box-sizing: border-box;
   background-color: #1f1f1f;
   color: #f2f2f2;;
   display: flex;
@@ -94,14 +91,19 @@ header img:hover {
 
 /*----------------------MAIN------------------*/
 main {
-  width: 100%;
-  max-width: 1000px;
+  max-width: 64rem;
   margin: 0rem auto;
   padding: 4rem 0;
   font-size: 1rem;
   background: white;
   text-align: justify;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); 
+}
+
+@media (max-width: 768px) {
+  main{
+    max-width: 43rem;
+  }
 }
 
 section {
@@ -150,7 +152,7 @@ section h3 {
 
 article {
   height: 12rem;
-  width: 40rem;
+  width: 38rem;
   display: flex; /* image à coté de la descirption*/
   align-items: baseline;
   gap: 1rem;
@@ -165,16 +167,16 @@ article:hover {
 }
 
 .article-thumb {
-  width: 8rem;   /* conserve les proportions */
-  height: auto;       /* largeur maximale */
-  margin: auto;
+  width: 8rem;
+  height: auto;
+  margin: auto 2rem;
   object-fit: cover;    /*crop pour ajuster*/
-  /*display: block;         /* supprime l’espacement inline par défaut */
+  display: block;         /* supprime l’espacement inline par défaut */
   border-radius: 6px;     /* coins arrondis (optionnel) */
 }
 
 .article_desc{
-  margin: auto;
+  margin: auto 2rem auto auto;
 }
 
 article h3 {
@@ -221,8 +223,7 @@ article p{
 }
 
 .texte-encadre {
-  padding: 5px;
-  width: 100%;
+  padding: 1rem;
   text-align: center;
   font-size: 1.2em;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
@@ -262,10 +263,10 @@ figcaption{
 
 #genea .horizontalFlex{
  justify-content: space-evenly;
- gap: 2rem;
 }
 
 .vintage-frame {
+  margin: 0 auto;
   padding: 1rem; /*épaisseur du cadre*/
   background-color: #e4d5ab; /* ton papier vieilli */
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
@@ -273,13 +274,15 @@ figcaption{
 }
 
 .vintage-frame img {
-  height: 16rem;
-  width: 100%;
+  display: block;
+  margin: auto;
+  height: 12rem;
+  width: auto;
   border: .3rem solid #fff;
 }
 
 .vintage-frame .photo {
-  height: 16rem;
+  height: 14rem;
   width: auto;
   border: .3rem solid #fff;
 }
@@ -289,12 +292,12 @@ figcaption{
 /*----------------------Footer------------------*/
 
 footer {
-  width: 80%;
+  max-width: 62rem;
   margin: 0 auto;
   padding: 0rem 2rem;
   background-color: white;
-  border: solid rgb(59, 59, 59);
-  border-radius: 12px; /* arrondi des coins */
+  border: 2px solid rgb(59, 59, 59);
+  border-radius: 1rem; /* arrondi des coins */
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); /* ombre externe */
 }
 
