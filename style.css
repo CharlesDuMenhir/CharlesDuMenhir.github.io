@@ -36,6 +36,18 @@ header {
   z-index: 1000;
 }
 
+header .acc a{
+  color: white;
+  text-decoration: none;
+  margin-right: 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+header a:hover {
+  color: #a3d8df;
+}
+
 header p {
   color: white;
   margin: 0;
@@ -52,7 +64,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #4DD0E1;
+  color: #a3d8df;
 }
 
 header img {
@@ -86,7 +98,7 @@ header img:hover {
 }
 
 .img_button{
-  width: 3rem;
+  width: 2rem;
 }
 
 /*----------------------MAIN------------------*/
@@ -108,13 +120,13 @@ main {
 
 section {
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   width: 90%;
   max-width: 900px; /*Evite de s'etendre si on dezoom*/ 
 }
 
 section h2{
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 section h3 {
@@ -262,6 +274,7 @@ figcaption{
 }
 
 #genea .horizontalFlex{
+ margin: 2rem auto;
  justify-content: space-evenly;
 }
 

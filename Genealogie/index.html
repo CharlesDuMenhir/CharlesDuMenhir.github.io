@@ -13,20 +13,17 @@
     .then(r => r.text())
     .then(html => document.querySelector('nav').innerHTML = html);
   </script>
-    <header>
-        <p>Généalogie</p>
-        <nav>
-        </nav>
-    </header>
-
-<!-- Bouton retour accueil -->
-<a href="/" class="bouton home"><img src="/images/Left.png" class="img_button"">  </a>
+  <header>
+    <div class="acc"><a href="/">&larr; Accueil</a> </div>
+    <p>Généalogie</p>
+    <nav>
+    </nav>
+  </header>
 
 
-<!-- Bouton retour en haut -->
-<div id="top" style="scroll-margin-top: 75px"></div>
-<a href="#top" class="bouton up"><img src="/images/Up.png" class="img_button"></a>
-
+  <!-- Bouton retour en haut -->
+  <div id="top" style="scroll-margin-top: 75px"></div>
+  <a href="#top" class="bouton up"><img src="/images/Up.png" class="img_button"></a>
 
     <main id="genea">
         <div style="position: relative; margin: 10px 0;">
