@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/style.css" rel="stylesheet">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <title>Zeta 2</title>
+</head>
+
+<body>
+  <script>
+    fetch('/nav.html')
+    .then(r => r.text())
+    .then(html => document.querySelector('nav').innerHTML = html);
+  </script>
+  <header>
+        <div class="acc"><a href="/">&larr; Accueil</a> </div>
+    <p>Zeta(2)</p>
+    <nav>
+    </nav>
+  </header>
+
+  <!-- Bouton retour en haut -->
+  <div id="top" style="scroll-margin-top: 75px"></div>
+  <a href="#top" class="bouton up"> <img src="/images/Up.png"style="width:40px;"> </a>
+
+  <main>
+
+    <!-- Surface de Boy -->
+
+    <section class="basel">
+      <h1 style="text-align: center;">La surface de Boy</h1>
+      <h2>Un peu de topologie</h2>
+      <p>
+        En géométrie, on regarde un objet dans son entièreté. Ses mesures, ses angles, ses courbes... C'est naturel et intuitif: un carré n'est pas cercle. Pour certaines considérations, comme la théorie des noeuds, ces détails n'ont pas d'importance. Que l'on fasse un noeud simple dans une corde de 10m ou 10cm ne change pas la logique du noeud simple. Il en est de même si cette corde a une section ronde, plate ou carrée. La géométrie de la corde importe peu. En revanche, si l'on dispose d'un anneau de corde c'est différent, et faire un noeud simple (sur un brin) relèvera alors de l'exploit. C'est ce type de différence, entre un bout de corde et un anneau de corde, que capture la topologie.
+      </p>
+
+      <p>
+        Pour être plus précis, en topologie, deux ensembles sont les mêmes si on peut en déformer un continuement pour arriver à l' autre, et réciproquement. Une telle déformation s'appelle un homéomorphisme. Ainsi, un cercle et un carré représentent le même objet. Mais un cercle et un droite ne le sont pas. En revanche, si on considère une droite à laquelle on adjoint un "point à l'infini", que l'on note usuellement \(\mathbb R \cup \{\infty \}\), on se retrouve homéomorphe à un cercle. En effet le point à l'infini permet de relier les deux branches de la droite, il la compactifie, pour former topologiquement un cercle.
+      </p>
+
+      <p>
+        Un des objets les plus emblématiques de la topologie est probablement le ruban de Möbius. Pour le décrire nous devons nous placer dans dans l'espace 3D, que l'on note \( \mathbb R^3 \). Il s'agit d'un bande, que nous aurions découpée, tordue d'un demi-tour, puis recollée. Une curiosité apparait alors: cette nouvelle bande n'a qu'un bord et qu'une face. On dit d'ailleurs qu'elle n'est pas orientable. En topologie, on peut représenter certains objets, que l'on appelle variétés, sous la forme de schéma de collage. Du moins lorsqu'il s'agit de variété de dimension 2. Pour le ruban de Möbius, un schéma de collage possible est donc le suivant: 
+      </p>
+
+      <p>
+       (légende d'une image) Un peu de réflexion permet de montrer que ce schéma de collage représentent aussi le ruban de Möbius.
+      </p>
+
+      <p>
+        Un autre schéma de collage très classique est le suivant: partant d'un feuille carrée, on recolle sans torsion les bords opposés. Ce schéma fut largement utilisé dans le jeu vidéo pour modéliser le monde, on le retrouve notamment dans les vieux Final Fantasy ou Secret of Mana. Si cette pratique fut plutôt confortable pour les programmeurs, elle conférait aux univers vidéoludiques une géométrie torique et non sphérique! En effet, si le collage des premiers bords opposés donne une forme cylindrique à la feuille, le collage qui suit ne referme pas le cylindre en sphère. Il faut joindre les deux extrémités du cylindre, ce qui forme un tore. Pour former une sphère, il suffit en fait de recoller deux à deux les côtés adjacents. 
+      </p>
+      
+      <p>
+        En analysant les recollements possibles, on obtient différentes variétés de dimensions. Nous avons vu la sphère et le tore, qui la propriété d'être orientable. Reprenons le cylindre et collons ces bords opposées, mais en sens inverse. L'opération n'est pas évidente, l'astuce consiste à faire rentrer le cylindre en lui-même et de la faire ressortir par son autre extremité, et d'enfin joindre les extrémités. On obtient une surface assez étrange: la bouteille de Klein. Comme le ruban de Möbius, elle n'est pas orientable.
+      </p>
+
+      <p>
+        Partant des recollements des bords du carré, il ne reste qu'une possibilité, celle où l'on recolle les bords opposés en inversant leur sens. Un homéomorphisme évident transforme ce schéma de collage en un disque duquel on identifie les points opposés. Recoller entre eux les points opposés d'un disque est encore plus compliqué que concevoir la bouteille de Klein. Une méthode assez visuelle consiste à diviser le bord du disque en six parties et à les recoller. Cela forme une surface originale qui ressemble à l'imbrication de trois tuyaux entre eux. C'est la surface de Boy.
+      </p>
+
+      <p>
+        On peut se convaincre de multiples manières que ce le schéma de collage présenté ne correspond pas à une sphère. Sur la feuille, tracer une droite horizontale et une verticale. Elles se coupent en un unique point. Essayez de faire pareil sur une sphère... impossible! La raison, sur la sphère, une telle ligne séparerait la sphère en deux parties, on parle de composantes connexes. Sur un tore ce n'est pas le cas; il sera toujours formé d'un bloc.
+      </p>
+
+        $$
+        \sum_{n=1}^\infty \frac 1 {n^2} = \frac{\pi^2}{6}.
+        $$
+
+
+
+        <div class="dateSection">Écrit le 23 juillet 2025</div>
+    </section>
+
+    <hr class="separateur">
+
+    <section>
+      <p>Feel free to share your thoughts, remarks or questions about thoses articles (github account needed).</p>
+
+      <script src="https://utteranc.es/client.js" repo="CharlesDuMenhir/CharlesDuMenhir.github.io" issue-term="/Boy/"
+        label="💬 Commentaires" theme="github-light" crossorigin="anonymous" async>
+      </script>
+    </section>
+
+  </main>
+    <footer>
+      <p> &copy; 2025 [Charles Duménil]</p>
+    </footer>
+</body>
+
+</html>

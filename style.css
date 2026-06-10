@@ -162,10 +162,10 @@ section h3 {
   color: #333;
 }
 
-article {
+.sujet {
   height: 12rem;
   width: 38rem;
-  display: flex; /* image à coté de la descirption*/
+  display: flex; /* image à coté de la description*/
   align-items: baseline;
   gap: 1rem;
   border: 1px solid #98989c;
@@ -174,7 +174,7 @@ article {
   background-color: #fff;
 }
 
-article:hover {
+.sujet:hover {
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); 
 }
 
@@ -191,13 +191,13 @@ article:hover {
   margin: auto 2rem auto auto;
 }
 
-article h3 {
+.sujet h3 {
   font-size: 1.2rem;
   padding-left: 1rem;
   vertical-align: middle;
 }
 
-article p{
+.sujet p{
   text-align: end;
   font-style: italic;
   font-size: .8rem;
