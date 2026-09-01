@@ -7,7 +7,7 @@
   <link href="/style.css" rel="stylesheet">
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
-  <title>Zeta 2</title>
+  <title>RP2</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
   </script>
   <header>
         <div class="acc"><a href="/">&larr; Accueil</a> </div>
-    <p>Zeta(2)</p>
+    <p>La surface de Boy</p>
     <nav>
     </nav>
   </header>
@@ -32,47 +32,266 @@
     <!-- Surface de Boy -->
 
     <section class="basel">
-      <h1 style="text-align: center;">La surface de Boy</h1>
-      <h2>Un peu de topologie</h2>
-      <p>
-        En géométrie, on regarde un objet dans son entièreté. Ses mesures, ses angles, ses courbes... C'est naturel et intuitif: un carré n'est pas cercle. Pour certaines considérations, comme la théorie des noeuds, ces détails n'ont pas d'importance. Que l'on fasse un noeud simple dans une corde de 10m ou 10cm ne change pas la logique du noeud simple. Il en est de même si cette corde a une section ronde, plate ou carrée. La géométrie de la corde importe peu. En revanche, si l'on dispose d'un anneau de corde c'est différent, et faire un noeud simple (sur un brin) relèvera alors de l'exploit. C'est ce type de différence, entre un bout de corde et un anneau de corde, que capture la topologie.
-      </p>
+      <h1 style="text-align: center;">Le plan projectif réel</h1>
+      Dans cet article, on va s'intéresser à un objet mathématique assez curieux: le plan projectif réel. On l'étudiera sous divers angles, jusqu'à lui trouver une forme géométrique et des propriétés que le profane n'oserait imaginer. Mais avant ça, on va commencer par le concevoir.
 
-      <p>
-        Pour être plus précis, en topologie, deux ensembles sont les mêmes si on peut en déformer un continuement pour arriver à l' autre, et réciproquement. Une telle déformation s'appelle un homéomorphisme. Ainsi, un cercle et un carré représentent le même objet. Mais un cercle et un droite ne le sont pas. En revanche, si on considère une droite à laquelle on adjoint un "point à l'infini", que l'on note usuellement \(\mathbb R \cup \{\infty \}\), on se retrouve homéomorphe à un cercle. En effet le point à l'infini permet de relier les deux branches de la droite, il la compactifie, pour former topologiquement un cercle.
+      <h2>Un peu d'algèbre</h2>
+      <p>Le plan projectif réel peut être vu comme le support géométrique d'une peinture. Le peintre reproduit ce qu'il voit à l'oeil, mais deux points de l'espace qui seraient alignés avec son oeil ne pourrait être peints tous les deux. En effet le peintre ne peindrait que celui qu'il voit. Ainsi on peut admettre que lorsque que l'on regarde un tableau représentant un arbre, on fait absrtaction de tout ce qui est derrière cet arbre. De même, n'est pas réprésenté ce qui est entre le peintre et le tableau, et encore moins ce qui est derrière le peintre. Faire abstraction des ces éléments, en mathématiques, revient à considérer ce qu'on appelle une classe d'équivalence.
       </p>
-
       <p>
-        Un des objets les plus emblématiques de la topologie est probablement le ruban de Möbius. Pour le décrire nous devons nous placer dans dans l'espace 3D, que l'on note \( \mathbb R^3 \). Il s'agit d'un bande, que nous aurions découpée, tordue d'un demi-tour, puis recollée. Une curiosité apparait alors: cette nouvelle bande n'a qu'un bord et qu'une face. On dit d'ailleurs qu'elle n'est pas orientable. En topologie, on peut représenter certains objets, que l'on appelle variétés, sous la forme de schéma de collage. Du moins lorsqu'il s'agit de variété de dimension 2. Pour le ruban de Möbius, un schéma de collage possible est donc le suivant: 
+        Dans un ensemble, on peut regrouper par classe, des éléments qui partagent une propriété. Partager cette propriété donnée est la relation d'équivalence. Par exemple, on peut regarder l'ensemble \( \mathbb N \) des entiers naturels, et considérer les nombres pairs, et les nombres impairs.. Cela crée deux classes d'équivalence. 
       </p>
-
       <p>
-       (légende d'une image) Un peu de réflexion permet de montrer que ce schéma de collage représentent aussi le ruban de Möbius.
+        Maintenant que l'on considère tous les éléments pairs comme équivalents et tous les impairs comme équivalents, on peut faire abstraction de l'ensemble et ne regarder plus qu'un de leur représentant, par exemple 0 pour les pairs et 1 pour les impairs. Considérer cette abstraction c'est regarder l'espace quotient par la relation d'équivalence. Ainsi si on note \(R \) la relation sus mentionnée, alors on peut dire que \( \mathbb N / R \cong \{0, 1\} \).
       </p>
-
       <p>
-        Un autre schéma de collage très classique est le suivant: partant d'un feuille carrée, on recolle sans torsion les bords opposés. Ce schéma fut largement utilisé dans le jeu vidéo pour modéliser le monde, on le retrouve notamment dans les vieux Final Fantasy ou Secret of Mana. Si cette pratique fut plutôt confortable pour les programmeurs, elle conférait aux univers vidéoludiques une géométrie torique et non sphérique! En effet, si le collage des premiers bords opposés donne une forme cylindrique à la feuille, le collage qui suit ne referme pas le cylindre en sphère. Il faut joindre les deux extrémités du cylindre, ce qui forme un tore. Pour former une sphère, il suffit en fait de recoller deux à deux les côtés adjacents. 
+        Revenons à notre tableau, nous peignons l'espace qui est autour de nous, mais sur notre tableau, où se projette l'espace, seul un point est dessiné par direction regardé. Deux points alignés avec l'oeil du peintre se retrouve représentés au même endroit sur le tableau. La relation d'équivalence qui modélise ici notre situation est la suivante: deux points de l'espace \(x\) et \( y\) sont équivalents si \(x\) et \( y\) sont alignés avec l'oeil du peintre. D'un point du vue géométrique, si l'oeil est l'origine, et qu' \(x\) et \( y\) sont des vecteurs, cette relation s'appelle la colinéarité, noté \(C\). Seule "ombre au tableau": l'oeil lui-même, qui est forcément aligné avec lui-même et n'importe quel autre point. On va donc l'écarter. On note \(\mathbb R^{3*}\) l'espace 3D usuel privé de l'origine.
       </p>
-      
       <p>
-        En analysant les recollements possibles, on obtient différentes variétés de dimensions. Nous avons vu la sphère et le tore, qui la propriété d'être orientable. Reprenons le cylindre et collons ces bords opposées, mais en sens inverse. L'opération n'est pas évidente, l'astuce consiste à faire rentrer le cylindre en lui-même et de la faire ressortir par son autre extremité, et d'enfin joindre les extrémités. On obtient une surface assez étrange: la bouteille de Klein. Comme le ruban de Möbius, elle n'est pas orientable.
-      </p>
-
-      <p>
-        Partant des recollements des bords du carré, il ne reste qu'une possibilité, celle où l'on recolle les bords opposés en inversant leur sens. Un homéomorphisme évident transforme ce schéma de collage en un disque duquel on identifie les points opposés. Recoller entre eux les points opposés d'un disque est encore plus compliqué que concevoir la bouteille de Klein. Une méthode assez visuelle consiste à diviser le bord du disque en six parties et à les recoller. Cela forme une surface originale qui ressemble à l'imbrication de trois tuyaux entre eux. C'est la surface de Boy.
-      </p>
-
-      <p>
-        On peut se convaincre de multiples manières que ce le schéma de collage présenté ne correspond pas à une sphère. Sur la feuille, tracer une droite horizontale et une verticale. Elles se coupent en un unique point. Essayez de faire pareil sur une sphère... impossible! La raison, sur la sphère, une telle ligne séparerait la sphère en deux parties, on parle de composantes connexes. Sur un tore ce n'est pas le cas; il sera toujours formé d'un bloc.
-      </p>
-
+        Ainsi le plan projectif réel peut être défini ainsi :  \(\textbf P^2  := \mathbb R^{3*} / C\). Mais comme deux vecteurs \(x\) et \(y\) sont colinéaires si et seulement si il existe un réel non nul \(\lambda\) tel que \(x = \lambda y\), on peut faire abstraction de la notation de la relation d'équivalence pour obtenir:
+      $$
+        \textbf P^2  := \mathbb R^{3*} / \mathbb R^*.
         $$
-        \sum_{n=1}^\infty \frac 1 {n^2} = \frac{\pi^2}{6}.
+      </p>
+
+      <p>
+        Pour finir cette partie, on se propose de trouver une forme bornée de \(\textbf P^2 \). Avec la représentation du tableau, nous avions choisi comme représentants de la classe d'équivalence les points du tableau. Finalement trouver un représentant à chaque classe revient à choisir un point pour chaque droite passant par l'origine. Pour être un peu plus universel, choisissons pour chaque droite, un point de la droite qui soit sur une sphère de rayon donnée et centrée sur l'origine. Comme le représentant doit être unique, mais qu'une droite passant par l'origine coupera une telle sphère en 2 points opposés, on restreint cette sphère à un demi-sphère. Mais ce n'est toujours pas suffisant. Pour les droites qui passent par les bords de la sphère, on choisit arbitraitement un point de l'intersection sphère/droite. Ainsi on a représenté notre objet \(\textbf P^2 \) par une demi-sphère de laquelle deux points opposés du bord sont identifiés. On y reviendra.
+      </p>
+
+        <h2>Un peu de topologie</h2>
+      <p>
+        Regarder un objet sous différentes formes tel qu'on vient de la faire, c'est déjà faire un peu de topologie. 
+        En géométrie, on regarde un objet dans son entièreté. Ses mesures, ses angles, ses courbes... C'est naturel et intuitif: un carré n'est pas cercle. Pour certaines considérations, comme la théorie des noeuds, ces détails n'ont pas d'importance. Que l'on fasse un noeud simple dans une corde de 10m ou 10cm ne change pas la logique du noeud simple. Il en est de même si cette corde a une section ronde, plate ou carrée. La géométrie de la corde importe peu, on peu s'en abstraire. En revanche, si l'on dispose d'un anneau de corde c'est différent, et faire un noeud simple (sur un brin) relèvera alors de l'exploit. C'est ce type de différence, entre un bout de corde et un anneau de corde, que capture la topologie.
+      </p>
+
+      <p>
+        Pour être plus précis, en topologie, deux ensembles sont les mêmes si on peut en déformer un continuement pour arriver à l' autre, et réciproquement. Une telle déformation s'appelle un homéomorphisme et on dit alors que les deux ensembles sont homéomorphes. Ainsi, un cercle et un carré sont homéomorphes. Mais un cercle et une droite ne le sont pas. En revanche, si on considère une droite à laquelle on adjoint un "point à l'infini", que l'on note usuellement \(\mathbb R \cup \{\infty \}\), on se retrouve homéomorphe à un cercle. En effet le point à l'infini permet de relier les deux branches de la droite, il la compactifie, pour former topologiquement un cercle.
+      </p>
+
+      <p>
+         Ainsi, pour chaque dimension n, fort de la relation d'équivalence qu'est l'homéomorphisme, on peut classifier une partie des espaces topologiques. Ceux que l'on appelle des variétés de dimension n, et qui sont les espaces topologiques localement homéomorphes à \(\mathbb R ^n\). Dans cet articles, ce sont les variétés de \(\mathbb R ^2\) qui vont nous intéresser.
+      </p>
+
+      <h2>Les schéma de collage</h2>
+
+      <p>
+        Un des objets les plus emblématiques de la topologie est probablement le ruban de Möbius, noté \(\textbf {Mö}\). Pour le décrire visuellement, nous nous plaçons dans l'espace 3D, \( \mathbb R^3 \). À partir d'une bande de papier, recollons les deux bouts opposés mais en effectuant une torsion d'un demi-tour à l'un des bouts. Une curiosité apparait alors: cette nouvelle bande n'a qu'un bord et qu'une face. On dit d'ailleurs qu'elle n'est pas orientable. On peut représenter certaines variétés, sous la forme de schéma de collage. Du moins lorsqu'il s'agit de variété de dimension 2. Pour le ruban de Möbius, un schéma de collage possible est donc le suivant: 
+      </p>
+
+      <div class="horizontalFlex">
+          <div class="container-image">
+              <img src="/Surface de Boy/images/schCollRub.jpg" alt="schéma de collage topologique Mobius"  style="display: block; margin: auto; width: 60%; height: auto;">
+              <figcaption>Schéma de collage topologique du ruban de Möbius.</figcaption>
+          </div>
+
+            <div class="container-image">
+              <img src="/Surface de Boy/images/ruban.jpg" alt="schéma de collage topologique Mobius" style="display: block; margin: auto; width: 70%; height: auto;" class="coins-arrondis">
+          </div>
+      </div>
+
+
+
+      <p>
+        Ce qu'il faut comprendre de ce schéma, c'est que si l'on prend une feuille de papier, et que l'on recolle les deux bords avec les flèches de sorte à ce qu'elles aillent dans le même sens, on dit qu'on les identifie, alors on obtient une version géométrique du ruban de Möbius. Dans le schéma de collage, on a la version conceptuelle, topologique. Dans \(\mathbb R^3\), on a ce qu'on appelle une immersion. Il eut pu être plus pédagogique de commencer par le cas, plus simple, où les deux flèches vont dans le même sens. On aurait alors obtenu un cylindre.</p>
+
+
+        <div class="horizontalFlex">
+          <div class="container-image">
+              <img src="/Surface de Boy/images/schCollCyl.jpg" alt="schéma de collage topologique cylindre"  style="display: block; margin: auto; width: 60%; height: auto;">
+              <figcaption>Schéma de collage topologique du cylindre.</figcaption>
+          </div>
+
+            <div class="container-image">
+              <img src="/Surface de Boy/images/cylindre.jpg" alt="schéma de collage topologique cylindre" style="display: block; margin: auto; width: 70%; height: auto;" class="coins-arrondis">
+          </div>
+      </div>
+
+      <p>
+        Ces deux variétés sont dites "à bords", car elles possèdent des points dont le voisinage n'est pas homéomorphe à \( \mathbb R^2 \): les points des bords. Ainsi on remarquera que le ruban de Möbius n'a bien qu'un bord: un bord au bout de chaque flèche, or il n'y a qu'une flèche puisqu'on les a identifiées depuis le schéma de collage. Le cylindre lui, a un bord à la base et un autre à la pointe de la flèche.
+      </p>
+
+      <p>
+        Un autre schéma de collage très classique est le suivant: partant d'un feuille carrée, on recolle sans torsion les quatre bords opposés, deux à deux. C'est le schéma largement utilisé dans le jeu vidéo pour modéliser la carte des mondes, on le retrouve notamment dans les vieux Final Fantasy ou Secret of Mana. Si cette pratique fut plutôt confortable pour les programmeurs, elle conférait aux univers vidéoludiques une topologie torique et non sphérique! En effet, si le collage des premiers bords opposés donne une forme cylindrique à la feuille, le collage qui suit ne referme pas le cylindre en une sphère. Il faut joindre les deux bords du cylindre, ce qui forme un tore. Notons le \(\textbf T\).
+        </p>
+        <div class="horizontalFlex">
+          <div class="container-image">
+              <img src="/Surface de Boy/images/schCollTore.jpg" alt="schéma de collage topologique tore"  style="display: block; margin: auto; width: 60%; height: auto;">
+              <figcaption>Schéma de collage topologique du tore.</figcaption>
+          </div>
+
+            <div class="container-image">
+              <img src="/Surface de Boy/images/tore.png" alt="schéma de collage topologique tore" style="display: block; margin: auto; width: 55%; height: auto;" class="coins-arrondis">
+          </div>
+      </div>
+      <p>  
+        Que se passe-t-il maintenant si l'on part du cylindre et qu'on lui identifie ses bords opposées, mais en sens inverse. L'opération n'est pas évidente, l'astuce consiste à faire rentrer le cylindre en lui-même et de la faire ressortir par son autre extremité, et d'enfin joindre les extrémités. On obtient une surface assez étrange: la bouteille de Klein, \(\textbf K\). Comme le ruban de Möbius, elle n'est pas orientable.
+      </p>
+      <div class="horizontalFlex">
+          <div class="container-image">
+              <img src="/Surface de Boy/images/schCollKlein.jpg" alt="schéma de collage topologique klein bottle"  style="display: block; margin: auto; width: 60%; height: auto;">
+              <figcaption>Schéma de collage topologique de la bouteille de Klein.</figcaption>
+          </div>
+
+            <div class="container-image">
+              <img src="/Surface de Boy/images/Kleinbot.png" alt="schéma de collage topologique Klein bottle" style="display: block; margin: auto; width: 55%; height: auto;" class="coins-arrondis">
+          </div>
+      </div>
+
+      <p>
+        Les illustrations IA manquent de rigueur, mais pour ce blog, ce qui m'importe est que ce soit joli. Pour être correct il faut considérer que la partie cylindrique en arrière plan, traverse la bouteille, puis sort par son fond, tout en formant ce dernier.
+      </p>
+      <p>
+        En énumérant les recollements possibles, on obtient différentes variétés de dimensions 2 (sans bord). Pour l'instant, nous avons vu le tore et la bouteille de Klein. Jusqu'ici nous avons omis la sphère \(\textbf S^2 \). Variété pourtant la plus simple de dimension 2. En effet considérer son schéma est assez futile, mais en réalité il nous servira plus loin. Pour faire une sphère topologique à partir d'une feuille, il suffit de "recoudre" au fur et à mesure la feuille sur elle même. Cela donne le schéma suivant:
+      </p>
+
+      <div class="horizontalFlex">
+          <div class="container-image">
+              <img src="/Surface de Boy/images/schCollsphere.jpg" alt="schéma de collage topologique sphere"  style="display: block; margin: auto; width: 60%; height: auto;">
+              <figcaption>Schéma de collage topologique de la sphère.</figcaption>
+          </div>
+
+            <div class="container-image">
+              <img src="/Surface de Boy/images/sphere.png" alt="schéma de collage topologique sphere" style="display: block; margin: auto; width: 55%; height: auto;" class="coins-arrondis">
+          </div>
+      </div>
+
+      <p>
+        Il nous reste un schéma de collage à considérer: celui où le bords opposés se recollent en sens inverses. Déjà pour la bouteille de Klein, il fallait faire preuve de gymnastique cérébrale, mais là c'est d'un autre niveau. En recollant deux bords, on obtient le ruban de Mobius, puis il faudrait alors recoller sur lui-même son unique bord... pas simple. D'ailleurs, il a longtemps été pensé que considérer une telle surface en 3D était impossible.
+      </p>
+
+      <div class="horizontalFlex">
+          <div class="container-image">
+              <img src="/Surface de Boy/images/schCollBoy.jpg" alt="schéma de collage topologique surface de boy"  style="display: block; margin: auto; width: 60%; height: auto;">
+              <figcaption>Schéma de collage topologique restant.</figcaption>
+          </div>
+
+            <div class="container-image">
+              <img src="/Surface de Boy/images/Boy0.png" alt="schéma de collage topologique projectif" style="display: block; margin: auto; width: 55%; height: auto;" class="coins-arrondis">
+          </div>
+      </div>
+
+      <h2>Immersion du plan projectif</h2>
+
+      <p>
+       Dans l'optique de visualiser la surface manquante, on va modifier un peu son schéma de collage. Reprenons le collage de la sphère. En soit, il était superflu de considérer quatre côtés, deux flèches qui se suivent ne peuvent en former qu'une. Deux côtés, sur un schéma arrondi auraient suffi. 
+      </p>
+
+      <p>
+        On peut remarquer pour notre schéma mystère que les flèches tournent toutes dans le même sens autour du carré. En fait on peut simplifier la définition du schéma en disant qu'il suffit de recoller les points opposés du schéma. Plus besoin de parler de carré, on pourrait très bien prendre un disque. Notre schéma de collage est donc désormais le suivant: un disque qu'il faut recoller sur lui-même par ses bords opposés. Mais comme pour le schéma, la géométrie n'importe pas, on peut plonger ce schéma de collage dans \(\mathbb R^3\) et le bomber légèrement jusqu'à obtenir une demi-sphère. Demi-sphère de laquelle deux points opposés du bords sont identifiés. Qu'obtenons-nous? \(\textbf P^2 \). Magique? Non, topologique!
+        </p>
+
+      <p>
+        Ainsi, obtenir une immersion de ce schéma de collage nous fournira une immersion de \(\textbf P^2 \).
+        Une méthode assez visuelle consiste alors à diviser le bord du disque en six parties et à les recoller simultanément. Cela forme une surface originale qui ressemble à l'imbrication de trois tuyaux entre eux. C'est la surface de Boy. Une vidéo sera plus parlante.
+      </p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/uiq-EcQz_uU?si=AodmCjYyNQgemEj1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p>
+        Afin d'illustrer par l'image notre plan projectif, on retrouve ci-dessous une version IA, discutable, dans le style des précèdentes illustrations. Ainsi qu'une version d'artiste, celle de Patrice Jeener.
+      </p>
+      <div class="horizontalFlex">
+          <div class="container-image">
+              <img src="/Surface de Boy/images/Boy.png" alt="plan projectif"  style="display: block; margin: auto; width: 55%; height: auto;">
+          </div>
+
+            <div class="container-image">
+              <img src="/Surface de Boy/images/lithoJeener.jpg" alt="plan projectif patrice jeener" style="display: block; margin: auto; width: 100%; height: auto;">
+          </div>
+      </div>
+
+
+      <h2>Classification</h2>
+      <p>
+      Maintenant que l'on a identifié plusieurs variétés, on va pouvoir les classifier. On ne classifiera ici que les variétés fermées (compactes et sans bord) et connexes (d'un bloc). Avant de s'y atteler, on va considérer une opération sur les variétés, qui va nous permettre de passer de l'une à l'autre. Cette opération c'est la <a href="https://fr.wikipedia.org/wiki/Somme_connexe">somme connexe</a>. On la note \(\#\). Elle consiste en quelque sorte à coller l'une contre l'autre deux variétés. Prenons quelques exemples.
+      </p>
+
+      <p>
+      Prenons deux sphères et faisons leur somme connexe, on obtient graphiquement une sorte de cacahuète. Mais topologiquement, le résultat reste une sphère.
+      $$
+        \textbf S^2  \# \textbf S^2  \cong \textbf S^2 .
         $$
+      En fait on peut se convaincre assez facilement que la sphère est un élément neutre pour cette opération.
+      </p>
 
+      <p>
+      Prenons maintenant deux tores. Si on les colle, on peut obtenir une surface en forme de huit, un double tore. Recollons lui un tore, on obtient alors une nouvelle surface avec trois trous. On peut continuer ainsi de suite pour obtenir de nouvelles surfaces. Chaque surface obtenue ainsi est bien différente des précédentes topologiquement. En effet elle n'a pas le même nombre de trous. Ce nombre, fondammental en topologie, c'est ce qu'on appelle le genre. Pour être exact le genre est le nombre de coupes fermées qu l'on peut faire sans séparer la surface. En itérant ce processus, on obtient toutes les 2-variétés orientables.
+      </p>
 
+      <p>
+        Prenons maintenant deux plans projectifs et faisons-en la somme connexe. Pour le coup c'est plus difficile. On peut repartir du schéma de collage de \( \textbf P^2 \). Faire sa somme connexe avec \( \textbf P^2 \) revient à découper un trou carré dans le schéma de collage initial et à recoller ce trou à la façon du plan projectif. Un peu de gymnastique et on retombe sur la bouteille de Klein. On peut continuer ainsi de suite les collages pour obtenir des identités telles que :
+        $$
+        \textbf P^2  \# \textbf P^2  \# \textbf P^2  \cong \textbf P^2  \# \textbf T \cong \textbf P^2  \# \textbf K.
+        $$
+      </p>
 
-        <div class="dateSection">Écrit le 23 juillet 2025</div>
+      <p>
+        La classification des 2-variétés fermées et connexes nous dit que toute 2-variété est soit une sphère, soit une somme connexe de tores, si elle est orientable, ou soit une somme connexe de plans projectifs sinon. Formellement, si on appelle \( \textbf T_n\) la somme connexe de n tores et \( \textbf P^2 _n\) la somme connexe de n plans projectifs, on a:
+      </p>
+
+      <div class="texte-encadre">
+        <p>Soit \(V\) une 2-variété de genre \(g\).</p>
+        <p>Si \(g = 0\) alors \(V \cong \textbf S^2 \).</p>
+        <p>Sinon, si \(V\) est orientable alors \(V \cong \textbf T_g\).</p>
+        <p>Sinon, \(V\) n'est pas orientable et \(V \cong \textbf P^2 _g\).</p>
+      </div>
+      <p>En particulier, on remarquera que pour un entier \(n\), \(\textbf P^2 _{2n} \cong \textbf T_{n-1} \# \textbf K\) et \(\textbf P^2 _{2n+1} \cong \textbf T_{n} \# \textbf P^2 \).</p>
+
+      <h2>Quelques remarques</h2>
+      <p>La sphère et le plan projectif sont donc deux 2-variétés élementaires. On va illustrer un peu cette proximité. Au début, on avait présenté le plan projectif comme étant:
+      $$
+        \textbf P^2  := \mathbb R^{3*} / \mathbb R^*.
+        $$
+      Car on identifiait les vecteurs colinéaires. Mais pour obtenir une sphère depuis \(\mathbb R^{3*}\) il suffit d'identifier les vecteurs qui sont colinéaire et dans le même sens. En d'autres termes, on peut écrire:
+      $$
+        \textbf S^2  \cong \mathbb R^{3*} / \mathbb R^*_+.
+      $$
+      Admettons que la différence est subtile.</p>
+
+      <p>
+        Alternativement, on peut représenter la sphère à travers la projection stéréographique. Prenez une sphère sur la quelle on choisira un pôle nord \(p_N\). Puis placer un plan sous la sphère. Pour chaque point \(p\) de la sphère, on considère son projeté sur le plan comme étant l'intersection du plan avec la droite \( (pp_N)\). De cette manière, le pôle nord se projete parallèlement au plan et on peut considérer qu'il se projète en un point à l'infini. On obtient l'homéomorphisme:  
+        $$
+        \textbf S^2  \cong \mathbb R^{2} \cup \{p_\infty\}.
+        $$
+      </p>
+
+      <p>
+        Parallèlement, on avait identifié le plan projectif au plan d'un tableau qu'un peintre peindrait. Mais un élément à peindre dont la direction serait dans le plan du tableau ne pourrait être dessiné qu'à l'infini dans tableau. Le bords infinis de ce tableau correspondent donc aux directions parallèles au tableau. Elle forment un cercle à l'infini, que l'on va noté \(\textbf S^1_{\infty}\). On obtient:
+        $$
+        \textbf S^2  \cong \mathbb R^{2} \cup \textbf S^1_{\infty}.
+        $$
+      </p>
+
+      <p>
+        Autre particularité des collages en topologie, on peut exprimer les variétés sans bords comme collage de variété à bords selon leur bord. On notera \( \cup_\delta\) ce collage. La sphère par exemple est le collage de deux disques \(\textbf D\) selon leurs bords. Le plan projectif: le collage d'un ruban Möbius avec un disque. Et finalement la bouteille de Klein, qui est le collage de deux ruban de Möbius.
+        $$
+        \textbf S^2  \cong \textbf D \cup_\delta \textbf D,~~
+        \textbf P^2  \cong \textbf D \cup_\delta \textbf {Mö},~~
+        \textbf K  \cong \textbf {Mö} \cup_\delta \textbf {Mö}.
+        $$
+      </p>
+
+      <p> On pourra aussi s'amuser à créer un tore en collant bout à bout deux cylindres. Mais pour créer le double tore, il faudra considérer une nouvelle variété à bord: <a href="https://en.wikipedia.org/wiki/Pair_of_pants_(mathematics)">le pantalon</a>!</p>
+
+      <p> On conclus cette section par mentionner la version généralisé du problème des quatres couleurs aux 2-variétés. Si on note \(N(V)\) le nombre de couleurs nécessaire pour colorier une carte sur la variété \(V\), alors:
+        $$
+        N(\textbf S^2) = 4,~~N(\textbf T) = 7,~~N(\textbf{Mö} ^2)=6,~~N(\textbf P^2)=6,~~N(\textbf K)=6.
+        $$
+        Et 8 pour le double tore.
+      </p>
+
+      <h2>Un peu d'homotopie</h2>
+      <p>Traçons maintenant une boucle, sur la sphère pour commencer. La question que l'on va se poser ici est, "peut-on réunir la boucle en un point?". Sur la sphère c'est évident. On dit alors qu'elle simplement connexe.</p>
+      <p>Prenons maintenant le tore, et traçons une boucle dessus. On peut tracer une petite boucle dans une petite portion du tore, et la réunir. Mais on peut aussi tracer une boucle autour du tore, et de deux manières différentes (autour de tube, ou autour du centre). On remarque vite que si l'on trace une boucle ainsi, on ne peut pas la réunir. Inversement, on peut faire plusieurs tours autour du tore. Afin de se donner une représentation de la structure du lacet ainsi formé, on peut regarder ce qu'on appelle le groupe fondamentale de la variété.</p>
+      <p>Pour la sphère, ce groupe correspond au groupe trivial. Tout lacet se contracte en un unique point. Pour le tore c'est plus compliqué, mais il suffit de compter le nombre de tours fait autour du tube et autour du centre. Cela se traduit en un couple de nombres relatifs (le sens des tours importe). Ainsi le groupe fondamental du tore est isomorphe (similaire) à \( \mathbb Z \times \mathbb Z \).</p>
+      <p>Pour le plan projectif, c'est un peu moins intuitif. Partons du schéma de collage, si on fait une boucle d'un tour, on se retrouve avec un lacet incompressible. Mais dès lors qu'on en fait deux, on peut se rendre compte que le chemin est compressible. Le groupe fondamental du plan projectif correspond donc au groupe additif \(\{0,1\}\). Je ne détaillerai pas le groupe fondamental de la bouteille de Klein, il correspond à un produit semi direct \( \mathbb Z \rtimes \mathbb Z \).</p>
+
+      <h2>Vers les 3-variétés</h2>
+      <p>Nettement plus compliquée, l'étude des 3-variétés a hanté les mathématiciens du 20ème siècle. En 1904, Henri Poincaré pose la question : </p>
+      <div class="texte-encadre">
+        <p>Toute 3-variété fermée et simplement connexe est-elle homéomorphe à la 3-sphère ?</p>
+      </div>
+      <p>Question que l'article que ci-dessus vous permet de comprendre, mais vraisemblablement pas de résoudre. Principal problème, les 3-variétés sont des volumes, les visualiser est difficile. Il faudra attendre que le brillant esprit de Grigori Perelman ne démontre la conjecture de géométrisation de Thruston, offrant à la fois une classification des 3-variétés et la résolution du problème de Poincaré, en y répondant par l'affirmative.</p>
+
+        <div class="dateSection">Écrit le 23 août 2026</div>
     </section>
 
     <hr class="separateur">
@@ -80,7 +299,7 @@
     <section>
       <p>Feel free to share your thoughts, remarks or questions about thoses articles (github account needed).</p>
 
-      <script src="https://utteranc.es/client.js" repo="CharlesDuMenhir/CharlesDuMenhir.github.io" issue-term="/Boy/"
+      <script src="https://utteranc.es/client.js" repo="CharlesDuMenhir/CharlesDuMenhir.github.io" issue-term="/Surface de Boy/"
         label="💬 Commentaires" theme="github-light" crossorigin="anonymous" async>
       </script>
     </section>
