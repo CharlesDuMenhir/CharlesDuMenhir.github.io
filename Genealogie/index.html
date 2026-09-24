@@ -5,61 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/style.css" rel="stylesheet">
     <title>Histoire BLD</title>
+    <style>
+.content-flex{
+ margin: 2rem auto;
+ justify-content: space-evenly;
+}
+
+.vintage-frame {
+  margin: auto;
+  padding: 1rem; /*épaisseur du cadre*/
+  background-color: #e4d5ab; /* ton papier vieilli */
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.vintage-frame img {
+  display: block;
+  margin: auto;
+  height: 12rem;
+  border: .3rem solid #fff;
+}
+
+.vintage-frame .photo {
+  height: 14rem;
+  width: auto;
+  border: .3rem solid #fff;
+}
+    </style>
 </head>
 
 <body>
   <script>
   fetch('/nav.html')
     .then(r => r.text())
-    .then(html => document.querySelector('nav').innerHTML = html);
+    .then(html => document.querySelector('header').innerHTML = html);
   </script>
   <header>
-    <div class="acc"><a href="/">&larr; Accueil</a> </div>
-    <p>Généalogie</p>
-    <nav>
-    </nav>
   </header>
 
-
-  <!-- Bouton retour en haut -->
-  <div id="top" style="scroll-margin-top: 75px"></div>
-  <a href="#top" class="bouton up"><img src="/images/Up.png" class="img_button"></a>
-
-    <main id="genea">
+    <main >
         <div style="position: relative; margin: 10px 0;">
-            <img src="images/motifChapG.png" class="decorativeG-image">
-            <img src="images/motifChapD.png" class="decorativeD-image">
-            <img src="/images/ConfLogo2.png" alt="logo Roussey Bar-le-Duc" style="display: block; margin: 0 auto; width: 20%;">
+            <img src="images/motifChapG.png" style="position: absolute; width: 25%; height:auto;">
+            <img src="images/motifChapD.png" style="position: absolute; right: 0; width: 25%; height: auto;">
+            <img src="images/ConfLogo.png" alt="logo Roussey Bar-le-Duc" style="display: block; margin: 0 auto; width: 20%;">
         </div>
-  
-        <h1 style="text-align: center;"> Une histoire barisienne</h1>
-        
-        <section>        
-            <h2>Reconstitution historique de la famille Horiot-Roussey-Ladevèze</h2>
-            <p>
-                En 2022, ma mère a laissé sa vie la quitter. Avec une immense peine, j'ai déposé son urne au cimetière de Bar-le-Duc. Elle repose dans notre sépulture familiale, la chapelle Horiot-Roussey. J'avoue qu'avant cet évènement, je ne m'étais guère intéressé à ce monument, ni à ces occupants. Des noms inscrits sur la grande plaque funéraire de la chapelle, je n'en connaissais aucun.
-            </p>
-            <p>
-                Parmi les nombreuses affaires que j'ai retrouvé chez ma mère, figuraient plusieurs albums de photos anciennes. De ces vieux albums aux pages épaisses et cartonnées. Évidemment je ne reconnaissais aucun visage, au mieux mes arrière-grands parents. Je me suis alors mis en tête de mettre des noms sur ces personnes, et de retrouver une partie de leur histoire. J'ai passé du temps aux archives, aussi bien sur place qu'en ligne. Je n'ai pas remonté très haut dans la généalogie mais au moins jusqu'aux ancêtres qui se sont implantés à Bar-le-Duc. J'ai essayé autant que possible de dénicher des éléments de leur vie. Peu à peu j'ai réussi à avoir une vision assez juste de membres qui composaient ma famille.
-            </p>
-            <p>
-                L'histoire qui m'aura le plus touché est celle de Marie Horiot, mon arrière-arrière-grand-mère, gérante de la fabrique de confitures "À la croix de Lorraine". Fait étonnant, son nom ne figurait pas dans la chapelle. Alors même que je savais que c'est elle qui l'avait fait bâtir. Pourtant les registes témoignaient bien qu'elle y était enterrée. Encore aujourd'hui, j'ignore pourquoi c'était le cas, mais la seconde guerre mondiale a probablement joué un rôle. Face à cet injuste oubli, je me suis senti missionné de rendre à mon ancêtre le privilège de son souvenir, et avec l'aide de ses autres descendants, nous avons fait écrire son nom, à l'emplacement, vide, qui lui était destiné.
-            </p>
+        <div class="hero">
+            <h1 style="text-align: center;">Une histoire barisienne</h1>
+            <h2 style="text-align: center;">Reconstitution historique de la famille Horiot-Roussey-Ladevèze</h2>
+            <div class="hero-inner">
+                <p>
+                    En 2022, ma mère a laissé sa vie la quitter. Avec une immense peine, j'ai déposé son urne au cimetière de Bar-le-Duc. Elle repose dans notre sépulture familiale, la chapelle Horiot-Roussey. J'avoue qu'avant cet évènement, je ne m'étais guère intéressé à ce monument, ni à ces occupants. Des noms inscrits sur la grande plaque funéraire de la chapelle, je n'en connaissais aucun.
+                </p>
+                <p>
+                    Parmi les nombreuses affaires que j'ai retrouvé chez ma mère, figuraient plusieurs albums de photos anciennes. De ces vieux albums aux pages épaisses et cartonnées. Évidemment je ne reconnaissais aucun visage, au mieux mes arrière-grands parents. Je me suis alors mis en tête de mettre des noms sur ces personnes, et de retrouver une partie de leur histoire. J'ai passé du temps aux archives, aussi bien sur place qu'en ligne. Je n'ai pas remonté très haut dans la généalogie mais au moins jusqu'aux ancêtres qui se sont implantés à Bar-le-Duc. J'ai essayé autant que possible de dénicher des éléments de leur vie. Peu à peu j'ai réussi à avoir une vision assez juste des membres qui composaient ma famille.
+                </p>
+                <p>
+                    L'histoire qui m'aura le plus touché est celle de Marie Horiot, mon arrière-arrière-grand-mère, gérante de la fabrique de confitures "À la croix de Lorraine". Fait étonnant, son nom ne figurait pas dans la chapelle. Alors même que je savais que c'est elle qui l'avait fait bâtir. Pourtant les registes témoignaient bien qu'elle y était enterrée. Encore aujourd'hui, j'ignore pourquoi c'était le cas, mais la seconde guerre mondiale a probablement joué un rôle. Face à cet injuste oubli, je me suis senti missionné de rendre à mon ancêtre le privilège de son souvenir, et avec l'aide de ses autres descendants, nous avons fait écrire son nom, à l'emplacement, vide, qui lui était destiné.
+                </p>
 
-            <p>
-                Dans le document qui suit, je vous propose une reconstitution, assez fidèle je pense, de la branche maternelle de ma généalogie, depuis mes ancêtres de Haute-Saône, jusqu'à moi-même, en passant par leur installation à Bar-le-Duc, le commerce de confiture de groseilles, les tragédies des guerres...
-            </p>
+                <p>
+                    Dans le document qui suit, je vous propose une reconstitution, assez fidèle je pense, de la branche maternelle de ma généalogie, depuis mes ancêtres de Haute-Saône, jusqu'à moi-même, en passant par leur installation à Bar-le-Duc, le commerce de confiture de groseilles, les tragédies des guerres...
+                </p>
 
-            <p>
-                Le document se veut être une reconstitution, tout n'est peut-être pas exact, j'ai même des doutes sur certains visages. Le document est chronologique, les dates précédées d'une tilde sont approximatives.
-            </p>
-            <div class="horizontalFlex">
-                <div class="vintage-frame" style="background-color:#D1D1D5;">
-                    <img src="images/chap plaque.jpg" class="coins-arrondis" style = "height: 16rem;">
-                    <figcaption>La plaque funéraire de la famille Horiot-Roussey</figcaption>
+                <p>
+                    Le document se veut être une reconstitution, tout n'est peut-être pas exact, j'ai même des doutes sur certains visages. Le document est chronologique, les dates précédées d'une tilde sont approximatives.
+                </p>
+                <div class="content-flex">
+                    <div class="vintage-frame" style="background-color:#D1D1D5;">
+                        <img src="images/chap plaque.jpg" style = "height: 16rem;">
+                        <figcaption>La plaque funéraire de la famille Horiot-Roussey</figcaption>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
 
         <section>
             <h2>La première branche de Haute-Saône </h2> <!-- --------------------------La première branche de Haute-Saône------------- -->
@@ -81,7 +99,7 @@
                 </p>
             </div>
 
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/JPrudhomme1.jpg" alt="Julie Prudhomme" class="photo">
                     <figcaption>Julie Prudhomme<br>~1860</figcaption>
@@ -100,7 +118,7 @@
                 Le 10 octobre 1855 naît la première fille de Julie et François à Paris. Elle est prénommée Julie Marie Anastasie, peut-être en hommage à une des soeur de François : Astasie. Entre 1855 et 1861, les époux Horiot migrent pour Bar-le-Duc, avec Françoise, Eugénie et Marie. La ville y est prospère, le train la relie à Paris depuis 1851. Ils emménagent au 2 rue de la Rochelle, se trouvant par la même occasion voisins du fondateur de la banque Varin-Bernier, le banquier <a href="https://mediatheques.meusegrandsud.fr/patrimoine-historique-chateau-02.aspx?_lg=fr-FR">Gabriel Varin</a>.
             </p>
 
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/MHoriot0.jpg" alt="Marie Horiot" class="photo">
                     <figcaption>Marie Horiot<br>~1865</figcaption>
@@ -116,7 +134,7 @@
                 Forts de leur ascendance de cordonniers et de tisserands, les Horiot ouvrent une boutique de vêtements sur mesure&nbsp;: "À la ville de Paris". François y exerce la profession de tailleur d'habits, accompagné d'Eugénie à la caisse. En 1862, Julie et François ont une seconde fille&nbsp;: Ernestine.
             </p>
        
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/FHoriotPub1866.jpg" alt="Publicité Horiot 1866">
                     <figcaption>Publicité Horiot "À la ville de Paris"<br>1866</figcaption>
@@ -130,7 +148,7 @@
             <p>
                 Les origines haut-saônoises de la famille ne s'arrêtent pas là. En effet, à quelques pas au sud de Vernois, naît en 1848, Auguste Ernest Roussey dans la commune de Vitrey-sur-Mance. Il grandit dans l'auberge de ses parents Anne Charles et François Roussey, avec son frère Hippolyte et sa soeur Victorine. Auguste est le benjamin de la famille, avec presque dix ans d'écart avec ses frère et soeur.
             </p>    
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/AugRoussey1.jpg" alt="Auguste roussey" class="photo">
                     <figcaption>Auguste Roussey<br>~1868</figcaption>
@@ -150,7 +168,7 @@
                     </p>
                 
                 
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/AugRoussey2.jpg" alt="Auguste roussey" class="photo">
                     <figcaption>Auguste Roussey<br>~1874</figcaption>
@@ -167,14 +185,14 @@
                 </div>
             </div>
 
-            <div class="horizontalFlex" style="width:60%;">
+            <div class="content-flex" style="width:60%;">
 
             </div>
             <p>
                 La guerre franco-prussienne éclate en 1870. Pour Marie, beaucoup d'évènements vont s'enchaîner. En 1871, sa grand-mère, Françoise Catel, décède. En 1876, elle épouse Auguste Roussey à Bar-le-Duc. Ils vivent à Saint-Dizier au 16 rue de l'hôtel de ville et ont leur premier enfant, Marguerite en 1878. En 1880, à 60 ans, François Horiot vend son commerce. Il emménage avec Julie à Sermaize-les-bains au 30 rue Bénard. Ernestine, la soeur de Marie, y épousera Camille Mannoury en 1886.
             </p>
 
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/MHoriot3.png" alt="Marie Roussey" class="photo" style="border:none;">
                     <figcaption>Marie Roussey<br>~1880</figcaption>
@@ -193,7 +211,7 @@
                 En 1885, 1887 et 1892 naissent respectivement Marcelle, Maurice et Germaine. Sur les photo de leurs communions, on reconnait distinctement les époux Horiot et Roussey. Par deduction, on devine Germaine dans les bras de Marie.
             </p>
 
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/MarcRousseyCommu.jpg" alt="Marcelle Roussey">
                     <figcaption>Communion de Marcelle Roussey<br>~1890</figcaption>
@@ -209,7 +227,7 @@
                 Les Roussey projetent de s'installer à Bar-le-Duc. En 1896, Auguste cède son commerce de Saint-Dizier à M Venot. 
                 Alors qu'ils s'absentent, leur fils Maurice se tue accidentellement en jouant avec une arme à feu.
             </p>
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/MarcelleMaurice.jpg" alt="Marcelle et Maurice Roussey"  class="photo">
                     <figcaption>Maurice et Marcelle<br>~1893</figcaption>
@@ -217,7 +235,7 @@
 
                 <div class="vintage-frame">
                     <img src="images/MaurRousseyAccident.jpg" alt="Maurice Roussey" class="photo">
-                    <figcaption>Extrait de presse relatant l'accident mortel de Maurice<br>1896</figcaption>
+                    <figcaption>Article relatant l'accident mortel de Maurice<br>1896</figcaption>
                 </div>
             </div>    
 
@@ -226,7 +244,7 @@
                 Le temps qu'il trouve une maison, le couple s'installe à Naives-Rosières, à côté de Bar-le-Duc. Le benjamin de la famille, André, naît en 1897. Ce sera leur dernier enfant, en effet Auguste décède l'année qui suit.
             </p>
 
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/JPrudhomme2.jpg" alt="Julie Horiot" class="photo">
                     <figcaption>Julie Horiot<br>~1894</figcaption>
@@ -245,7 +263,7 @@
             <p>
                 Marie et ses enfants entrent dans le XXème siècle. Les années folles marqueront un tournant décisif pour la famille.</p>
 
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/GermaineAndre.jpg" alt="Andre et germaine" class="photo">
                     <figcaption>André et Germaine<br>~1901</figcaption>
@@ -262,7 +280,7 @@
             </p>
 
 
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/ConfActeAchat.jpg" alt="Acte achat confiture">
                     <figcaption>Couverture de l'acte d'achat<br>1899</figcaption>
@@ -278,7 +296,7 @@
                 Reprendre une telle maison n'est pas évident, sa clientèle est locale, nationale et internationale. En effet elle fournit aussi bien le chateau de Jean d'heure à Lisle-en-Rigault, que les villes de Paris ou Nice et exporte même jusque Londres, Oran et New-York. Afin d'aider Marie dans ses nouvelles fonctions, Mme Damain s'engagera à rester une année à ses côtés.
             </p>
 
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/ConfFacture1.jpg" alt="facture confiture">
                     <figcaption>Une commande pour New-York<br>1899</figcaption>
@@ -298,7 +316,7 @@
                 En 1901, François Horiot décède à l'âge de 80 ans. L'année qui suit, Marguerite, la première fille de Marie, succombe tragiquement à la maladie à l'âge de 24 ans. 
             </p>
 
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/FHoriot3.png" alt="françois Horiot" class="photo" style="border:none;">
                     <figcaption>François Roussey<br>~1900</figcaption>
@@ -314,7 +332,7 @@
                 La famille Roussey s'installe alors au 33 rue du bourg à Bar-le-Duc. La même année, Marie commande la construction d'une chapelle familiale au cimetière de Bar-le-Duc. La commande se fait auprès de Louis Piot, sculpteur et marbrier de Haute-Saône. 
             </p>
        
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/chapelle.jpg" alt="chapelle">
                     <figcaption>La chapelle Horiot-Roussey<br>2025</figcaption>
@@ -333,7 +351,7 @@
                 En 1903, Paul Varin, le fils de Gabriel Varin, fait bâtir le chateau de Marbeaumont. Il cède son ancien domicile à Marie. À croire que la famille a suivi de près les Varin-Bernier sur plusieurs générations. C'est ainsi que la famille Roussey s'intalle au 37 boulevard de la banque, futur boulevard Poincaré.
             </p>
 
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                 <img src="images/ConfEtiq.jpg" alt="Publicité Roussey">
                 <figcaption>Publicité Roussey "À la croix de Lorraine"<br>~1910</figcaption>
@@ -343,7 +361,7 @@
                 Pendant leur temps libre, Marcelle et Germaine s'adonnent au théatre. Elles donneront notamment une reconstitution du départ de Jehanne d'Arc depuis Vaucouleur.
                 En 1911, Eugénie, la demi-soeur de la mère de Marie, qui a accompagné les Roussey toute sa vie, décède à son tour.
             </p>
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/JeannedArc.jpg" alt="Représentation Jeanne d'arc" class="photo">
                     <figcaption>Germaine et Marcelle sur scène (carte postale)<br>~1910</figcaption>
@@ -356,7 +374,7 @@
             <p>
                 La grande guerre éclate. En 1915, le jeune André, alors étudiant à Paris, s'engage.
             </p>
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/ARoussey1.jpg" alt="André Roussey" class="photo">
                     <figcaption>André en uniforme<br>1915</figcaption>
@@ -375,7 +393,7 @@
             <p>
 	           André est affecté au 26ème régiment d'artillerie. Sur le champs de bataille, il se lie d'amitié avec son sous-lieutenant, un certain Marcel Ladevèze.
             </p>
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/AndréMarcel.png" alt="André et marcel" class="photo" style="border:none;">
                     <figcaption>André et Marcel Ladevèze<br>~1916</figcaption>
@@ -385,10 +403,10 @@
 	            Marcel trouve ses origines en Haute-Garonne, à la frontière de l'Espagne. Son père, Victor, naît à Argut-Dessous en 1864. Sa mère, Alexine Escande, naît en 1865 à Fougaron. Tous deux ont une famille bien ancrée en Haute-Garonne, à tel point qu' à Argut-Dessous, un habitant sur six est un Ladevèze. Le couple migre pour la capitale. Victor y exerce la profession d'instituteur. En 1889, naît Charlotte, suivie en 1891, de son frère Marcel. Il obtient en 1914 à Paris son diplôme d'ingénieur des arts et manufacture. Charlotte quant à elle, deviendra une des premières femmes chirurgiens-dentistes de France.
             </p>
 	
-           <div class="horizontalFlex">
+           <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/CharlotteMarcel.jpg" alt="Charlotte et marcel ladeveze" class="photo">
-                    <figcaption>Charlotte et Marcel Ladevèze<br>~1900</figcaption>
+                    <figcaption>Charlotte et Marcel<br>~1900</figcaption>
                 </div>
                 <div class="vintage-frame">
                     <img src="images/MLadeveze1.png" alt="Marcel ladeveze" class="photo" style="border:none;">
@@ -400,7 +418,7 @@
                 Marcel s'engage en 1914. Deux ans plus tard, il rejoint André au 26ème régiment d'infanterie où il est nommé sous-lieutenant de réserve.
             </p>
 
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/MLadeveze3.jpg" alt=" marcel ladeveze" class="photo">
                     <figcaption>Marcel Ladevèze<br>~1916</figcaption>
@@ -415,10 +433,10 @@
 	            La bataille fait rage autour de Verdun, le 26ème régiment d'artillerie est chargé de reprendre le fort de Douaumont :
             </p>
            
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
-                    <div class="texte-encadre" style="margin: auto; text-align: justify; font-size: .8rem;">
-                        <h3 style="color: #333">L'attaque de Douaumont</h3>	
+                    <div  style=" padding:1rem; text-align: justify; background-color: white;  font-size: .8rem;">
+                        <h3 style="margin-top: 1rem;">L'attaque de Douaumont</h3>	
                         <p>
 	                        Après une période de repos, les trois groupes se remettent en batterie le 13 octobre dans des positions construites par des hommes envoyés dès le 4 octobre par les batteries.
                         </p>
@@ -455,7 +473,7 @@
             <p>	
                 En 1920, le couple Ladevèze a son premier enfant: Andrée Marie Alexine. En hommage, elle porte le prénom de feu son oncle mort à la guerre. Elle aura deux frères et une soeur: Bernard, Josette et Jacques.
             </p>
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/GermaineMarcel.jpg" alt="Couple ladeveze" class="photo">
                     <figcaption>Le couple Ladevèze<br>~1925</figcaption>
@@ -465,7 +483,7 @@
                 Pendant ce temps, la confiture de groseille de Bar-le-Duc connaît un succès international. Marie exporte toujours à travers le monde, c'est la maison la plus connue à l'époque.
                 Le succès est tel que ses principaux fabricants, ceux garants du secret de leur technique, se voient contraints de créer un syndicat pour se démarquer. C'est l'apparition du fameux timbre bleu.
             </p>
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/ConfPub.jpg" alt="Pub Roussey">
                     <figcaption>Publicité Confitures de Bar-le-Duc "À la croix de Lorraine"<br>~1925</figcaption>
@@ -478,7 +496,7 @@
             <p>
                 Marie a 83 ans quand la seconde guerre mondiale éclate. Un jeune médecin de 26 ans, Jean-Marie Chauvisé, est affecté à Bar-le-Duc en tant qu'officier de réserve. Il est originaire de Brienon-sur-Armançon où sa famille est installée depuis plusieurs générations. Ses parents sont négociants en vin.
             </p>
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/JMChauvise 1923.jpg" alt="Jean Marie Chauvisé" class="photo">
                     <figcaption>Le jeune jean-Marie Chauvisé<br>~1923</figcaption>
@@ -491,7 +509,7 @@
             <p>
                 À Bar-le-Duc, Jean-Marie fait la rencontre d'Andrée. La famille Ladevèze fuit la France occupée pour s'installer à Rodez, où Jean-Marie épousera Andrée en 1940. Sous le régime de Vichy, Marcel participe activement à la résistance. Il protège des familles juives et sera même dénoncé pour cela.
             </p>
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/MLadevezeRes.jpg" alt="Marcel Resistant">
                     <figcaption>Carte de Marcel aux fonctionnaires resistants<br>1949</figcaption>
@@ -501,7 +519,7 @@
                 Mai 1945, l'Allemagne nazie capitule. Les Ladevèze rentrent à Bar-le-Duc. À 90 ans, Marie s'éteint. Elle aura connu trois grandes guerres, aura perdu son époux et trois enfants prématuremment, et aura été une entrepreneuse d'exception, menant sa famille au confort d'une certaine bourgeoisie. La fabrique de confiture sera vendue à son concurrent, Monsieur Amiable. Plus tard, c'est la famille Dutriez qui leur succèdera.
             </p>
 
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/MHoriot6.png" alt="Marie Roussey" style="border:none;" class="photo" >
                     <figcaption>Marie Roussey née Horiot<br>~1935</figcaption>
@@ -515,7 +533,7 @@
                 Jean-Marie installe son cabinet au 37 boulevard Poincaré. Les anciens de Bar-le-Duc qui l'ont eu pour médecin se souviendront probablement de sa gentillesse. Dans les années 1950, les caméras se popularisent. En 1955, le couple gagne le second prix du cinéma amateur. Ils auront cinq filles.
                 Marcel s'implique dans la vie sportive de Bar-le-Duc, il sera à l'origine de la construction d'un terrain de Tennis et participera à plusieurs tournois de ping-pong. Plus tard, c'est le golf qui occupera la famille Ladevèze-Chauvisé.
             </p>
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/JMChauviseFilm.jpg" alt="Film Chauvisé">
                     <figcaption>Les Chauvisé gagnent le prix<br>1955</figcaption>
@@ -528,7 +546,7 @@
             <p>
                 En 1957, Marcelle, qui n'aura su trouver l'âme soeur, décède à l'âge de 72 ans.
             </p>
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/MarcRoussey2.jpg" alt="Marcelle Roussey">
                     <figcaption>Marcelle Roussey<br>~1950</figcaption>
@@ -538,7 +556,7 @@
                 Pour l'ensemble de sa carrière militaire et son service dans la resistance, Marcel reçoit, en 1961, la légion d'honneur des mains du Général Lehr.
                 Marcel et Germaine s'éteignent respectivement en 1974 et 1986.
             </p>
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div class="vintage-frame">
                     <img src="images/MLadevezeHonneur.jpg" alt="Legion d'honneur" >
                     <figcaption>Marcel reçoit la légion d'honneur<br>1961</figcaption>
@@ -553,18 +571,14 @@
             </p>
         </section>
 
-        <hr class="separateur"><!-- ------------------------------------------------------------- -->
-
+        <section>
         <style>
             .img_archive{
                 height: 12rem;
                 display: inline-block;
-                border: .2rem solid #010101;
+                border: 2px solid #010101;
             }
         </style>
-
-
-        <section>
             <h2>
                 Anecdotes d'archive
             </h2>
@@ -581,7 +595,7 @@
                 Pour rechercher cet acte, je me basais sur l'acte de décès de François, sur lequel on peut lire "né à 
                 Nolay (Côte d'or)". 
             </p>
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div>
                     <img src="images/FHoriotActeDeces.jpg" alt="Francois Horiot Deces" class="img_archive">
                     <figcaption>Acte de décès de François</figcaption>
@@ -603,7 +617,7 @@
             <p>
                 Bingo! La Rochelle existe bien en Haute-Saône. Mais encore mieux, un village au nom plus ou moins familier nous apparaît: Molay. Serait-il possible que, lors de la déclaration du décès de François, il ait été confondu Nolay en Côte d'or avec Molay en Haute-Saône ? C'est bel et bien le cas, et je retrouve finalement l'acte de naissance de François établi à Molay. On constatera, à posteriori, que Molay est bien le village inscrit sur l'acte de mariage de François, mais que la précision fausse apportée dans l'acte décès (ville + département) l'aura emporté sur la vérité illisible de l'acte de mariage.
             </p>
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div >
                     <img src="images/FHoriotActeNaissance.jpg" alt="Francois Horiot Naissance" class="img_archive">
                     <figcaption>Acte de naissance de François</figcaption>
@@ -617,7 +631,7 @@
             <p>
                 Pour trouver cette date, j'ai épluché les annuaires de Meuse. Ils recensent beaucoup d'informations, notamment les commerces locaux. L'idée est de trouver en quelle année disparait la maison Damain et apparait la maison Roussey. Mettant mes compétences en algorithmique à profit, je procède à une recherche dichotomique et trouve que la maison Damain disparaît dans l'annuaire de 1900 mais que la maison Roussey y apparaît.
             </p>
-            <div class="horizontalFlex">
+            <div class="content-flex">
                 <div>
                     <img src="images/ConfAnnuaire1899.jpg" alt="Annuaire 1899 confitures" class="img_archive">
                     <figcaption>Extrait de l'annuaire 1899</figcaption>
@@ -646,9 +660,6 @@
 
         <div class="dateSection">Écrit le 4 Août 2025</div>
 
-   
-        <hr class="separateur">
-
         <section>
             <p>Feel free to share your thoughts, remarks or questions about thoses articles (github account needed).</p>
             <script src="https://utteranc.es/client.js" repo="CharlesDuMenhir/CharlesDuMenhir.github.io" issue-term="/Genealogie/"
@@ -657,8 +668,5 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 [Charles Duménil]</p>
-    </footer>
 </body>
 </html>

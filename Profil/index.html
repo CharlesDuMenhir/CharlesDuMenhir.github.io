@@ -11,22 +11,19 @@
     <script>
         fetch('/nav.html')
         .then(r => r.text())
-        .then(html => document.querySelector('nav').innerHTML = html);
+        .then(html => document.querySelector('header').innerHTML = html);
     </script>
     <header>
-    <div class="acc"><a href="/">&larr; Accueil</a> </div>
-        <p>Profil</p>
-        <nav>
-        </nav>
     </header>
 
   <main>
 
-    <section class="horizontalFlex" style="padding: 16rem auto;">
-      <div class="container-image" style="flex:1; margin-top: 4rem;">
-      <img src="images/profilGraviton.jpg" alt="Charles Duménil Graviton Fontainebleau" class="coins-arrondis">
-      </div>
-      <div style="flex:1;">
+    <div class="hero" style="padding-bottom: 4rem;">
+      <div class="content-flex">
+        <figure style="width:50%">
+          <img src="images/profilGraviton.jpg" alt="Charles Duménil Graviton Fontainebleau" class="framed">
+        </figure>
+        <div style="flex:1;">
         <h2>En bref</h2>
         <h3>Climber, Gamer, Math Teacher</h3>
         <p>
@@ -36,12 +33,11 @@
           Sportif, je pratique régulièrement l'escalade. Dans une recherche d'esthétique et d'optimisation.
         </p>
         <p>
-          D'avoir grandi dans les 90s, j'ai une affection particulière pour les jeux vidéo rétro. Je possède une assez belle collection dont quelques rares exemplaires.
+          Accessoirement, j'ai une affection particulière pour le bricolage et les jeux vidéo rétro.
         </p>
       </div>
-    </section>
-
-    <hr class="separateur">
+      </div>
+    </div>
 
     <section class="apropos">
       <h2>À propos de moi</h2>
@@ -55,7 +51,7 @@
         m'initie à l'escalade. Cette discipline ne me lachera plus, et je suis toujours à la recherche de voies à
         découvrir, à déchiffrer, puis à enchaîner.
         La grimpe m’apporte un équilibre essentiel : concentration, stratégie, dépassement de soi. Dans le mouvement,
-        l’optimisation, et l'esthétique. Le mouvement, c'est ce qui me pousse à quitter temporairement (ou pas)
+        l’optimisation, et l'esthétique. Le mouvement, c'est peut-être ce qui me pousse à quitter temporairement (ou pas)
         l'enseignement pour élargir mes connaissances mathématiques. Je découvre la géométrie algorithmique, à la
         jonction entre les maths et l'info. Un des concepts de géo-algo est la triangulation de Delaunay, j'en ferai le
         sujet de mon doctorat.
@@ -66,10 +62,9 @@
         Roussey, gérante de la maison "À la croix de Lorraine", qui fabriquait les célèbres confitures de groseilles
         épépinées à la plume d'oie. Je découvre aussi l'histoire, marquée par les guerres, de mes ancêtres. Pour
         le souvenir de ma mère, je répertorie et encadre les soies qu'elle a peintes. Pour mon
-        père, qui s'est mis en tête de restaurer une maison à 80 ans, je bâtis un charpente traditionnelle en bois. J'espère un jour en faire mon métier.
-        Côté loisir, je me détends en grimpant, notamment à Lérouville, où j'enchaîne mon premier 8a :
-        Thermofuel.
+        père, qui s'est mis en tête de restaurer une maison à 80 ans, je bâtis un charpente traditionnelle en bois. J'en ferai temporairement mon métier.
       </p>
+      <p>C'est l'ensemble de ces sujets que j'aborde dans ce blog. Profitant de mon inaptitude à trouver un travail stable, j'écris sur le temps libre qui m'est, loin de m'en plaindre, imposé. On y retrouve entre autres mon sujet de thèse, une partie de ma généalogie, mon premier 8A... Un peu de science, de jeu vidéo et de sport. Une somme éparse qui me ressemble plutôt bien.</p>
     </section>
   </main>
 

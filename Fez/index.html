@@ -4,226 +4,218 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/style.css" rel="stylesheet">
-    <title>Fez</title>
+    <title>Fez</title> 
 </head>
 
 <body>
     <script>
         fetch('/nav.html')
         .then(r => r.text())
-        .then(html => document.querySelector('nav').innerHTML = html);
+        .then(html => document.querySelector('header').innerHTML = html);
     </script>
-    <header>
-        <div class="acc"><a href="/">&larr; Accueil</a> </div>
-        <p>Fez</p>
-        <nav>
-        </nav>
-    </header>
+  <header>
+  </header>
 
-    <!-- Bouton retour en haut -->
-    <div id="top" style="scroll-margin-top: 75px"></div>
-    <a href="#top" class="bouton up"> <img src="/images/Up.png" class="img_button"> </a>
 
     <main>
         <!-- Fez -->
-        <section>
-            <h1 style="text-align: center;">Fez, an enigmatic game</h1>
-            <p>
+        <div class="hero">
+            <h1>Fez, an enigmatic game</h1>
+            <div class="hero-inner">
+            <p class="intro">
                 Fez is a platform game, side-view, similar to classic titles like Mario or Metroid, developped by Polytron and released in 2012. While it starts as a traditional platformer with its own unique mechanics, it gradually transforms into a challenging puzzle game like one that would go on to inspire later titles like Tunic or Animal Well. Nowadays, Fez still remains one the rare games that still holds unsolved mysteries. If you've never played Fez, be aware that spoilers lie ahead. If you know the game, you may be interested in the section <a href="#UnsolvedSecrets">"Unsolved secrets"</a>.
             </p>
+            </div>
+        </div>
 
-            <div class="horizontalFlex">
-                <div class="container-texte">
-                    <h2>The game</h2>
-                    <p>
-                        You play Gomez, a little white creature, living in VillageVille in its 2D-world. At the beginning of the game, you meet the Hexahedron — a god-like entity that communicates in an unknown language. Before it explodes, it gives Gomez a Fez, along with the ability to perceive the third dimension. Because, in reality, the world of Fez is embedded in 3-dimensional space. From the player's point of view, the Fez allows to rotate the camera around the environment, effectively shifting the 2D plane in which Gomez moves. A platform that seemed unreachable might suddenly become accessible from another angle. This clever rotation mechanic lets you navigate through different levels and regions. Your first objective is to collect golden cubes, which are fragments of the shattered Hexaedron. There are 32 golden cubes in total. You'll need them to open certains doors. This mechanic — simple yet incredibly inventive, form the core of the gameplay.
-                    </p>
-                    <p>
-                        Aesthetically, the game is beautiful, in a harmonious pixel art. You start in an astonishing archipelago, go through the most peaceful forest, explore an industrial district as well as an ominous cemetary. Far from your home village, you may reach an old scientific complex, remains of a forgotten civilisation. As a must-pass of the best games, you won't avoid a visit to the sewer. These diverse environments are accompanied by an incredible, highly immersive and peaceful soundtrack, composed by <a href="https://disasterpeace.bandcamp.com/album/fez-ost">DisasterPeace</a>.
-                    </p>
-                </div>
-
-                <div class="container-image">
-                    <img src="https://img.itch.zone/aW1hZ2UvOTc3ODEvNDU4MDkxLmdpZg==/original/Np9rpB.gif" alt="phare de Polytron Fez " class="coins-arrondis">
+        <section>    
+            <h2>The game</h2>
+            <p>
+                You play Gomez, a little white creature, living in VillageVille in its 2D-world. At the beginning of the game, you meet the Hexahedron — a god-like entity that communicates in an unknown language. Before it explodes, it gives Gomez a Fez, along with the ability to perceive the third dimension. Because, in reality, the world of Fez is embedded in 3-dimensional space. From the player's point of view, the Fez allows to rotate the camera around the environment, effectively shifting the 2D plane in which Gomez moves. A platform that seemed unreachable might suddenly become accessible from another angle. This clever rotation mechanic lets you navigate through different levels and regions. Your first objective is to collect golden cubes, which are fragments of the shattered Hexaedron. There are 32 golden cubes in total. You'll need them to open certains doors. This mechanic — simple yet incredibly inventive, form the core of the gameplay.
+            </p>
+            <figure style="width:50%;">
+                    <img src="https://img.itch.zone/aW1hZ2UvOTc3ODEvNDU4MDkxLmdpZg==/original/Np9rpB.gif" alt="phare de Polytron Fez " class="framed">
                     <figcaption>The rotation mechanic</figcaption>
-                </div>
-            </div>
+            </figure>
 
-            <div class="horizontalFlex">
-                <div class="container-image">
-                    <img src="/Fez/images/TheFoxJumps.gif" alt="Fez the wild fox jumps over the lazy dog" class="coins-arrondis">
-                    <figcaption>A peaceful scene</figcaption>
-                </div>
+            <p>
+                Aesthetically, the game is beautiful, in a harmonious pixel art. You start in an astonishing archipelago, go through the most peaceful forest, explore an industrial district as well as an ominous cemetary. Far from your home village, you may reach an old scientific complex, remains of a forgotten civilisation. As a must-pass of the best games, you won't avoid a visit to the sewer. These diverse environments are accompanied by an incredible, highly immersive and peaceful soundtrack, composed by <a href="https://disasterpeace.bandcamp.com/album/fez-ost">DisasterPeace</a>.
+            </p>
 
-                <div class="container-texte">
-                    <p>
-                        After a few levels, the game takes an unexpected turn. Gomez begins to encounter strange, indecipherable glyphs. Mysterious owls appear, delivering cryptic messages. Soon, he discovers an ancient civilization: the Zu. They speak the same language as the Hexahedron — Zuish. Some trasure chests contain obscure treasure maps, while others hide odd artifacts like the writing and counting cubes, or an unreadable book — the Tome. Maybe you will stumble upon the existence anti-cubes. What first seemed like a charming platformer gradually transforms into a complex and mysterious puzzle game. Nearly every room hides a secret. The difficulty ramps up, and solving it all requires observation, creativity, and sometimes... obsession.
-
-                    </p>
-                    <p>
-                        Eventually, Gomez may collect 32 cubes, unlocking the path to the final sequence. He casually opens a stargate, ascends a floating alien cosmic pyramid, and triggers the end of the game in a psychedelic cinematic. Aaaaaaaand the game restarts. Gomez meets the Hexahedron once more. Perhaps taking him for a role model, it rewards Gomez with a new accessory: a pair of sunglasses that go perfectly with his fez. Stylish and practical, they allow the player to switch to a first-person view, a feature essential for the mysterious journey that lies ahead in New Games +.
-                    </p>
-                </div>
-            </div>
-
-            <div class="horizontalFlex">
-                <div class="container-texte">
-                    <h2>The first answers</h2>
-                    <p>
-                        In the course of the second travel, we will pass through rooms in which you may distinguishes the subtleties. In the Zu counting classroom, with the counting cube, we learn how works the numeration system of Zu. Each of the six faces we find on the counting cube represents a numbers up to the orientation of the face. By analogy, we understand that each face on the writing cube corresponds to a letter, up to a rotation. Note that two symboles can describe the same number.
-                    </p>
-                    <img src="/Fez/images/Numbers.jpg" alt="Fez numbers" style="display: block; margin: auto; max-width: 50%; height: auto;">
-                    <figcaption>The Zuish numbers</figcaption>
-                    <p>
-                     In the right room, we might finally begin to decipher the Zu alphabet. That room is the one pictured above, where a fox jumps over a dog. Behind them stands a stele engraved with the symbols from the writing cube. With the help of the animals on stage, we start to make sense of it. The stele reads from top to bottom, then left to right: “The quick brown fox” followed by “jumps over the lazy dog” on the reverse side. We recognize the famous English pangram, and thanks to it, we gain a direct translation between the Latin alphabet and Zuish.
-                    </p>
-                </div>
-                <div class="container-image">
-                    <img src="/Fez/images/Alphabet.jpg" alt="Fez zuish alphabet" style ="width: 100%; height: auto;">
+            <p>
+                After a few levels, the game takes an unexpected turn. Gomez begins to encounter strange, indecipherable glyphs. Mysterious owls appear, delivering cryptic messages. Soon, he discovers an ancient civilization: the Zu. They speak the same language as the Hexahedron — Zuish. Some treasure chests contain obscure treasure maps, while others hide odd artifacts like the writing and counting cubes, or an unreadable book — the Tome. Maybe you will stumble upon the existence anti-cubes. What first seemed like a charming platformer gradually transforms into a complex and mysterious puzzle game. Nearly every room hides a secret. The difficulty ramps up, and solving it all requires observation, creativity, and sometimes... obsession.
+            </p>
+            <figure style="width:50%;">
+                    <img src="/Fez/images/TheFoxJumps.gif" alt="Fez the wild fox jumps over the lazy dog" class="framed">
+                <figcaption>A peaceful scene</figcaption>
+            </figure>
+            <p>
+                Eventually, Gomez may collect 32 cubes, unlocking the path to the final sequence. He casually opens a stargate, ascends a floating alien cosmic pyramid, and triggers the end of the game in a psychedelic cinematic. Aaaaaaaand the game restarts. Gomez meets the Hexahedron once again. Perhaps taking him for a role model, it rewards Gomez with a new accessory: a pair of sunglasses that go perfectly with his fez. Stylish and practical, they allow the player to switch to a first-person view, a feature essential for the mysterious journey that lies ahead in New Games +.
+            </p>
+        </section>
+        <section>
+            <h2>The first answers</h2>
+            <p>
+                In the course of the second travel, we will pass through rooms in which you may distinguishes the subtleties. In the Zu counting classroom, with the counting cube, we learn how works the numeration system of Zu. Each of the six faces we find on the counting cube represents a numbers up to the orientation of the face. Note that two symboles can describe the same number.
+            </p>
+            <figure style="height:175px;">
+                <img src="/Fez/images/Numbers.jpg" alt="Fez numbers" class="glyphs">
+                <figcaption>The Zuish numbers</figcaption>
+            </figure>
+            <div class="content-flex">
+                <p style="flex:1.5;">
+                    By analogy, we understand that each face on the writing cube corresponds to a letter, up to a rotation. In the right room, we might finally begin to decipher the Zu alphabet. That room is the one pictured above, where a fox jumps over a dog. Behind them stands a stele engraved with the symbols from the writing cube. With the help of the animals on stage, we start to make sense of it. The stele reads from top to bottom, then left to right: “The quick brown fox” followed by “jumps over the lazy dog” on the reverse side. We recognize the famous English pangram, and thanks to it, we gain a direct translation between the Latin alphabet and Zuish.
+                </p>
+                <figure style="flex:1;">
+                    <img src="/Fez/images/Alphabet.jpg" alt="Fez zuish alphabet" class="glyphs">
                     <figcaption>The Zuish alphabet</figcaption>
-                </div>
+                </figure>  
             </div>
 
-            <div class="horizontalFlex">
-                <div class="container-image">
-                    <img src="/Fez/images/NuZuClassroom.jpg" alt="Fez Nu Zu classroom" class="coins-arrondis">
+            <div class="content-flex">
+                <figure style="flex:1;">
+                    <img src="/Fez/images/NuZuClassroom.jpg" alt="Fez Nu Zu classroom" class="framed">
                     <figcaption>Nu Zu classroom</figcaption>
-                </div>
-                <div class="container-texte">
+                </figure>
+                <div style="flex:1.3;">
                     <p>
                         In Nu Zu, an abandoned building filled with flickering neon lights, we come across another classroom where we learn how to decipher the glyphs. These glyphs are actually made up of characters called tetrominos, and each one corresponds to a specific input the player can perform. Most of the game's secrets revolve around finding these glyphs and figuring out how to interpret them. To understand what to do, we need to follow the instructions written on the blackboard, in the order indicated by the numbers, which we can now read.
                         The idea is to break each glyph down into its tetromino components (shapes made of four blocks), rotate the glyph 90° counterclockwise, and then input the corresponding command. The key to translating tetrominos into controller inputs is found in a nearby room, where a stele is displayed in the top-left corner of the blackboard.
                     </p>
-                    <img src="/Fez/images/InputsTranslation.jpg" alt="Fez Input tetromino" style="display: block; margin: auto; width: 40%; height: auto;">
-                    <p>
-                        The first four inputs correspond to the standard movement directions. The Z and inverse-Z inputs are used to rotate the screen, to the left and right respectively. The final input is the jump command. Typically, a glyph represents a sequence of eight tetrominos.
-                    </p>
-                    <p>
-                        At this point, we've managed to translate the Zuish alphabet, the numbers, and the glyphs. With the help of the sunglasses, we may have uncovered the remaining cubes: 32 regular cubes and 32 anti-cubes. Maybe we've even discovered the Skull artifact, hidden in a particularly mysterious room. It is worth finishing the game again. This time, we get a new ending animation, and a new pair of glasses, the 3D glasses.
-                    </p>
                 </div>
             </div>
-
-           
-            <div class="horizontalFlex">
-                <div class="container-texte">
-                    <h2>A new level of complexity</h2>
+            <div>
+                <p>
+                    The first four inputs correspond to the standard movement directions. The Z and inverse-Z inputs are used to rotate the screen, to the left and right respectively. The final input is the jump command. Typically, a glyph represents a sequence of eight tetrominos.
+                </p>
+                <img src="/Fez/images/InputsTranslation.jpg" alt="Fez Input tetromino" style="display: block; margin: auto; width: 35%; height: auto;">
+                <p>
+                    At this point, we've managed to translate the Zuish alphabet, the numbers, and the glyphs. With the help of the sunglasses, we may have uncovered the remaining cubes: 32 regular cubes and 32 anti-cubes. Maybe we've even discovered the Skull artifact, hidden in a particularly mysterious room. It is worth finishing the game again. This time, we get a new ending animation, and a new pair of glasses, the 3D glasses.
+                </p>
+            </div>
+        </section> 
+        
+        <section>
+            <h2>A new level of complexity</h2>
+            <p>
+                When all the secrets in a room have been solved, the game marks it as complete on the map. Surprisingly, even after collecting all 64 cubes, some rooms are still shown as incomplete. There may be four such rooms: the Security Question Room, the Observatory Interior, the Monolith Room, and the Temple of Love.
+            </p>
+            <div class="content-flex">
+                <div class="text">
                     <p>
-                        When all the secrets in a room have been solved, the game marks it as complete on the map. Surprisingly, even after collecting all 64 cubes, some rooms are still shown as incomplete. There may be four such rooms: the Security Question Room, the Observatory Interior, the Monolith Room, and the Temple of Love.
-
                         Let's start with the Security Question Room. It consists of a single platform with a floating stele. After deciphering the stele, we get an enigmatic question.
-                    </p>
-                    <p>
                         It's a bit tricky but here the solution: What is "what it is" is, by definition, meta. What made it — the game or the question itself — is Polytron, the studio behind Fez. Put together, the answer is Metatron. There was even an in-game hint: an owl mentions it at some point during the adventure. Solving this riddle rewards us with a Heart Cube. We need to collect three of these Heart Cubes to complete the Temple of Love.
                     </p>
                 </div>
-                <div class ="container-image">
-                    <div class="texte-encadre">
+                <div class ="text" >
+                    <div class="framed">
                         <p>
                             Please answer this security question :<br> What's my name ? <br> Security question hint :<br> My first half is what it is ;<br> My second half is half of what made it.
                         </p> 
                     </div>
-                    <figcaption>The Security Question</figcaption>
                 </div>
             </div>
 
-            <div class="horizontalFlex">
-                <div class="container-image">
-                    <img src="/Fez/images/ObservatoryCode.gif" alt="Fez Observatory code" class="coins-arrondis">
+            <div class="content-flex">
+                <figure>
+                    <img src="/Fez/images/ObservatoryCode.gif" alt="Fez Observatory code" class="framed">
                     <figcaption>The sky by night</figcaption>
-                </div>
-                <div class="container-texte">
+                </figure>
+                <div class="text">
                     <p>
-                        The next mystery lies within the scientific complex. When I first played the game years ago, I felt small and powerless in front of this enigma — even after learning the solution. Once inside the observatory, you can approach a large telescope and look up at the sky. But be patient. Wait until nightfall, because — spoiler — you won't see any stars during the day. If you look in the right direction, you might notice two subtle red dots blinking in the top-left corner. You can see them in the image on the left. Didn't spot them? Seriously?
-                    </p>
-                    <p>
-                        What are we supposed to do now? Easy! Just write down the blinking pattern of the red dots. And then? Well… here's where it gets tricky. In my opinion, if you're not familiar with basic computer logic, this puzzle is a dead end. Thankfully, the gaming community is large and generous, and it didn't take long for a clever nerd to figure it out. Here's the key: the left dot is a 0, the right dot is a 1. Why? Why not! There are two things — it's binary ! On the Switch version, the full sequence is:
-                    </p> 
-                    <p style="text-align: center; font-size: 1.2em; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;">    
-                        010100100100110001001100&#8203;010100100101001001001100
-                    </p>
-                    <p>
-                       Well, well, well… What now? Maybe you didn't notice the pattern repeating every eight bits. Indeed, the sequences 01010010 and 01001100 appear multiple times. By converting these binary sequences to ASCII, you get the characters R and L. From the original sequence, this translates to: R L L R R L. Now it's up to you to enter these inputs and earn your second Heart Cube. Easy, right? Just wait — there's more to come!
+                        The next mystery lies within the scientific complex. When I first played the game years ago, I felt small and powerless in front of this enigma — even after learning the solution. Once inside the observatory, you can approach a large telescope and look up at the sky. But be patient. Wait until nightfall, because — spoiler — you won't see any stars during the day. If you look in the right direction, you might notice two subtle red dots blinking in the top-left corner. You can see them in the image on the left. Didn't spot them? Seriously? What are we supposed to do now? Easy! Just write down the blinking pattern of the red dots. And then? Well… here's where it gets tricky.
                     </p>
                 </div>
             </div>
-
-            <div class="horizontalFlex">
-                <div class="container-texte">
+                <p>
+                        In my opinion, if you're not familiar with basic computer logic, this puzzle is a dead end. Thankfully, the gaming community is large and generous, and it didn't take long for a clever nerd to figure it out. Here's the key: the left dot is a 0, the right dot is a 1. Why? Why not! There are two things — it's binary ! On the Switch version, the full sequence is:
+                </p> 
+                <p style="text-align: center; font-size: 1.2em; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;">    
+                    010100100100110001001100&#8203;010100100101001001001100
+                </p>
+                <p>
+                    Well, well, well… What now? Maybe you didn't notice the pattern repeating every eight bits. Indeed, the sequences 01010010 and 01001100 appear multiple times. By converting these binary sequences to ASCII, you get the characters R and L. From the original sequence, this translates to: R L L R R L. Now it's up to you to enter these inputs and earn your second Heart Cube. Easy, right? Just wait — there's more to come!
+                </p>
+                <p>
+                    It is time to visit the Monolith Room. At first glance, it looks like just a terrace above the entrance door. But with your sunglasses on, you notice a glyph on the ground. It resembles the infinity symbol or the number eight, rotated by 45 degrees. The glyph is made up of multiple strips.
+                    You might remember seeing this shape before, on a treasure map known as the Burnt Map. Although much of the map is unreadable, half of it remains legible. It shows a position and a tetromino sequence. On Switch, the sequence is Up-R-Up-B-Down-L-Up-Down. When you enter this command while Gomez stands in the right spot, a black floating monolith appears. However, the world map still shows that a secret here remains unsolved. It's easy to guess that a second command must be entered at another location, but since the map is burnt, we have no clue what that command might be...
+                </p>
+                <div class="content-flex">
+                    <div class="text">
                     <p>
-                        It is time to visit the Monolith Room. At first glance, it looks like just a terrace above the entrance door. But with your sunglasses on, you notice a glyph on the ground. It resembles the infinity symbol or the number eight, rotated by 45 degrees. The glyph is made up of multiple strips.
-                        You might remember seeing this shape before, on a treasure map known as the Burnt Map. Although much of the map is unreadable, half of it remains legible. It shows a position and a tetromino sequence. On Switch, the sequence is Up-R-Up-B-Down-L-Up-Down. When you enter this command while Gomez stands in the right spot, a black floating monolith appears. However, the world map still shows that a secret here remains unsolved. It's easy to guess that a second command must be entered at another location, but since the map is burnt, we have no clue what that command might be...
-
-                    </p>
-                    <p>
-                        Maybe the solution can be found in the Tome. Its cover features a symbol similar to the one on the ground in the Monolith Room. This symbol was used earlier to understand the Zuish numeration — it represents the third dimension. Opening the book, you might feel a moment of instant regret. Tons of Zuish characters... Oh gosh. And at the back of each page, there is a large letter.  Alright, let's decipher the Tome! The letters you get are: F... F... I... L... R... E... W... O...  What the hell?! Guess what? The characters are not in the usual order. And if that wasn't enough, neither are the pages!  Long story short, the correct page order is: 1-5-2-6-3-7-4-8. Here is the correct character way to read the Tome: read the first character of page 1, then the first character of page 5, then continue through pages 2, 6, 3, 7, 4, and 8. Once you finish that round, go back to page 1 and read the second character, and so on.  InsoFox was the first to translate this, as he explained in <a href="https://gamefaqs.gamespot.com/boards/961239-fez/62556785?page=1#11">this topic</a>. Once deciphered, the Tome reveals <a href="/Fez/images/Poem.txt">an enigmatic poem</a>:
+                        Maybe the solution can be found in the Tome. Its cover features a symbol similar to the one on the ground in the Monolith Room. This symbol was used earlier to understand the Zuish numeration — it represents the third dimension. Opening the book, you might feel a moment of instant regret. Tons of Zuish characters... Oh gosh. And at the back of each page, there is a large letter.  Alright, let's decipher the Tome! The letters you get are: F... F... I... L... R... E... W... O...  What the hell?! Guess what? The characters are not in the usual order. And if that wasn't enough, neither are the pages!
                     </p>
                 </div>
-                <div class="container-image">
-                    <img src="/Fez/images/MonolithRoom.jpg" alt="Fez monolith room" class="coins-arrondis">
+                <figure>
+                    <img src="/Fez/images/MonolithRoom.jpg" alt="Fez monolith room" class="framed">
                     <figcaption>The Monolith Room</figcaption>
-                </div>
+                </dfigure>
             </div>
-            <div class="cont-image-centree">
-                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/679d2620-2ab3-408b-b798-c3a7cfe45724/d7hf4uv-224f392b-94e8-4d2d-895e-977d6a410a13.png/v1/fit/w_612,h_792,q_70,strp/fez___the_tome_artifact_by_running_ricketts_d7hf4uv-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzkyIiwicGF0aCI6IlwvZlwvNjc5ZDI2MjAtMmFiMy00MDhiLWI3OTgtYzNhN2NmZTQ1NzI0XC9kN2hmNHV2LTIyNGYzOTJiLTk0ZTgtNGQyZC04OTVlLTk3N2Q2YTQxMGExMy5wbmciLCJ3aWR0aCI6Ijw9NjEyIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.ZodeDYThZ2wKWOv12T9i9sabIE3h3a32OHpZCMo4ASg" alt="Fez Tome Artifact" class="coins-arrondis" style="box-shadow: 0 0 8px 3px #ae800a;">
-                <figcaption>Deviation by <a href = "https://www.deviantart.com/running-ricketts/gallery">Running-Ricketts</a></figcaption>
-            </div>
+            <p>
+            Long story short, the correct page order is: 1-5-2-6-3-7-4-8. Here is the correct way to read the Tome: read the first character of page 1, then the first character of page 5, then continue through pages 2, 6, 3, 7, 4, and 8. Once you finish that round, go back to page 1 and read the second character, and so on.  InsoFox was the first to translate this, as he explained in <a href="https://gamefaqs.gamespot.com/boards/961239-fez/62556785?page=1#11">this topic</a>. Once deciphered, the Tome reveals <a href="/Fez/images/Poem.txt">an enigmatic poem</a>:
+            </p>
 
-          
+            <figure style="width:50%;">
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/679d2620-2ab3-408b-b798-c3a7cfe45724/d7hf4uv-224f392b-94e8-4d2d-895e-977d6a410a13.png/v1/fit/w_612,h_792,q_70,strp/fez___the_tome_artifact_by_running_ricketts_d7hf4uv-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzkyIiwicGF0aCI6IlwvZlwvNjc5ZDI2MjAtMmFiMy00MDhiLWI3OTgtYzNhN2NmZTQ1NzI0XC9kN2hmNHV2LTIyNGYzOTJiLTk0ZTgtNGQyZC04OTVlLTk3N2Q2YTQxMGExMy5wbmciLCJ3aWR0aCI6Ijw9NjEyIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.ZodeDYThZ2wKWOv12T9i9sabIE3h3a32OHpZCMo4ASg" alt="Fez Tome Artifact" class="framed" style="box-shadow: 0 0 8px 3px #ae800a;">
+                <figcaption>Deviation by <a href = "https://www.deviantart.com/running-ricketts/gallery">Running-Ricketts</a></figcaption>
+            </figure>
+
+        </section> 
+        <section>
 
             <h2 id="UnsolvedSecrets" style="scroll-margin-top: 75px">The unsolved mysteries</h2>
             <p>
                 Thanks for the translation... I'm not sure if things are clearer now or not... From this point on, we don't really learn anything new. The gaming community hasn't uncovered any additional in-game information.  After more than 10 years, nobody has ever figured out how to find the second code for the Monolith Room. To be honest, that's not entirely true. Using out-of-game methods, people have managed to solve almost everything. But knowing a solution is different from truly understanding it. And that's the whole challenge of Fez. This can be both very frustrating and very enjoyable. In my opinion, it's what makes a game so memorable. Games like Celeste or the Souls series immerse players in deep frustration, making every achievement feel like a liberation. Fez isn't exactly the same — it's not a die-and-retry game — but there is still a certain analogy.  In this last section, I will list what might be helpful in uncovering Fez's final secrets.
             </p>
 
-            <div class="horizontalFlex">
-                <div class="container-texte">
-                    <h3>The second Monolith code</h3>
-                    <p>
-                        Actually, we know the second Monolith code. It was brute-forced by the gaming community and discovered by GregStorm. On Switch, the code is: Down Down L R R B Up.  Only seven inputs, while all the other commands have eight? Interesting... The story of the brute forcing is shared across these pages  (<a href="https://gamefaqs.gamespot.com/boards/961239-fez/62566926?page=10">discussions</a>, <a href="https://www.giantbomb.com/fez/3030-24768/forums/monolith-solution-543751/#6">solution</a> and <a href="https://arstechnica.com/gaming/2012/04/why-it-took-almost-a-week-for-the-world-to-completely-finish-fez/">narration</a>).
-                        The code was found in less than a week after the game's release, but nobody has ever given a coherent explanation on how to find this sequence in-game. For many players, this is very frustrating. Even worse, the community began doubting whether a real in-game solution actually exists. We know the sequence, but we don't know how to find it — and we don't even know if there is a way to discover it legitimately.  Many theories have emerged since then. The most famous one is <a href="https://www.reddit.com/r/Fez/comments/1hx4ed/spoilers_release_date_theory_possible_monolith/">the release date theory</a>, although it suffers from the weakness of being constructed backward, based on the knowledge of the second code.
-                    </p>
+            <h3>The second Monolith code</h3>
+            <p>
+                Actually, we know the second Monolith code. It was brute-forced by the gaming community and discovered by GregStorm. On Switch, the code is: Down Down L R R B Up.  Only seven inputs, while all the other commands have eight? Interesting... The story of the brute forcing is shared across these pages  (<a href="https://gamefaqs.gamespot.com/boards/961239-fez/62566926?page=10">discussions</a>, <a href="https://www.giantbomb.com/fez/3030-24768/forums/monolith-solution-543751/#6">solution</a> and <a href="https://arstechnica.com/gaming/2012/04/why-it-took-almost-a-week-for-the-world-to-completely-finish-fez/">narration</a>).
+                The code was found in less than a week after the game's release, but nobody has ever given a coherent explanation on how to find this sequence in-game. For many players, this is very frustrating. Even worse, the community began doubting whether a real in-game solution actually exists. We know the sequence, but we don't know how to find it — and we don't even know if there is a way to discover it legitimately.  Many theories have emerged since then. The most famous one is <a href="https://www.reddit.com/r/Fez/comments/1hx4ed/spoilers_release_date_theory_possible_monolith/">the release date theory</a>, although it suffers from the weakness of being constructed backward, based on the knowledge of the second code.
+            </p>
+            <div class="content-flex">
+                <div class="text">
                     <p>
                         Polytron's policy has always been “no comments.” However, staying silent isn't always easy. After the solution was brute-forced, Phil Fish, the game's creator, said: “It was way more interesting and satisfying than what we had originally intended for it.” So, there might actually be an intended way!  Meanwhile, a Polytron developer said: <a href="https://www.reddit.com/r/Fez/comments/21epkk/can_anyone_now_confirm_what_the_lightbar_is_used/">"There's still one thing that nobody never discover"</a>.
                         Finally, five years after the release date theory appeared, Renaud Bedard, Fez's programmer, <a href="https://www.reddit.com/r/Fez/comments/aggf3z/about_the_release_date_theory_for_the_black/">debunked the theory</a>. What's significant is that, after so much time, it was important enough for Renaud to share that information. Still, it's possible that the whole thing is just a troll...
                     </p>
                 </div>
-                <div class="container-image">
+                <figure>
                     <img src="/Fez/images/MonolithCodes.jpg" alt="Fez monolith codes" style="max-width: 100%;">
-                    <figcaption>The first code makes the Monolith appears,<br> the second code gives a Heart Cube</figcaption>
-                </div>
+                    <figcaption>The first code makes the Monolith appear,<br> the second code gives a Heart Cube</figcaption>
+                </figure>
             </div>
-
-
-                    
-            <div class="horizontalFlex">
-                <div class="container-texte">
-                    <h3>The unused elements</h3>
-                    <p> 
-                        In my opinion, a coherent solution does exist. Many elements have yet to be used. Here are some of them.
-                    </p>
-                    <h4>The big letters</h4>
+ 
+            <h3>The unused elements</h3>
+            <p> 
+                In my opinion, a coherent solution does exist. Many elements have yet to be used. Here are some of them.
+            </p>
+            <h4>The big letters</h4>
+            <div class="content-flex">
+                <div class="text">
                     <p>
                         The big letters are the Zuish characters found on the back of each page of the Tome. In their original order, they spell P A E A E B U B. Once reordered so the poem becomes readable, they spell P E A B E U A B.  We have no idea what this is used for. We don't even know if the big letters are supposed to indicate the order of the Tome or the reverse. In my opinion, the big letters can't give the order of the Tome since some letters are repeated. Also, it's unclear whether the Zuish characters appear in the correct orientation — maybe they aren't even the right letters at all. One probably important fact is that there are eight letters but only five unique characters are used.
                     </p>
                 </div>
-                <div class="container-image">
-                    <img src="/Fez/images/BigLetters.jpg" alt="Fez big letters tome" style="max-width: 100%;">
+                <figure>
+                    <img src="/Fez/images/BigLetters.jpg" alt="Fez big letters tome">
                     <figcaption>The big letters next to their page number</figcaption>
-                </div>
+                </figure>
             </div>
 
-  
-            <div class="horizontalFlex">
-                <div class="container-image">
-                    <img src="/Fez/images/FractalRoom.jpg" alt="Fez fractal room" class="coins-arrondis">
+            <h4>The concentric squares</h4>
+            <div class="content-flex">
+                <figure>
+                    <img src="/Fez/images/FractalRoom.jpg" alt="Fez fractal room" class="framed">
                     <figcaption>The Fractal Room and the four concentric squares</figcaption>
-                </div>
-
-                <div class="container-texte">      
-                    <h4>The concentric squares</h4>
+                </figure>
+                <div class="text">      
                     <p>
-                        In the world of Fez, there are eight white paintings on the ground, each shaped like concentric squares. Each painting has a different number of squares, from one to eight. You need to use the sunglasses to see them — except for the fourth one. The fourth painting is located in the fractal room, where you can't rotate the screen yourself or use the glasses. The only way to see this painting is through an out-of-game method like <a href="noclip.website">noclip</a>. It shows four concentric squares. An important detail is that the fractal shape in the room closely resembles the shape of the Heart Cubes. The fact that you can't see the fourth painting might be connected to the second Monolith code having only seven input — represented here by the missing cube on the fractal. It's possible that Gomez needs to stand at the center of the squares and perform a specific action. Maybe the levels containing these paintings are connected on the world map in a special way.
+                        In the world of Fez, there are eight white paintings on the ground, each shaped like concentric squares. Each painting has a different number of squares, from one to eight. You need to use the sunglasses to see them — except for the fourth one. The fourth painting is located in the fractal room, where you can't rotate the screen yourself or use the glasses. The only way to see this painting is through an out-of-game method like <a href="noclip.website">noclip</a>. It shows four concentric squares. A not so important detail is that the fractal shape in the room closely resembles the shape of the Heart Cubes. The fact that you can't see the fourth painting might be connected to the second Monolith code having only seven input — represented here by the missing cube on the fractal.
+                    </p>
+                </div>
+            </div>
+                        It's possible that Gomez needs to stand at the center of the squares and perform a specific action. Maybe the levels containing these paintings are connected on the world map in a special way.
                     </p>
 
                     <div style="display: flex; justify-content: space-evenly;">
@@ -243,36 +235,28 @@
                 </div>
             </div>
 
-            <div class="horizontalFlex">
-                <div class="container-texte">  
-                    <h4>The burnt map</h4>
-                    <p>
-                        Of course, we use the burnt map to make the monolith appear. But what's the point of making it appear if it could have been there all along? Why do we need two codes? This might suggest that the second code can be deduced from the first one.
-                    </p> 
+            <h4>The burnt map</h4>
+            <p>
+                Of course, we use the burnt map to make the monolith appear. But what's the point of making it appear if it could have been there all along? Why do we need two codes? This might suggest that the second code can be deduced from the first one.
+            </p> 
+            <figure style="width:50%">
+                <img src="/Fez/images/BurntMap.jpg" alt="Fez burnt map" class="framed">
+                <figcaption>Both sides of the burnt map</figcaption>
+            </figure>
 
-                    <h4>The 3D-glasses</h4>
-                    <p>
-                        When you finish the game with all 64 cubes, the Hexaedron gives you a pair of 3D-glasses. They seem useless at first. In my opinion, they're just an easter egg breaking the fourth wall — since 3D-glasses were originally used to watch 3D movies in theaters, much like Gomez gaining this ability in the game.
-                    </p>
-                </div>
+            <h4>The 3D-glasses</h4>
+            <p>
+                When you finish the game with all 64 cubes, the Hexaedron gives you a pair of 3D-glasses. They seem useless at first. In my opinion, they're just an easter egg breaking the fourth wall — since 3D-glasses were originally used to watch 3D movies in theaters, much like Gomez gaining this ability in the game.
+            </p>
 
-                <div class="container-image">
-                    <img src="/Fez/images/BurntMap.jpg" alt="Fez burnt map" class="coins-arrondis">
-                    <figcaption>Both sides of the burnt map</figcaption>
-                </div>
-            </div>
-
-            <div class="horizontalFlex">
-                <div class="container-image">
-                    <img src="/Fez/images/BoilerRoom.jpg" alt="Fez boiler room" class="coins-arrondis">
-                    <figcaption>The posters of the Hexaedron and the 3-eyed skull in the boiler room</figcaption>
-                </div>
-
-                <div class="container-texte">  
-                    <h4>The Skull and the Hexaedron poster</h4>
-                    <p>
-                        The Skull artifact seems to have no use in the game, but it remains very enigmatic. Additionally, you can find a poster of the three-eyed skull in the boiler room of Gomez's village. In the same room, there is also a poster showing one face of the Hexaedron. To me, these are just elements of the lore. Note that one face of the Hexaedron resembles the book cover.
-                    </p>
+            <h4>The Skull and the Hexaedron poster</h4>
+            <p>
+                The Skull artifact seems to have no use in the game, but it remains very enigmatic. Additionally, you can find a poster of the three-eyed skull in the boiler room of Gomez's village. In the same room, there is also a poster showing one face of the Hexaedron. To me, these are just elements of the lore. Note that one face of the Hexaedron resembles the book cover.
+            </p>
+            <figure style="width:60%">
+                <img src="/Fez/images/BoilerRoom.jpg" alt="Fez boiler room" class="framed">
+                <figcaption>The posters of the Hexaedron and the 3-eyed skull in the boiler room</figcaption>
+             </figure> 
 
                     <h4>The Zelda reference</h4>
                     <p>
@@ -282,61 +266,50 @@
             </div>
 
             <div class="sketchfab-embed-wrapper" style="text-align: center;"> <iframe title="Hexahedron" height="120rem" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/75ce83e560c5471c9d3eb8dcabbb6841/embed"> </iframe> <p style="font-size: 1rem; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/hexahedron-75ce83e560c5471c9d3eb8dcabbb6841?utm_medium=embed&utm_campaign=share-popup&utm_content=75ce83e560c5471c9d3eb8dcabbb6841" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Hexahedron </a> by <a href="https://sketchfab.com/toiletsnakes?utm_medium=embed&utm_campaign=share-popup&utm_content=75ce83e560c5471c9d3eb8dcabbb6841" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> toiletsnakes </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=75ce83e560c5471c9d3eb8dcabbb6841" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
-
-            <div class="horizontalFlex">
-                <div class="container-texte">  
-                    <h4>The Ost spectrograms and the Heart reboot</h4>
-                    <p>
-                       Speaking of songs... Even the OST of Fez holds secrets. This is far beyond my understanding, but people can insert images into song files without altering the music — and that's exactly what was done in Fez. The OST contains a gallery of sixteen images with various references. Since I don't understand everything, I feel somewhat detached from the idea that this is necessary to find the Monolith solution. Still, it's really cool to see that they included artists who played with distorting 3D reality, like Dalí and Escher. Here is <a href="https://www.reddit.com/r/Fez/comments/1ijdrds/fez_ost_spectrogram_images_rendered_into_a/">a reddit post</a> and <a href="https://blog.krzyhau.pl/fez-spectrograms-adventure">an explanatory article</a> from the author's blog. Such an amazing work!
-                    </p>
-                    <p>
-                        On the other hand, when the game was released on PC, people started to decompile it and explore the files. They discovered that once you bring the three Heart Cubes back to the Temple of Love, you can enter a sequence while looking at the writing and counting artifacts in the menu. This causes the heart to explode and restarts the game. Maybe it even corrupts your save... Here is <a href="https://gamefaqs.gamespot.com/boards/945079-fez/66110193">the original topic</a>.
-                    </p>
-                    <p>
-                        In <a href="https://www.reddit.com/r/Fez/comments/1koxbdz/possible_spectrogram_solution/">a recent theory</a>, Emerald_ links the Heart reboot to the Ost spectrograms.
-                    </p>
-                </div>
-
-                <div class="container-image">
-                    <img src="/Fez/images/TempleLove.jpg" alt="Fez temple love" class="coins-arrondis">
-                    <figcaption>The Heart completed in the Temple of Love</figcaption>
-                </div>
-            </div>
             
-            <div class="horizontalFlex">
-                <div class="container-texte">
-                    <h3>Other useful links</h3>
-                    <p>
-                        Before me, others have made summaries of the Fez mysteries. Below, I list some of them — first as a credit, since they helped me, and second for readers who want to go further down the rabbit hole. These resources are well documented and very interesting. Nowadays, the community is still active, and the recent Switch release has renewed the game's popularity. We're still waiting for someone to finally bring a solution.
-                    </p>
+            <h4>The Ost spectrograms and the Heart reboot</h4>
+            <p>
+                Speaking of songs... Even the OST of Fez holds secrets. This is far beyond my understanding, but people can insert images into song files without altering the music — and that's exactly what was done in Fez. The OST contains a gallery of sixteen images with various references. Since I don't understand everything, I feel somewhat detached from the idea that this is necessary to find the Monolith solution. Still, it's really cool to see that they included artists who played with distorting 3D reality, like Dalí and Escher. Here is <a href="https://www.reddit.com/r/Fez/comments/1ijdrds/fez_ost_spectrogram_images_rendered_into_a/">a reddit post</a> and <a href="https://blog.krzyhau.pl/fez-spectrograms-adventure">an explanatory article</a> from the author's blog. Such an amazing work!
+            </p>
+            <p>
+                On the other hand, when the game was released on PC, people started to decompile it and explore the files. They discovered that once you bring the three Heart Cubes back to the Temple of Love, you can enter a sequence while looking at the writing and counting artifacts in the menu. This causes the heart to explode and restarts the game. Maybe it even corrupts your save... Here is <a href="https://gamefaqs.gamespot.com/boards/945079-fez/66110193">the original topic</a>.
+            </p>
+            <p>
+                In <a href="https://www.reddit.com/r/Fez/comments/1koxbdz/possible_spectrogram_solution/">a recent theory</a>, Emerald_ links the Heart reboot to the Ost spectrograms.
+            </p>
 
-                    <div style="text-align: left;">
-                        <a href="https://www.reddit.com/r/Fez/comments/nvsbrm/comprehensive_fez_unsolved_mysteries_post/">A Comprehensive Fez Unsolved Mysteries Post,</a> by Gazooh on Reddit<br>
-                        <a href="https://www.reddit.com/r/Fez/comments/alh4df/is_there_a_comprehensive_resource_of_what_we_know/">A Comprehensive Resource Of What We Know,</a> still by Gazooh on Reddit but older <br>
-                        <a href="https://www.smokingonabike.com/2015/03/25/fez-mysteries/">Fez Mysteries,</a> by ColdPie on his blog <br>
-                        <a href="https://www.youtube.com/watch?v=fZODKWXzSxs">The strangest accounts of r/Fez,</a> by Eli B on Youtube <br>
-                    </div>
+            <figure style="width: 50%;">
+                <img src="/Fez/images/TempleLove.jpg" alt="Fez temple love" class="framed">
+                <figcaption>The Heart completed in the Temple of Love</figcaption>
+            </figure>
+            
+            <h3>Other useful links</h3>
+            <p>
+                Before me, others have made summaries of the Fez mysteries. Below, I list some of them — first as a credit, since they helped me, and second for readers who want to go further down the rabbit hole. These resources are well documented and very interesting. Nowadays, the community is still active, and the recent Switch release has renewed the game's popularity. We're still waiting for someone to finally bring a solution.
+            </p>
+
+            <div style="text-align: left;">
+                <a href="https://www.reddit.com/r/Fez/comments/nvsbrm/comprehensive_fez_unsolved_mysteries_post/">A Comprehensive Fez Unsolved Mysteries Post,</a> by Gazooh on Reddit<br>
+                <a href="https://www.reddit.com/r/Fez/comments/alh4df/is_there_a_comprehensive_resource_of_what_we_know/">A Comprehensive Resource Of What We Know,</a> still by Gazooh on Reddit but older <br>
+                <a href="https://www.smokingonabike.com/2015/03/25/fez-mysteries/">Fez Mysteries,</a> by ColdPie on his blog <br>
+                <a href="https://www.youtube.com/watch?v=fZODKWXzSxs">The strangest accounts of r/Fez,</a> by Eli B on Youtube <br>
+            </div>
                     
-                    <p>
-                        As a gift for the reader who has reached the end of this article, here is a 3D visualization of the writing and counting cubes. Mine is ugly (I'll upload a better one once I learn more), but Jules Cárdenas's version is really nice! Maybe this can help with the puzzle solving.
-                    </p> 
+            <p>
+                As a gift for the reader who has reached the end of this article, here is a 3D visualization of the writing and counting cubes. Mine is ugly (I'll upload a better one once I learn more), but Jules Cárdenas's version is really nice! Maybe this can help with the puzzle solving.
+            </p> 
+
+            <div class="content-flex">
+                <div class="sketchfab-embed-wrapper" style="margin-bottom: 20px;">
+                    <iframe title="Fez Writing Cube" height="120rem" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/401eb666e94c42c28750536561c1ceff/embed"> </iframe> <p style="font-size: 1rem; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/fez-writing-cube-401eb666e94c42c28750536561c1ceff?utm_medium=embed&utm_campaign=share-popup&utm_content=401eb666e94c42c28750536561c1ceff" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Fez Writing Cube </a>   by <a href="https://sketchfab.com/CharlesDuMenhir?utm_medium=embed&utm_campaign=share-popup&utm_content=401eb666e94c42c28750536561c1ceff" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> myself </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=401eb666e94c42c28750536561c1ceff" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
                 </div>
 
-                <div>
-                    <div class="sketchfab-embed-wrapper" style="margin-bottom: 20px;">
-                        <iframe title="Fez Writing Cube" height="120rem" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/401eb666e94c42c28750536561c1ceff/embed"> </iframe> <p style="font-size: 1rem; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/fez-writing-cube-401eb666e94c42c28750536561c1ceff?utm_medium=embed&utm_campaign=share-popup&utm_content=401eb666e94c42c28750536561c1ceff" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Fez Writing Cube </a>   by <a href="https://sketchfab.com/CharlesDuMenhir?utm_medium=embed&utm_campaign=share-popup&utm_content=401eb666e94c42c28750536561c1ceff" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> myself </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=401eb666e94c42c28750536561c1ceff" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
-                    </div>
-
-                    <div class="sketchfab-embed-wrapper">
-                         <iframe title="FEZ Counting Artifact" height="120rem" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/7f293d0a2c594f6cbef32e4b7fc951ee/embed"> </iframe> <p style="font-size: 1rem; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/fez-counting-artifact-7f293d0a2c594f6cbef32e4b7fc951ee?utm_medium=embed&utm_campaign=share-popup&utm_content=7f293d0a2c594f6cbef32e4b7fc951ee" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Fez Counting Cube </a> by <a href="https://sketchfab.com/JulesCardenas?utm_medium=embed&utm_campaign=share-popup&utm_content=7f293d0a2c594f6cbef32e4b7fc951ee" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Jules Cárdenas </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=7f293d0a2c594f6cbef32e4b7fc951ee" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
-                    </div>
+                <div class="sketchfab-embed-wrapper">
+                        <iframe title="FEZ Counting Artifact" height="120rem" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/7f293d0a2c594f6cbef32e4b7fc951ee/embed"> </iframe> <p style="font-size: 1rem; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/fez-counting-artifact-7f293d0a2c594f6cbef32e4b7fc951ee?utm_medium=embed&utm_campaign=share-popup&utm_content=7f293d0a2c594f6cbef32e4b7fc951ee" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Fez Counting Cube </a> by <a href="https://sketchfab.com/JulesCardenas?utm_medium=embed&utm_campaign=share-popup&utm_content=7f293d0a2c594f6cbef32e4b7fc951ee" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Jules Cárdenas </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=7f293d0a2c594f6cbef32e4b7fc951ee" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
                 </div>
             </div>
-
-            <div class="dateSection">Écrit le 28 juillet 2025</div>
-        </section> <!-- ------------------------ /FEZ ------------------------ -->
-
-        <hr class="separateur">
+        </section>
+        <div class="dateSection">Écrit le 28 juillet 2025</div>
 
         <section>
             <p>Feel free to share your thoughts, remarks or questions about thoses articles (github account needed).</p>
@@ -345,9 +318,5 @@
             </script>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2025 [Charles Duménil]</p>
-    </footer>
 </body>
 </html>

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/style.css" rel="stylesheet">
+  <link href="/styleAccueil.css" rel="stylesheet">
   <title>Accueil</title>
 </head>
 
@@ -12,25 +13,30 @@
   <script>
   fetch('/nav.html')
     .then(r => r.text())
-    .then(html => document.querySelector('nav').innerHTML = html);
+    .then(html => document.querySelector('header').innerHTML = html);
   </script>
 
   <header>
-    <div> </div>
-    <p>Accueil</p>
-    <nav>
-    </nav>
   </header>
 
   <main>
-    <p>( Site en construction. Prochains sujets: les voies de Meuse, la surface de Boy )</p>
-
-    <section style="margin: 6rem auto;">
+  <div class="hero">
+    <p class="intro-sub">Divers sujets qui m'intéressent.</p>
+</div>
       <div class="articles-list">
         <!--  Miniatures carrées  -->
+        <a href="/Thermo/">
+          <div class="sujet">
+            <img src="/_miniatures/ThermoMin.png" alt="" class="article-thumb">
+            <div class="article_desc">
+              <h3>L'évolution par la thermodynamique</h3>
+              <p>#Science</p>
+            </div>
+          </div>
+        </a>
         <a href="/Kili/">
           <div class="sujet">
-            <img src="/images/Kili.jpg" alt="" class="article-thumb">
+            <img src="/_miniatures/Kili.jpg" alt="" class="article-thumb">
             <div class="article_desc">
               <h3>Trek au Kilimandjaro</h3>
               <p>#Perso #Sport</p>
@@ -39,7 +45,7 @@
         </a>
         <a href="/Surface de Boy/">
           <div class="sujet">
-            <img src="/images/boy_surface.png" alt="surface de boy" class="article-thumb">
+            <img src="/_miniatures/boy_surface.png" alt="surface de boy" class="article-thumb">
             <div class="article_desc">
               <h3>La surface de Boy</h3>
               <p>#Maths</p>
@@ -59,7 +65,7 @@
 
         <a href="/Delaunay/">
           <div class="sujet">
-            <img src="/images/StanfordBunnyMin.png" alt="StanfordBUnny" class="article-thumb">
+            <img src="/_miniatures/StanfordBunnyMin.png" alt="StanfordBUnny" class="article-thumb">
             <div class="article_desc">
               <h3>My PhD topic</h3>
               <p>#Perso #Maths</p>
@@ -69,7 +75,7 @@
 
         <a href="/Genealogie/">
           <div class="sujet">
-            <img src="/images/ConfLogo2.png" alt="Genealogie" class="article-thumb">
+            <img src="/_miniatures/ConfLogo.png" alt="Genealogie" class="article-thumb">
             <div class="article_desc">
               <h3>Une histoire barisienne</h3>
               <p>#Perso</p>
@@ -79,7 +85,7 @@
 
         <a href="/Fez/">
           <div class="sujet">
-            <img src="/images/FezMin.jpg" alt="Fez miniature" class="article-thumb">
+            <img src="/_miniatures/FezMin.jpg" alt="Fez miniature" class="article-thumb">
             <div class="article_desc">
               <h3>Fez, an enigmatic game</h3>
               <p>#Gaming</p>
@@ -89,7 +95,7 @@
 
         <a href="/Basel/">
           <div class="sujet">
-            <img src="/images/BaselMin.png" alt="Basel problem" class="article-thumb">
+            <img src="/_miniatures/BaselMin.png" alt="Basel problem" class="article-thumb">
             <div class="article_desc">
               <h3>The Basel problem</h3>
               <p>#Maths</p>
@@ -98,13 +104,8 @@
         </a>
 
       </div>
-    </section>
 
   </main>
-
-  <footer>
-    <p> &copy; 2025 [Charles Duménil]</p>
-  </footer>
 </body>
 
 </html>

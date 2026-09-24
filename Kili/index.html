@@ -11,30 +11,24 @@
     <script>
         fetch('/nav.html')
         .then(r => r.text())
-        .then(html => document.querySelector('nav').innerHTML = html);
+        .then(html => document.querySelector('header').innerHTML = html);
     </script>
     <header>
-        <div class="acc"><a href="/">&larr; Accueil</a> </div>
-        <p>Kilimandjaro</p>
-        <nav>
-        </nav>
     </header>
-
-    <!-- Bouton retour en haut -->
-    <div id="top" style="scroll-margin-top: 75px"></div>
-    <a href="#top" class="bouton up"> <img src="/images/Up.png" class="img_button"> </a>
 
     <main>
         <!-- KILI -->
         
-        <h1 style="text-align: center;">Par la voie Marangu</h1>
-        <section>
-            <p>
+        <div class="hero">
+        <h1>Le Kilimandjaro, <br> par la voie Marangu</h1>
+            <div class="hero-inner">
+            <p class="intro">
                 Le Kilimandjaro par la voie Marangu, c'est cinq jours de marche à travers quatre biomes bien distincts pour rejoindre le sommet de l'Afrique. Le Kilimandjaro est composé de trois sommets : Shira, Mawenzi et Kibo dont le point culminant, le pic Uhuru culmine à près de 5900 mètres. C'est vers cette dernière destination que nous mène la voie Marangu.
             </p>
                 Dans cette page, je vous décris mon expérience, vous partage mes découvertes et vous recommande mes choix, stratégiques et vestimentaires, afin d'optimiser votre ascension. <a href="#Recap">Recap technique à la fin</a>.
-            
-
+            </div>
+        </div>
+   <section>
             <h2>Jour 0 : Arrivée en Tanzanie</h2>
 
             <p>
@@ -43,12 +37,13 @@
 
 
             <h2>Jour 1 : De Marangu Gate (1879m) à Mandara Hut (2720m) - 8km</h2>
-            <div class="horizontalFlex">
-                <div class="container-texte">
+  
                     <p>
                         La veille, les guides nous ont donné des recommandations vestimentaires. Il fera plutôt chaud le premier jour, short et t-shirt sont de mise.
                         L'équipe d'Ascend Tanzania nous rejoint à l'hotel à 9h30. Elle comprend les deux guides, neuf porteurs et un cuisinier. Tout le monde monte dans le van. Nous passons dans Moshi louer l'équipement qu'il nous manque (bâtons de marche et sac de couchage) puis direction le Kili. Malgré ses presque 6000 mètres, nous ne le voyons pas du trajet. Le mont Kibo est connu pour être timide et se tapit derrière une épaisse brume.
-                    </p>
+                    </p>          
+                <div class="content-flex">
+                <div class="text">
                     <p>
                         Nous arrivons à midi au Marangu Gate, point de départ de notre trek. La route Marangu est la route originelle, gravie intégralement par l'allemand Hans Meyer en 1889. Pendant que Chris s'occupe des papiers, nous prenons notre premier repas. Plusieurs groupes font de même, et nous pouvons sentir l'excitation collective. Godbless vient nous chercher à 14h. Nous signons des papiers, subissons un contrôle de routine, et passons enfin sous le portail de Marangu, marquant le commencement de notre randonnée.
                     </p>
@@ -56,22 +51,12 @@
                         Seul le guide Godbless nous accompagne, Chris est aux papiers, témoignage que la lenteur administrative est universelle. Nous marchons donc, en pente douce (montante bien sûr), à un rythme plutôt lent. C'est le fameux "Pole pole". Marcher lentement est une nécessité pour les novices, cela garantie une acclimatation progressive et donc correctement menée. La marche n'est pas difficile, et nous faisons notre bout de chemin à travers la forêt en écoutant attentivement les explications de notre guide.
                     </p>
                 </div>
-                <div class="container-image">
-                    <img src="/Kili/images/jungle.jpg" alt="jungle kilimandjaro rainforest" class="coins-arrondis">
+                <figure>
+                    <img src="/Kili/images/jungle.jpg" alt="jungle kilimandjaro rainforest" class="framed">
                     <figcaption>Au coeur de la rainforest.</figcaption>
                 </div>
             </div>
-
-            <div class="horizontalFlex">
-                <div class="container-image">
-                    <img src="/Kili/images/singe.jpg" alt="singe bleu" class="coins-arrondis">
-                    <figcaption>Le singe bleu du Kili.</figcaption>
-                    <p> </p>
-                    <img src="/Kili/images/hirox.jpg" alt="hirox daman" class="coins-arrondis">
-                    <figcaption>Ce daman prend un bain de soleil.</figcaption>
-                </div>
                 
-                <div class="container-texte">
                     <p>
                         La forêt que nous traversons est une forêt pluviale. La végétation y est dense et l'air humide. On y trouve des arbres immenses, assez clairsemés, et recouverts de lichens. Mais aussi la délicate <a href="https://fr.wikipedia.org/wiki/Impatiens_kilimanjari">plante éléphant</a> nommée ainsi car ses pétales évoquent une trompe. Côté faune, nous croisons des <a href="https://fr.wikipedia.org/wiki/Cercopithecus_mitis">singes bleus</a>, des <a href="https://en.wikipedia.org/wiki/White-necked_raven">corbeaux à cou blanc</a>, ainsi qu'un <a href="https://fr.wikipedia.org/wiki/Daman_des_arbres">daman des arbres</a> immobile, profitant de la lumière du soleil.
                     </p>
@@ -79,26 +64,30 @@
                     <p>
                         Nous ferons une pause dans l'après midi, puis arriverons à Mandara Hut à 17h30. Nous découvrons nos refuges: d'originaux cabanons triangulaires. Tous bâtis sur le schéma, ils comprennent 4 lits, deux étagères, une table et ses chaises, le strict nécessaire. Une lumière au plafond est alimentée par panneaux solaires, de même qu'une prise électrique dont le fonctionnement n'est pas toujours au rendez-vous. Le camp est aussi pourvu d'une cantine, et de toilettes. Pour ceux disposant d'une sim locale, du wifi payant est accessible. 
                     </p>
+
+                    
+                    <div class="content-flex">
+                            <figure>
+                            <img src="/Kili/images/singe.jpg" alt="singe bleu" class="framed">
+                            <figcaption>Le singe bleu du Kili.</figcaption>
+                            </figure>
+                            <figure>
+                            <img src="/Kili/images/hirox.jpg" alt="hirox daman" class="framed">
+                            <figcaption>Ce daman prend un bain de soleil.</figcaption>
+                            </figure>
+                    </div>
                     <p>
                         L'assistant cuisinier nous apporte une bassine d'eau chaude chacun pour la toilette. C'est aussi l'occasion de faire des lessives sommaires. Nous nous rendons au réfectoire où nous mangeons un plat copieux préparé par le chef, puis les guides nous font un check, afin de s'assurer de nos aptitudes. Le lendemain s'annonce sec, et dépourvu d'ombre.  </p>
-                </div>
-            </div>
-            <div class="horizontalFlex">
-                <div class="container-texte">
-                </div>
-                <div class="container-image" style="flex: 2">
-                    <img src="/Kili/images/fleurelephant.jpg" alt="fleur éléphant" class="coins-arrondis">
-                    <figcaption>La fleur éléphant et sa trompe.</figcaption>
-                </div>
-                <div class="container-texte">
-                </div>
-            </div>
-                
-            
 
+                    <figure style="width:40%">
+                    <img src="/Kili/images/fleurelephant.jpg" alt="fleur éléphant" class="framed">
+                    <figcaption>La fleur éléphant et sa trompe.</figcaption>
+                    </figure>
+      
+                
             <h2>Jour 2 : De Mandara Hut  (2720m) à Horombo Hut (3720m) - 11km</h2>
-            <div class="horizontalFlex">
-                <div class="container-texte">
+            <div class="content-flex">
+                <div class="text">
                     <p>
                         Réveil à 6h30, toilette à 7h, petit déjeuner à 7h30 et départ à 8h30. Les recommandations de la veille : short ou pantalon léger, t-shirt éventuellement à manche longue, chapeau et crême solaire! L'assistant cuisinier a chargé nos gourdes. Par sécurité nous y ajoutons des pastilles Micropur (rouge), ce n'est pas nécessaire à cette altitude, mais je ne veux pas prendre de risques inutiles.
                     </p>
@@ -109,21 +98,21 @@
                         Nous faisons un total de deux pauses sur le trajet. Sur la fin, le Kibo montre le bout de son nez. Avec lui, s'approche le froid... Par sécurité, il peut être utile d'avoir pris sa polaire avec soi. Nous arrivons à Horombo Hut à 14h30, et bénéficions de l'après-midi pour nous relaxer. Pour le lendemain, on nous recommande d'ajouter sa polaire ou doudoune, les températures continuant de baisser. La nuit est fraiche, il est stratégique de bien préparer son pyjama!
                     </p>
                 </div>
-                <div class="container-image">
-                    <img src="/Kili/images/fleurdefeu.jpg" alt="fleur de feu" class="coins-arrondis">
+                <figure>
+                    <img src="/Kili/images/fleurdefeu.jpg" alt="fleur de feu" class="framed">
                     <figcaption>Une fleur de feu aux abords de Horombo Hut.</figcaption>
-                </div>
+                </figure>
             </div>
 
-            <div class="horizontalFlex">
-                <div class="container-image" style="flex: 1.5">
-                    <img src="/Kili/images/senecon.jpg" alt="senecon" class="coins-arrondis">
+            <div class="content-flex">
+                <figure>
+                    <img src="/Kili/images/senecon.jpg" alt="senecon" class="framed">
                     <figcaption>Les séneçons popent autour des cours d'eau.</figcaption>
-                </div>
-                <div class="container-image" style="flex: 1.5">
-                    <img src="/Kili/images/fleur.jpg" alt="protea" class="coins-arrondis">
+                </figure>
+                <figure>
+                    <img src="/Kili/images/fleur.jpg" alt="protea" class="framed">
                     <figcaption>Une protea éclose.</figcaption>
-                </div>
+                </figure>
             </div>
 
 
@@ -140,15 +129,15 @@
                 À ce stade, la stratégie abordée par l'équipe est la suivante: on déjeune, on dort un peu, on dine, on redort un peu, puis on part pour le sommet à minuit. À mon avis c'est une erreur. Au final, j'ai trop mangé, et je n'ai pas dormi. Conséquence directe : sommeil durant l'ascension et mal des montagnes à proximité du sommet. Pour moi, il est suffisant de ne manger qu'à midi et nécessaire de favoriser le repos sans interruption jusqu'au reveil du départ. J'aurai préféré faire ça. C'est là mon gros regret. Car l'ascension finale me fut plutôt laborieuse, et j'en veux pour cause ce choix.
             </p>
 
-            <div class="horizontalFlex">
-                <div class="container-image" style="flex: 1.5">
-                    <img src="/Kili/images/mawenzi.heic" alt="Mawenzi Kilimandjaro" class="coins-arrondis">
+            <div class="content-flex">
+                <figure>
+                    <img src="/Kili/images/mawenzi.heic" alt="Mawenzi Kilimandjaro" class="framed">
                     <figcaption>Le mont Mawenzi.</figcaption>
-                </div>
-                <div class="container-image" style="flex: 1.5">
-                    <img src="/Kili/images/desert.jpg" alt="Desert kilimandjaro" class="coins-arrondis">
+                </figure>
+                <figure>
+                    <img src="/Kili/images/desert.jpg" alt="Desert kilimandjaro" class="framed">
                     <figcaption>Un petit cactus cache le mont Kibo.</figcaption>
-                </div>
+                </figure>
             </div>
 
            
@@ -165,8 +154,8 @@
                 Pour les gants: des sous-gants très fins en mérinos, jumelés avec une paire de maxi moufles. Le top! C'est chiant pour les bâtons, mais les bâtons...
                 Pour finir, on équipe la tête avec une balaclava mérinos, et la nécessaire lampe frontale.
             </p>
-            <div class="horizontalFlex">
-                <div class="container-texte">
+            <div class="content-flex">
+                <div class="text">
                     <p>
                         Minuit, c'est le départ. En plus des deux guides, un porteur (Salimi) nous accompagne. Place à un environnement type haute montagne. Nous gravissons la pente pole pole. L'ascension est si lente qu'elle semble interminable. Nous faisons regulièrement de courtes pauses. Assez vite, le manque de sommeil se fait sentir. Pour Sarah aussi. La lutte la plus difficile est de garder les yeux ouverts. C'est difficile, le sable et les cailloux gissent sous nos pieds. Au fur et à mesure, le sentier laisse place à un ensemble de rochers à crapahuter. Vers 5h00, je subis un léger mal des montagnes, Salimi s'empare de mon sac. Merci! Une demi-heure plus tard, nous arrivons à Gilma Point. Ce checkpoint marque l'arrivée au cratère et donc la fin de l'ascension en pente abrupte. Je suis à bout et nauséeux, je ne peux même pas finir mon thé. Je ferme les yeux trente secondes, ca me fait du bien. Il reste à atteindre Uhuru.
                     </p>       
@@ -177,24 +166,25 @@
                         Nous ne prenons guère le temps de contempler et entamons rapidement le retour. À mi-chemin, je fais "l'erreur" de prendre un repos trop marqué. Salimi m'embarque, et nous dévalons la pente à pleine vitesse. C'est une machine. Je me laisse trainer. De quoi me reposer, et me requinquer. Une fois reboosté et suffisamment bas pour l'oxygène, je continue la descente de moi-même, toujours à pleine vitesse. Nous arrivons à Kibo Hut à 9h30, une heure avant mes coéquipiés, juste de quoi me reposer. Enfin!  
                     </p>
                 </div>
-                <div class="container-image">
-                    <img src="/Kili/images/glace.jpg" alt="lever de soleil" class="coins-arrondis">
+                <figure>
+                    <img src="/Kili/images/glace.jpg" alt="lever de soleil" class="framed">
                     <figcaption>L'inhospitalité des glaces sous le lever de soleil.</figcaption>
-                </div>
+                </figure>
             </div>
-            <div class="container-image">
-                <img src="/Kili/images/sommet2.jpg" alt="Uhuru pic" class="coins-arrondis">
+
+            <figure style="width:60%">
+                <img src="/Kili/images/sommet2.jpg" alt="Uhuru pic" class="framed">
                 <figcaption>Arrivée à Uhuru Peak.</figcaption>
-            </div>
+            </figure>
 
             <h2> Jour 4.2 + Jour 5 : Retour à Mandara Gate - 28km</h2>
             <p>
                 Le retour se fait dans l'après-midi, nous rejoignons Horombo Hut pour y dormir. Le lendemain nous marchons jusqu'à Marangu Gate où nous sommes accueillis par les chants victorieux de l'équipe de porteurs, un moment mémorable! 
             </p>
-            <div class="container-image">
-                    <img src="/Kili/images/kili.jpg" alt="Kilimandjaro from plane" class="coins-arrondis">
+         <figure style="width:100%">
+                    <img src="/Kili/images/kili.jpg" alt="Kilimandjaro from plane" class="framed">
                     <figcaption>Ce n'est finalement qu'à bord de l'avion que nous voyons pleinement le Kilimandjaro.</figcaption>
-                </div>
+         </figure>
 
         </section>
 
@@ -249,9 +239,6 @@
         </section>
             <div class="dateSection">Écrit le 16 août 2026 </div>
         
-
-        <hr class="separateur">
-
         <section>
             <p>Feel free to share your thoughts, remarks or questions about thoses articles (github account needed).</p>
             <script src="https://utteranc.es/client.js" repo="CharlesDuMenhir/CharlesDuMenhir.github.io" issue-term="/Kili/"

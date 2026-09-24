@@ -1,0 +1,55 @@
+
+
+/*----------------------MENU BLOG------------------*/
+
+.articles-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem auto;
+  gap: 1rem; /* espace entre les éléments */
+}
+
+.articles-list a{
+  text-decoration: none;
+}
+
+.sujet {
+  height: 12rem;
+  width: 38rem;
+  display: flex; /* image à coté de la description*/
+  align-items: baseline;
+  gap: 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.sujet:hover {
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.article-thumb {
+  width: 8rem;
+  height: auto;
+  margin: auto 2rem;
+  object-fit: cover;    /*crop pour ajuster*/
+  display: block;         /* supprime l’espacement inline par défaut */
+  border-radius: 6px;     /* coins arrondis (optionnel) */
+}
+
+.article_desc{
+  margin: auto 2rem auto auto;
+}
+
+.sujet h3 {
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  vertical-align: middle;
+}
+
+.sujet p{
+  text-align: end;
+  font-style: italic;
+  font-size: .8rem;
+  margin-bottom: 0;
+}
